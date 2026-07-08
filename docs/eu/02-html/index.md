@@ -56,72 +56,11 @@ osatzen dute, komatxo artean idatzita:
 <elementu_izena atributu1="balio1" atributu2="balio2">...</elementu_izena>
 ```
 
-## Etiketa semantikoak (HTML5)
 
-### Orri baten egitura
-
-- `<header>`: orri edo atal baten goiburua.
-- `<nav>`: nabigazio-menua.
-- `<main>`: orriaren eduki nagusia.
-- `<section>`: gai edo atal jakin batekin lotutako edukia taldekatzen du.
-- `<article>`: eduki-unitate independente bat adierazten du (adibidez, blog-sarrera bat).
-- `<aside>`: eduki osagarria edo nagusiarekin zeharka lotutakoa.
-- `<footer>`: orri edo atal baten oin-oharra.
-
-```html
-<!DOCTYPE html>
-<html>
-    <header>
-    <nav>
-    <main>
-        <section>
-            <article>
-        <aside>
-    </main>
-    <footer>
-</html>
-```
-
-### Edukia antolatzeko etiketak
-
-- `<hgroup>`: elkarrekin lotutako hainbat izenburu taldekatzen ditu.
-- `<h1>` - `<h6>`: izenburuen hierarkia ezartzen dute.
-- `<div>`: blokeko edukia taldekatzeko etiketa generikoa.
-- `<span>`: lerro barruko edukia taldekatzeko etiketa generikoa.
-
-### Eduki osagarria
-
-- `<address>`: kontaktu-informazioa adierazten du.
-- `<details>` eta `<summary>`: informazio zabalgarria sortzen dute.
-- `<hr>`: edukien arteko bereizketa tematikoa adierazten du.
-
-
-### Iruzkinak
-
-Lerro batean edo zenbait lerrotan nabigatzaileak interpretatuko ez dituen
-iruzkinak sartzeko balio du: `<!-- edukia -->` moduan idazten dira eta
-nabigatzaileak ez ditu erakusten. Iturri-kodea ikusterakoan, ordea,
-iruzkin horiek ikusi daitezke.
-
-```html
-<!--nireorrialdea.html-->
-<html>
-<head> ... </head>
-<!--Hemen hasten da dokumentuaren gorputza -->
-<body> ... </body>
-</html>
-```
 
 !!! example "Ariketa 1"
     Praktikatzen hasiko dugu, horretarako lehenengo ariketa egingo dugu: [Ariketa 1](https://docs.google.com/document/d/1bX3VveTiWPALXlwyk2_bzWR_Lmldd4CsQWVppNYj1LA/edit?usp=sharing){: target="_blank" rel="noopener" }
     
-
-**Estekak eta scriptak:**
-
-- `<a href="...">`-k hiperestekak eraikitzen ditu.
-- `<script>` eta `<noscript>`-ek programak eta JavaScript desaktibatuta
-  dagoenean erabiltzeko alternatiba biltzen dituzte.
-
 ## Metadatuak (`<head>`)
 
 - `<meta charset="UTF-8">`: sinboloak eta azentuak ondo erakusten direla
@@ -192,6 +131,22 @@ taldekatzeko:
     <hr/>
     <p>hau bigarren paragrafoa da.</p>
 </body>
+```
+
+## Iruzkinak
+
+Lerro batean edo zenbait lerrotan nabigatzaileak interpretatuko ez dituen
+iruzkinak sartzeko balio du: `<!-- edukia -->` moduan idazten dira eta
+nabigatzaileak ez ditu erakusten. Iturri-kodea ikusterakoan, ordea,
+iruzkin horiek ikusi daitezke.
+
+```html
+<!--nireorrialdea.html-->
+<html>
+<head> ... </head>
+<!--Hemen hasten da dokumentuaren gorputza -->
+<body> ... </body>
+</html>
 ```
 
 ## Testu formatua
@@ -578,112 +533,822 @@ hurrengoa batuko dira gelaxka bakarrean.
     barruan egon behar da. Nahitaezkoa da: taulak beste gelaxka batzuen
     barruan habiaratu daitezke maketazio konplexuak eraikitzeko.
 
+## Etiketa semantikoak (HTML5)
+
+HTML5ek **etiketa semantiko berriak** gehitu zituen web-orriak modu argiago eta ulergarriagoan antolatzeko. Horri esker, bai nabigatzaileek, bai bilatzaileek eta baita garatzaileek ere hobeto ulertzen dute orriaren egitura.
+
+> **Garrantzitsua:** etiketa semantikoek ez dute itxura aldatzen berez; edukiari **esanahia** ematen diote.
+
+---
+
+### Orri baten egitura
+
+- `<header>`: orri edo atal baten **goiburua**. Bertan normalean logoa, webgunearen izena edo izenburu nagusia kokatzen dira.
+- `<nav>`: **nabigazio-menua**. Beste orri edo atal batzuetara eramaten duten estekak biltzen ditu.
+- `<main>`: orriaren **eduki nagusia**.
+- `<section>`: gai edo atal jakin batekin lotutako edukia taldekatzen du.
+- `<article>`: **eduki independente** bat adierazten du (blog-sarrera bat, albiste bat, produktu baten fitxa...).
+- `<aside>`: **eduki osagarria** edo albo-barra. Normalean lotura interesgarriak, iragarkiak edo informazio gehigarria jartzen dira.
+- `<footer>`: orri edo atal baten **oin-oharra**. Bertan egilearen informazioa, copyright-a edo kontaktua agertu ohi dira.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nire webgunea</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Nire webgunea</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Hasiera</a></li>
+                <li><a href="#">Produktuak</a></li>
+                <li><a href="#">Kontaktua</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+
+            <article>
+                <h2>Lehen artikulua</h2>
+                <p>Artikuluaren edukia...</p>
+            </article>
+
+            <article>
+                <h2>Bigarren artikulua</h2>
+                <p>Artikuluaren edukia...</p>
+            </article>
+
+        </section>
+
+        <aside>
+            Informazio osagarria
+        </aside>
+
+    </main>
+
+    <footer>
+        &copy; 2026 - Nire webgunea
+    </footer>
+
+</body>
+</html>
+```
+
+### Etiketa bakoitzaren azalpena
+
+#### `<header>`
+
+Orri edo atal baten goiburua adierazten du. Normalean honako hauek izaten ditu:
+
+- Webgunearen izena
+- Logoa
+- Izenburu nagusia
+- Nabigazio-menua (askotan `<nav>` barruan)
+
+---
+
+#### `<nav>`
+
+Nabigazio-elementuak biltzen ditu.
+
+Normalean barruan esteken zerrenda bat (`<ul>` eta `<li>`) egoten da, baina irudi edo botoiak ere erabil daitezke.
+
+Adibidez:
+
+- Hasiera
+- Guri buruz
+- Produktuak
+- Kontaktua
+
+---
+
+#### `<main>`
+
+Web-orriaren **eduki nagusia** biltzen du.
+
+Orri bakoitzean **`<main>` bakarra** egon behar da.
+
+---
+
+#### `<section>`
+
+Gai bereko edukia taldekatzen du.
+
+Adibidez:
+
+- Albisteak
+- Zerbitzuak
+- Produktuak
+- Harremanetarako atala
+
+Normalean barruan hainbat `<article>` egoten dira.
+
+---
+
+#### `<article>`
+
+Bere kabuz zentzua duen edukia adierazten du.
+
+Adibide batzuk:
+
+- Blog bateko sarrera
+- Albiste bat
+- Foro bateko mezua
+- Produktu baten deskribapena
+
+Barruan normalean izenburua (`<h2>` edo `<h3>`), testua, irudiak edo bideoak egoten dira.
+
+---
+
+#### `<aside>`
+
+Eduki nagusia osatzen duen informazioa erakusten du.
+
+Adibidez:
+
+- Lotura interesgarriak
+- Iragarkiak
+- Inkestak
+- Azken albisteak
+
+Normalean albo batean kokatzen da.
+
+---
+
+#### `<footer>`
+
+Orriaren edo atal baten amaiera adierazten du.
+
+Bertan agertu ohi dira:
+
+- Copyright-a
+- Kontaktua
+- Sare sozialetarako estekak
+- Lege-oharrak
+
+---
+
+### Edukia antolatzeko etiketak
+
+- `<hgroup>`: elkarrekin lotutako hainbat izenburu taldekatzen ditu.
+- `<h1>` - `<h6>`: izenburuen hierarkia ezartzen dute.
+- `<div>`: blokeko edukia taldekatzeko etiketa generikoa.
+- `<span>`: lerro barruko edukia taldekatzeko etiketa generikoa.
+
+#### `<div>`
+
+Eduki blokeak taldekatzeko erabiltzen da.
+
+Ez du esanahi semantikorik; antolaketa eta estiloa aplikatzeko erabiltzen da batez ere.
+
+#### `<span>`
+
+Testu zati txiki bati estilo edo portaera berezia emateko erabiltzen da.
+
+Ez du lerro-jauzirik sortzen.
+
+```html
+<p>
+    Hau testu normala da eta
+    <span class="gorria">hau gorriz agertuko da</span>.
+</p>
+```
+
+### Eduki osagarria
+
+- `<address>`: kontaktu-informazioa adierazten du.
+- `<details>` eta `<summary>`: informazio zabalgarria sortzen dute.
+- `<hr>`: edukien arteko bereizketa tematikoa adierazten du.
+
+![HTML5 etiketa semantikoen egitura](../../images/html_semantic_elements.png)
+
+!!! tip "Gomendioak"
+
+    ✅ Erabili beti etiketa semantiko egokia.
+
+    ❌ Ez egin web osoa `<div>` etiketen bidez.
+
+    Etiketa semantikoak erabiltzeak honako abantailak ditu:
+
+    - Kode garbiagoa eta ulergarriagoa.
+    - Irisgarritasun hobea.
+    - SEO hobea.
+    - Mantentze-lan errazagoak.
+
+!!! note "Ideia nagusia"
+    HTML5eko etiketa semantikoek edukiari **esanahia** ematen diote, ez soilik egitura.
+
+
+## Eduki txertatua eta multimedia
+
+HTML5ek aukera ematen du **audioa, bideoa eta bestelako multimedia-edukiak** zuzenean web-orrian txertatzeko, pluginik erabili gabe.
+
+Gainera, etiketa hauek nabigatzailearen **erreproduzigailu natiboa** erabiltzen dute, eta JavaScript gehigarririk gabe kontrolak eskaintzen dituzte (erreproduzitu, pausatu, bolumena, denbora-barra...).
+
+---
+
+### Eduki txertatu generikoak (`<object>`)
+
+`<object>` etiketa kanpoko baliabide mota desberdinak txertatzeko erabiltzen da (irudiak, PDFak, dokumentuak...).
+
+```html
+<object data="irudia.png" width="550" height="150">
+    Irudia ezin izan da kargatu.
+</object>
+```
+
+---
+
+### Audioa (`<audio>`)
+
+`<audio>` etiketa web-orrian audio-fitxategiak txertatzeko erabiltzen da.
+
+```html
+<audio controls src="media/abestia.mp3">
+    Zure nabigatzaileak ez du audio txertatua onartzen.
+</audio>
+```
+
+#### Audio-formatu nagusiak
+
+| Formatua | Azalpena |
+|----------|----------|
+| **MP3** | Formaturik erabiliena. Nabigatzaile guztiek onartzen dute. |
+| **WAV** | Kalitate handikoa, baina fitxategiak oso handiak dira. Audio laburretarako erabiltzen da. |
+| **OGG** | Formatu librea. Kalitate ona eta konpresio handia eskaintzen ditu. |
+
+### Hainbat audio-formatu eskaintzea
+
+Nabigatzaile guztiek ez dituzte formatu berdinak onartzen. Horregatik, gomendagarria da `<source>` etiketa erabiltzea.
+
+```html
+<audio controls>
+
+    <source src="media/abestia.mp3" type="audio/mpeg">
+    <source src="media/abestia.ogg" type="audio/ogg">
+
+    Zure nabigatzaileak ez du audioa onartzen.
+
+</audio>
+```
+
+Nabigatzaileak **lehenengo onartzen duen formatua** erabiliko du.
+
+---
+
+### Bideoa (`<video>`)
+
+`<video>` etiketa bideoak zuzenean web-orrian txertatzeko erabiltzen da.
+
+```html
+<video controls src="videos/filma.mp4">
+    Zure nabigatzaileak ez du bideo txertatua onartzen.
+</video>
+```
+
+#### Bideo-formatu nagusiak
+
+| Formatua | Azalpena |
+|----------|----------|
+| **MP4** | Formaturik erabiliena. YouTubek ere gomendatzen du. |
+| **WebM** | Weberako optimizatuta dagoen formatu librea. |
+| **OGG / OGV** | Formatu librea, nabigatzaile batzuetan erabilia. |
+
+### Hainbat bideo-formatu eskaintzea
+
+```html
+<video controls width="640">
+
+    <source src="videos/filma.mp4" type="video/mp4">
+    <source src="videos/filma.webm" type="video/webm">
+
+    Zure nabigatzaileak ez du bideoa onartzen.
+
+</video>
+```
+
+Nabigatzaileak automatikoki bateragarriena aukeratuko du.
+
+---
+
+### `<audio>` eta `<video>` etiketen atributu erabilienak
+
+| Atributua | Azalpena |
+|-----------|----------|
+| `controls` | Erreproduzigailuaren kontrolak erakusten ditu. |
+| `autoplay` | Orria irekitzean automatikoki hasten da. |
+| `loop` | Amaitzean berriro hasten da. |
+| `muted` | Hasieran isilduta kargatzen da. |
+| `preload` | Multimedia noiz kargatu behar den adierazten du. |
+| `width` | Bideoaren zabalera ezartzen du. (`<video>` bakarrik) |
+| `height` | Bideoaren altuera ezartzen du. (`<video>` bakarrik) |
+| `poster` | Bideoa hasi aurretik erakusten den irudia. (`<video>` bakarrik) |
+
+---
+
+### Kanpoko bideoak txertatzea (`<iframe>`)
+
+YouTube, Vimeo edo antzeko plataformetako bideoak **ez dira `<video>` etiketa erabiliz txertatzen**.
+
+Horrelako kasuetan `<iframe>` erabiltzen da.
+
+```html
+<iframe
+    src="https://www.youtube.com/embed/XXXXXXXX"
+    width="560"
+    height="315"
+    allowfullscreen>
+</iframe>
+```
+
+YouTuben bertan, **Partekatu → Kapsulatu (Embed)** aukeran klik eginez lortzen da kode hau.
+
+---
+
+!!! tip "Gomendioak"
+
+    ✅ Erabili beti **MP3** audioetarako eta **MP4** bideoetarako, bateragarritasun handiena eskaintzen dutelako.
+
+    ✅ Erabili `<source>` etiketa formatu bat baino gehiago eskaini nahi baduzu.
+
+    ✅ Gehitu beti ordezko testu bat (`Zure nabigatzaileak...`) multimedia onartzen ez duten nabigatzaileentzat.
+
+    ✅ Errespetatu multimedia-fitxategien **egile-eskubideak**. Interneten aurkitzen den guztia **ez da libreki erabil daitekeena**; egiaztatu beti lizentzia (adibidez, Creative Commons).
+
+!!! example "Ariketa 9"
+    Ariketa hau aurreko guztia errepasatzeko balioko zaigu: [Ariketa 9](https://docs.google.com/document/d/11uI0NrI0OdJXkDNqBq0T9JxlLd77c4mzLti7Q4yVel4/edit?usp=sharing){: target="_blank" rel="noopener" } 
+
+
 ## Formularioak
+
+Formularioak erabiltzailearen informazioa jasotzeko erabiltzen dira (erregistroak, saio-hasierak, kontaktu-formularioak, inkestak...).
+
+Formulario baten barruan hainbat kontrol egon daitezke: testu-koadroak, pasahitzak, aukerak, botoiak, zerrendak...
+
+---
+
+### `<form>` etiketa
+
+Formulario guztiak `<form>` etiketa barruan definitzen dira.
 
 ```html
 <form action="/bidali" method="post">
-    <label for="izena">Izena:</label>
-    <input type="text" id="izena" name="izena">
-    <button type="submit">Bidali</button>
+
+    <!-- formularioaren kontrolak -->
+
 </form>
 ```
 
-**Testu-eremua:**
+#### Atributu nagusiak
+
+| Atributua | Azalpena |
+|-----------|----------|
+| `action` | Datuak bidaliko diren helbidea. |
+| `method` | Datuak bidaltzeko metodoa (`get` edo `post`). |
+
+!!! note "Oharra" 
+    Oraingoz ez dugu zerbitzaririk erabiliko; beraz, `action` atributuak ez du benetako funtziorik izango.
+    Baina atributu honetan esango dugu zein izango den formularioaren elementuak jasoko dituen fitxategia
+
+---
+
+### `<label>`
+
+Formulario bateko kontrol bati izena emateko erabiltzen da.
+
+`for` atributuak kontrolaren `id` atributuarekin bat etorri behar du.
+
+```html
+<label for="izena">Izena:</label>
+<input type="text" id="izena" name="izena">
+```
+
+--- 
+
+### `id` eta `name`
+
+Bi atributuak oso garrantzitsuak dira, baina **ez dute gauza bera egiten**. Haien arteko ezberdintasuna zein den argi geratu behar da.
+
+| Atributua | Zertarako erabiltzen da? |
+|-----------|--------------------------|
+| `id` | Elementua modu bakarrean identifikatzeko. `<label>` etiketarekin lotzen da. |
+| `name` | Formularioa bidaltzean datuaren izena izango da. |
+
+Adibidea:
+
+```html
+<label for="izena">Izena</label>
+
+<input
+    type="text"
+    id="izena"
+    name="izena">
+```
+
+Kasu honetan:
+
+- `for="izena"` → `id="izena"` atributuarekin lotzen da.
+- `name="izena"` → zerbitzariari bidaliko zaion datuaren izena izango da.
+
+---
+
+### Testu-eremua (`text`)
+
+Testu laburrak idazteko erabiltzen da.
 
 ```html
 <label for="id_izena">Erabiltzailea</label>
-<input type="text" id="id_izena" value="Testu lehenetsia" size="20">
+
+<input type="text" id="id_izena" name="izena" value="Testu lehenetsia" size="20">
 ```
 
-**Pasahitza:**
+#### Atributu erabilienak
+
+| Atributua | Azalpena |
+|-----------|----------|
+| `name` | Datuaren izena. |
+| `value` | Hasierako balioa. |
+| `placeholder` | Laguntza-testua. |
+| `size` | Kutxaren zabalera. |
+| `maxlength` | Gehienezko karaktere kopurua. |
+| `required` | Nahitaez bete beharreko eremua. |
+
+Adibidea:
+
+```html
+<input
+    type="text"
+    placeholder="Idatzi zure izena"
+    required>
+```
+
+---
+
+### Pasahitza (`password`)
+
+Idatzitako karaktereak ezkutatzen ditu.
 
 ```html
 <input type="password" name="pwd">
 ```
 
-**Emaila (nabigatzailearen balidazio automatikoarekin):**
+---
+
+### Emaila (`email`)
+
+Helbide elektroniko bat sartzeko erabiltzen da.
+
+Nabigatzaileak automatikoki egiaztatzen du formatu egokia duen.
 
 ```html
-<input type="email" name="email_addr">
+<input type="email" name="email">
 ```
 
-**Aukera-botoiak (hautaketa bakarra):**
+---
+
+### Beste `input` mota erabilgarri batzuk
+
+| Mota | Erabilera |
+|------|-----------|
+| `number` | Zenbakiak sartzeko. |
+| `date` | Data aukeratzeko. |
+| `color` | Kolore-hautatzailea. |
+| `file` | Fitxategiak igotzeko. |
+| `range` | Balio bat barra baten bidez aukeratzeko. |
+
+Adibidea:
 
 ```html
-<input type="radio" name="generoa">Gizona
-<input type="radio" name="generoa">Emakumea
+<input type="date">
+
+<input type="number" min="0" max="100">
+
+<input type="color">
+
+<input type="file">
+
+<input type="range" min="0" max="10">
 ```
 
-**Egiaztapen-laukiak (hautaketa anitza):**
+---
+
+### Aukera-botoiak (`radio`)
+
+Aukera **bakarra** hautatzeko erabiltzen dira.
+
+Radio botoi guztiak talde berekoak izateko, `name` berdina izan behar dute.
 
 ```html
-<input type="checkbox" name="ibilgailua[]">Autoa
-<input type="checkbox" name="ibilgailua[]">Motoa
+<input type="radio" name="generoa" value="gizona"> Gizona
+
+<input type="radio" name="generoa" value="emakumea"> Emakumea
 ```
 
-**Zerrenda desplegagarriak:**
+![Radio buttom adibidea](../../images/form_radio.png)
+
+Lehenetsitako aukera:
+
+```html
+<input type="radio" name="generoa" checked> Gizona
+```
+![Radio buttom checked](../../images/form_radio_checked.png)
+
+---
+
+### Egiaztapen-laukiak (`checkbox`)
+
+Aukera **bat edo gehiago** hautatzeko erabiltzen dira.
+
+```html
+<input type="checkbox" name="ibilgailua[]" value="autoa"> Autoa
+
+<input type="checkbox" name="ibilgailua[]" value="motoa"> Motoa
+```
+
+![Checkbox adibidea](../../images/form_checkbox.png)
+
+Lehenetsitako aukera:
+
+```html
+<input type="checkbox" name="ibilgailua[]" value="motoa" checked> Motoa
+```
+
+![Radio buttom checekc](../../images/form_checkbox_checked.png)
+
+---
+
+### Zerrenda desplegagarria (`select`)
+
+Aukera-zerrenda bat erakusten du.
 
 ```html
 <select name="probintzia">
+
     <option value="AB">Araba</option>
-    <option value="GI" selected="selected">Gipuzkoa</option>
+
+    <option value="BI">Bizkaia</option>
+
+    <option value="GI" selected>Gipuzkoa</option>
+
 </select>
 ```
 
-`multiple="multiple"` erabil daiteke hautaketa anitza baimentzeko, eta
-`selected="selected"` aukera lehenetsi bat markatzeko.
+![Select adibidea](../../images/form_select.png)
 
-**Testu-area (lerro anitzekoa):**
+#### Atributu erabilgarriak
+
+| Atributua | Azalpena |
+|-----------|----------|
+| `selected` | Lehenetsitako aukera. |
+| `multiple` | Aukera bat baino gehiago hautatzeko aukera ematen du. |
 
 ```html
-<textarea rows="10" cols="15">Testu lehenetsia</textarea>
+<select multiple>
+
+    <option>Euskara</option>
+
+    <option>Gaztelania</option>
+
+    <option>Ingelesa</option>
+
+</select>
 ```
 
-**Datu-iradokizunak (`datalist`):**
+---
+
+### Testu-area (`textarea`)
+
+Lerro anitzeko testuak idazteko erabiltzen da.
 
 ```html
-<input type="text" id="hizkuntza_eremua" list="hizkuntzak">
+<textarea rows="6" cols="40">
+
+Hemen idatzi zure mezua...
+
+</textarea>
+```
+
+---
+
+### Datu-iradokizunak (`datalist`)
+
+Erabiltzaileak idazten duen bitartean iradokizunak erakusten ditu.
+
+```html
+<input
+    type="text"
+    list="hizkuntzak">
+
 <datalist id="hizkuntzak">
-    <option value="Ingelesa"></option>
-    <option value="Euskara"></option>
+
+    <option value="Euskara">
+
+    <option value="Gaztelania">
+
+    <option value="Ingelesa">
+
 </datalist>
 ```
 
-**Kontrolen taldekatzea:**
+Erabiltzaileak beste balio bat ere idatz dezake.
+
+![Datalist adibidea](../../images/form_datalist.png)
+
+---
+
+### Kontrolak taldekatzea (`fieldset` eta `legend`)
+
+Formularioaren atal desberdinak antolatzeko erabiltzen dira.
 
 ```html
 <fieldset>
-    <legend>Atalaren titulua</legend>
-    <!-- formularioaren kontrolak -->
+
+    <legend>Datu pertsonalak</legend>
+
+    <label>Izena:</label>
+    <input type="text">
+
+    <label>Abizenak:</label>
+    <input type="text">
+
 </fieldset>
 ```
 
-## Eduki txertatua eta multimedia
+---
 
-**Eduki txertatu generikoak:**
+### Botoiak
 
-```html
-<object data="irudia.png" width="550px" height="150px">Irudia</object>
-```
-
-**Audioa:**
+Formularioetan hainbat botoi mota erabil daitezke.
 
 ```html
-<audio controls="controls" src="media/abestia.mp3">
-    Zure nabigatzaileak ez du audio txertatua onartzen.
-</audio>
+<button type="submit">Bidali</button>
+
+<button type="reset">Garbitu</button>
+
+<button type="button">Beste ekintza</button>
 ```
 
-**Bideoa:**
+| Mota | Azalpena |
+|-------|----------|
+| `submit` | Formularioa bidaltzen du. |
+| `reset` | Balio guztiak hasierako egoerara itzultzen ditu. |
+| `button` | JavaScript bidez kontrolatzeko erabiltzen da. |
+
+---
+### HTML5 balidazioa
+
+HTML5ek balidazio automatiko batzuk egiten ditu JavaScript erabili gabe.
+
+Adibidez:
+
+- `required`
+- `email`
+- `min`
+- `max`
+- `maxlength`
+- `pattern`
 
 ```html
-<video controls="controls" src="videos/filma.mp4">
-    Zure nabigatzaileak ez du bideo txertatua onartzen.
-</video>
+<input
+    type="email"
+    required>
+
+<input
+    type="number"
+    min="0"
+    max="100">
 ```
 
-Bi etiketek erreproduzigailu natiboaren kontrolak eskaintzen dituzte
-(erreproduzitu, pausatu, bolumena doitu...), JavaScript gehigarririk gabe.
+Horri esker, erabiltzaileak ezin izango ditu datu okerrak bidali.
+
+---
+
+### `GET` eta `POST`
+
+Formulario batek bi modu nagusi ditu datuak bidaltzeko.
+
+| GET | POST |
+|-----|------|
+| Datuak URLan bidaltzen dira. | Datuak eskaeraren gorputzean bidaltzen dira. |
+| Bilaketetarako erabiltzen da. | Login, erregistro eta formulario gehienetan erabiltzen da. |
+| Ez da egokia pasahitzetarako. | Seguruagoa da. |
+
+Adibidea:
+
+```html
+<form method="get">
+```
+
+```html
+<form method="post">
+```
+
+---
+
+### Formulario baten adibide osoa
+
+```html
+<form action="/bidali" method="post">
+
+    <fieldset>
+
+        <legend>Erregistroa</legend>
+
+        <label for="izena">Izena</label>
+        <input
+            type="text"
+            id="izena"
+            name="izena"
+            required>
+
+        <br><br>
+
+        <label for="email">Emaila</label>
+        <input
+            type="email"
+            id="email"
+            name="email">
+
+        <br><br>
+
+        <label>Generoa</label>
+
+        <input
+            type="radio"
+            name="generoa"
+            value="gizona">
+
+        Gizona
+
+        <input
+            type="radio"
+            name="generoa"
+            value="emakumea">
+
+        Emakumea
+
+        <br><br>
+
+        <label>Hobien dituzun hizkuntzak</label>
+
+        <input
+            type="checkbox"
+            name="hizkuntzak[]"
+            value="eu">
+
+        Euskara
+
+        <input
+            type="checkbox"
+            name="hizkuntzak[]"
+            value="es">
+
+        Gaztelania
+
+        <br><br>
+
+        <label for="oharrak">Oharrak</label>
+
+        <textarea
+            id="oharrak"
+            rows="5"
+            cols="40"></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Bidali
+        </button>
+
+    </fieldset>
+
+</form>
+```
+
+![Formulario adibidea](../../images/form_example.png)
+
+
+!!! tip "Gomendioak"
+
+    ✅ Erabili beti `<label>` etiketa.
+
+    ✅ Kontrol guztiek `name` atributua izan behar dute.
+
+    ✅ Erabili `required` derrigorrezko eremuetan.
+
+    ✅ Radio botoiek `name` berdina izan behar dute.
+
+    ✅ Erabili `fieldset` formulario luzeak antolatzeko.
+
+
 
 ## Esteka erabilgarriak
 

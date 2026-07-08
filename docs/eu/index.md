@@ -15,4 +15,4 @@ Hemen teoria, adibideak eta ariketak bilduko ditut, gaika antolatuta.
 - [CMS](07-cms/index.md)
 
 !!! note "Apunte hauek nola erabili"
-    Apuntea ahuek hizkuntazz bietan  topatuko dituzue. Hau aurkibide naguasia da, ala ere, orri bakoitzean aurkibide  zehatzago bat topatuko duzue eta ala ere, zeozer topatzen ez izatekotan, goiko partean bilatzailea duzue.
+    Apuntea hauek hizkuntza bietan  topatuko dituzue. Hau aurkibide nagusia da, ala ere, orri bakoitzean aurkibide  zehatzago bat topatuko duzue eta ala ere, zeozer topatzen ez izatekotan, goiko partean bilatzailea duzue.
