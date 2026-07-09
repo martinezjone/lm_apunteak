@@ -1,0 +1,3829 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak apunteak eta ariketak">
+      
+      
+      
+        <link rel="canonical" href="https://martinezjone.github.io/lm_apunteak/02-html/">
+      
+      
+        <link rel="prev" href="../01-introduccion/">
+      
+      
+        <link rel="next" href="../03-css/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../eu/02-html/" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>HTML - Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#004c95" data-md-color-accent="#e95f15">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#html" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" class="md-header__button md-logo" aria-label="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#004c95" data-md-color-accent="#e95f15"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#004c95" data-md-color-accent="#e95f15"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../eu/02-html/" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../01-introduccion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introducción
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HTML
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../03-css/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CSS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../04-xml/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  XML
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../05-xslt/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  XSLT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../06-javascript/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  JavaScript
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../07-cms/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CMS
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" class="md-nav__button md-logo" aria-label="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es HTML?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-basica-de-un-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura básica de un documento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadatos-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadatos (&lt;head&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#titulos-h1-h6-y-linea-horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Títulos (&lt;h1&gt;-&lt;h6&gt;) y línea horizontal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comentarios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato de texto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-basico-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato básico de texto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parrafos-y-saltos-de-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Párrafos y saltos de línea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estilo-con-el-atributo-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estilo con el atributo style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espacios-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espacios en blanco
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entidades-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entidades HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texto-preformateado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texto preformateado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlaces (&lt;a&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagenes-img" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imágenes (&lt;img&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiquetas-semanticas-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etiquetas semánticas (HTML5)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etiquetas semánticas (HTML5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-una-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de una página
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-de-cada-etiqueta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicación de cada etiqueta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicación de cada etiqueta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;header&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;nav&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;main&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;section&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#article" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;article&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aside" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;aside&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;footer&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etiquetas-para-organizar-el-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etiquetas para organizar el contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etiquetas para organizar el contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;div&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;span&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-complementario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido complementario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenido-incrustado-y-multimedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido incrustado y multimedia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenido incrustado y multimedia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contenidos-incrustados-genericos-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos incrustados genéricos (&lt;object&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio (&lt;audio&gt;)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio (&lt;audio&gt;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatos-de-audio-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatos de audio principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofrecer-varios-formatos-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ofrecer varios formatos de audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vídeo (&lt;video&gt;)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vídeo (&lt;video&gt;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatos-de-video-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatos de vídeo principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofrecer-varios-formatos-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ofrecer varios formatos de vídeo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos-mas-usados-de-las-etiquetas-audio-y-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos más usados de las etiquetas &lt;audio&gt; y &lt;video&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incrustar-videos-externos-iframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incrustar vídeos externos (&lt;iframe&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formularios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formularios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etiqueta-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etiqueta &lt;form&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etiqueta &lt;form&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atributos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;label&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id-y-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        id y name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campo-de-texto-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campo de texto (text)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Campo de texto (text)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atributos-mas-usados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos más usados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrasena-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contraseña (password)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email (email)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otros-tipos-de-input-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otros tipos de input útiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#botones-de-opcion-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botones de opción (radio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casillas-de-verificacion-checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casillas de verificación (checkbox)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-desplegable-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista desplegable (select)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lista desplegable (select)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atributos-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#area-de-texto-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Área de texto (textarea)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sugerencias-de-datos-datalist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sugerencias de datos (datalist)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agrupacion-de-controles-fieldset-y-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agrupación de controles (fieldset y legend)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validación HTML5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-y-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET y POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo-de-un-formulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo de un formulario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlaces útiles
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-xml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-xslt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XSLT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-cms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es HTML?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-basica-de-un-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura básica de un documento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadatos-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadatos (&lt;head&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#titulos-h1-h6-y-linea-horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Títulos (&lt;h1&gt;-&lt;h6&gt;) y línea horizontal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comentarios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato de texto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-basico-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formato básico de texto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parrafos-y-saltos-de-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Párrafos y saltos de línea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estilo-con-el-atributo-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estilo con el atributo style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espacios-en-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espacios en blanco
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entidades-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entidades HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texto-preformateado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texto preformateado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlaces (&lt;a&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagenes-img" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imágenes (&lt;img&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiquetas-semanticas-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etiquetas semánticas (HTML5)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etiquetas semánticas (HTML5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-una-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de una página
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-de-cada-etiqueta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicación de cada etiqueta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicación de cada etiqueta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;header&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;nav&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;main&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;section&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#article" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;article&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aside" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;aside&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;footer&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etiquetas-para-organizar-el-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etiquetas para organizar el contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etiquetas para organizar el contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;div&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;span&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-complementario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido complementario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenido-incrustado-y-multimedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido incrustado y multimedia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenido incrustado y multimedia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contenidos-incrustados-genericos-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos incrustados genéricos (&lt;object&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio (&lt;audio&gt;)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio (&lt;audio&gt;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatos-de-audio-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatos de audio principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofrecer-varios-formatos-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ofrecer varios formatos de audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vídeo (&lt;video&gt;)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vídeo (&lt;video&gt;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatos-de-video-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatos de vídeo principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofrecer-varios-formatos-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ofrecer varios formatos de vídeo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos-mas-usados-de-las-etiquetas-audio-y-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos más usados de las etiquetas &lt;audio&gt; y &lt;video&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incrustar-videos-externos-iframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incrustar vídeos externos (&lt;iframe&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formularios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formularios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etiqueta-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etiqueta &lt;form&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etiqueta &lt;form&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atributos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;label&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id-y-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        id y name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campo-de-texto-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campo de texto (text)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Campo de texto (text)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atributos-mas-usados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos más usados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrasena-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contraseña (password)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email (email)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otros-tipos-de-input-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otros tipos de input útiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#botones-de-opcion-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botones de opción (radio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casillas-de-verificacion-checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casillas de verificación (checkbox)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-desplegable-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista desplegable (select)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lista desplegable (select)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atributos-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atributos disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#area-de-texto-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Área de texto (textarea)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sugerencias-de-datos-datalist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sugerencias de datos (datalist)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agrupacion-de-controles-fieldset-y-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agrupación de controles (fieldset y legend)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Botones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validación HTML5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-y-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET y POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo-de-un-formulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo de un formulario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlaces útiles
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h1>
+<p>HTML5 es la revisión más reciente del estándar HTML e introduce nuevas
+etiquetas semánticas que dan estructura y significado al contenido de la
+página.</p>
+<h2 id="que-es-html">¿Qué es HTML?<a class="headerlink" href="#que-es-html" title="Permanent link">&para;</a></h2>
+<ol>
+<li>HTML significa <strong>HyperText Markup Language</strong> (lenguaje de marcado de
+   hipertexto).</li>
+<li>Es el <strong>lenguaje estándar para crear páginas web</strong>.</li>
+<li><strong>Define la estructura</strong> de una página web mediante "etiquetas".</li>
+<li>Las <strong>etiquetas HTML indican cómo deben mostrarse</strong> los elementos
+   (texto, imágenes, enlaces, etc.).</li>
+<li>No es un lenguaje de programación, sino un lenguaje de marcado.</li>
+<li>Funciona junto con <strong>CSS</strong> (para el diseño) y <strong>JavaScript</strong> (para la
+   interacción).</li>
+<li>Los archivos HTML tienen la extensión <strong>.html o .htm</strong>.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Editor</p>
+<p>Para escribir código, se recomienda usar <strong><a href="https://code.visualstudio.com/" rel="noopener" target="_blank">Visual Studio Code</a></strong>.</p>
+</div>
+<h2 id="estructura-basica-de-un-documento">Estructura básica de un documento<a class="headerlink" href="#estructura-basica-de-un-documento" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;eu&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Nire orria<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Kaixo mundua<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li>El <code>doctype</code> identifica el estándar HTML que se está utilizando.</li>
+<li>Las etiquetas <code>&lt;html&gt;</code>...<code>&lt;/html&gt;</code> engloban el documento completo.</li>
+<li><code>&lt;head&gt;</code> contiene los metadatos; <code>&lt;body&gt;</code> contiene el contenido visible.</li>
+<li><code>&lt;title&gt;</code> establece el título de la página (el que aparece en la
+  pestaña del navegador).</li>
+</ul>
+<p>Todos los elementos dentro de <code>&lt;head&gt;</code> son opcionales excepto <code>&lt;title&gt;</code>:
+ese es el único que debe estar presente obligatoriamente.</p>
+<h2 id="atributos">Atributos<a class="headerlink" href="#atributos" title="Permanent link">&para;</a></h2>
+<p>Modifican el comportamiento general de las etiquetas (color, alineación,
+estilos...). El atributo se compone del nombre, el signo <code>=</code> y el valor
+que toma, escrito entre comillas:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">elementu_izena</span> <span class="na">atributu1</span><span class="o">=</span><span class="s">&quot;balio1&quot;</span> <span class="na">atributu2</span><span class="o">=</span><span class="s">&quot;balio2&quot;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">elementu_izena</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 1</p>
+<p>Empezaremos a practicar, para ello haremos el primer ejercicio: <a href="https://docs.google.com/document/d/1bX3VveTiWPALXlwyk2_bzWR_Lmldd4CsQWVppNYj1LA/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 1</a></p>
+</div>
+<h2 id="metadatos-head">Metadatos (<code>&lt;head&gt;</code>)<a class="headerlink" href="#metadatos-head" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>&lt;meta charset="UTF-8"&gt;</code>: garantiza que los símbolos y acentos se
+  muestren correctamente.</li>
+<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>:
+  optimiza la vista en dispositivos móviles.</li>
+<li><code>&lt;meta name="description" content="..."&gt;</code>: descripción de la página
+  (la que utilizan los buscadores).</li>
+<li><code>&lt;style&gt;</code>: permite incrustar CSS directamente en el documento.</li>
+<li><code>&lt;link rel="icon" sizes="192x192" href="/bidea/ikonoa.png"&gt;</code>: añade un
+  favicon.</li>
+<li><code>&lt;base&gt;</code>: indica la <strong>dirección raíz</strong> del sitio web, lo que permite
+  que todas las direcciones relativas de los enlaces de la página
+  (<code>href</code>, <code>src</code>...) se resuelvan a partir de esa dirección raíz.</li>
+</ul>
+<p><strong>Control de rastreo de buscadores (<code>robots</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index, follow&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;noindex, follow&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index, nofollow&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>index, follow</code>: indexa la página y sigue sus enlaces.</li>
+<li><code>noindex, follow</code>: no la indexa, pero sí sigue sus enlaces.</li>
+<li><code>index, nofollow</code>: la indexa, pero deja de lado sus enlaces.</li>
+</ul>
+<p><strong>Ejemplo de un <code>&lt;head&gt;</code> completo:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Nire web orria<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.URL.com/&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Nire web orriari buruz hitz egingo dugu&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;HTML, CSS, JavaScript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Jone&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;URL&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="titulos-h1-h6-y-linea-horizontal">Títulos (<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>) y línea horizontal<a class="headerlink" href="#titulos-h1-h6-y-linea-horizontal" title="Permanent link">&para;</a></h2>
+<p>Los encabezados de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> ordenan los títulos estrictamente
+según su tamaño, del más grande al más pequeño. Son elementos de bloque.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Goiburua H1<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Goiburua H2<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Goiburua H3<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Goiburua H4<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Goiburua H5<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Goiburua H6<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>La etiqueta <code>&lt;hr&gt;</code> crea una línea horizontal para separar párrafos.
+Puede usarse junto con <code>&lt;hgroup&gt;</code> para agrupar títulos relacionados
+entre sí:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="p">&lt;</span><span class="nt">hgroup</span><span class="p">&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>TITULU NAGUSIA<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Bigarren titulua<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">&lt;/</span><span class="nt">hgroup</span><span class="p">&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hau lehen paragrafoa da.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="p">&lt;</span><span class="nt">hr</span><span class="p">/&gt;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hau bigarren paragrafoa da.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="comentarios">Comentarios<a class="headerlink" href="#comentarios" title="Permanent link">&para;</a></h2>
+<p>Sirve para insertar comentarios, en una línea o en varias, que el
+navegador no interpretará: se escriben como <code>&lt;!-- contenido --&gt;</code> y el
+navegador no los muestra. Sin embargo, al ver el código fuente, esos
+comentarios sí pueden verse.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cm">&lt;!--nireorrialdea.html--&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> ... <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="cm">&lt;!--Hemen hasten da dokumentuaren gorputza --&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span> ... <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="formato-de-texto">Formato de texto<a class="headerlink" href="#formato-de-texto" title="Permanent link">&para;</a></h2>
+<h2 id="formato-basico-de-texto">Formato básico de texto<a class="headerlink" href="#formato-basico-de-texto" title="Permanent link">&para;</a></h2>
+<p>En HTML5 se recomienda definir <strong>el aspecto mediante CSS</strong>. Aun así,
+existen algunas etiquetas que aportan un significado semántico:</p>
+<table>
+<thead>
+<tr>
+<th>Etiqueta</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;strong&gt;</code></td>
+<td>Texto de gran importancia (normalmente se muestra en negrita).</td>
+</tr>
+<tr>
+<td><code>&lt;em&gt;</code></td>
+<td>Énfasis o subrayado semántico (normalmente en cursiva).</td>
+</tr>
+<tr>
+<td><code>&lt;b&gt;</code></td>
+<td>Texto al que se quiere llamar la atención, sin significado especial.</td>
+</tr>
+<tr>
+<td><code>&lt;i&gt;</code></td>
+<td>Palabras extranjeras, términos técnicos u otro tipo de texto especial.</td>
+</tr>
+<tr>
+<td><code>&lt;u&gt;</code></td>
+<td>Texto subrayado (uso muy limitado).</td>
+</tr>
+<tr>
+<td><code>&lt;sup&gt;</code></td>
+<td>Superíndice.</td>
+</tr>
+<tr>
+<td><code>&lt;sub&gt;</code></td>
+<td>Subíndice.</td>
+</tr>
+<tr>
+<td><code>&lt;small&gt;</code></td>
+<td>Comentarios aparte; reduce el tamaño del texto (se suele usar para mostrar derechos de autor).</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>-- Ambos se verán en negrita en el navegador, pero no significan lo mismo.
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Kaixo<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Kaixo<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>-- Ambos se escribirán en negrita, pero el navegador distinguirá el segundo como texto de gran importancia
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>HTML debe expresar el <strong>significado</strong>; el <strong>aspecto</strong>, en cambio,
+debe definirlo CSS.</p>
+</div>
+<h2 id="parrafos-y-saltos-de-linea">Párrafos y saltos de línea<a class="headerlink" href="#parrafos-y-saltos-de-linea" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>&lt;p&gt;</code>: define un párrafo.</li>
+<li><code>&lt;br&gt;</code>: inserta un salto de línea dentro del párrafo.</li>
+</ul>
+<p>Usar:</p>
+<ul>
+<li><code>&lt;p&gt;</code> para separar ideas o temas distintos.</li>
+<li><code>&lt;br&gt;</code> en casos en los que haya que separar direcciones, poemas,
+  letras de canciones o líneas.</li>
+</ul>
+<p>No se recomienda usar <code>&lt;br&gt;</code> para separar párrafos.</p>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 2</p>
+<p>Para practicar todo lo anterior, crearemos este segundo ejercicio: <a href="https://docs.google.com/document/d/1uGno9mUAN5DKdeTdbDz3JHxJCzQ_hNfYbqgqv9hz5GA/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 2</a></p>
+</div>
+<p><strong>Abreviaturas, definiciones y citas:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;World Wide Web Consortium&quot;</span><span class="p">&gt;</span>W3C<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>&lt;dfn&gt;</code> indica una definición.</li>
+<li><code>&lt;blockquote&gt;</code> marca una cita larga (como bloque).</li>
+<li><code>&lt;cite&gt;</code> marca una cita breve.</li>
+</ul>
+<p><strong>Cambios de texto:</strong></p>
+<ul>
+<li><code>&lt;del&gt;</code> texto tachado (eliminado).</li>
+<li><code>&lt;ins&gt;</code> texto insertado (normalmente en cursiva).</li>
+<li><code>&lt;mark&gt;</code> resalta el texto.</li>
+<li><code>&lt;samp&gt;</code> salida de ejemplo de un programa.</li>
+<li><code>&lt;tt&gt;</code> estilo de máquina de escribir/monoespaciado.</li>
+<li><code>&lt;wbr&gt;</code> sugiere un punto en el que el texto puede romperse al hacer
+  <em>wrap</em>.</li>
+<li><code>&lt;output&gt;</code> muestra el resultado de un cálculo.</li>
+</ul>
+<h2 id="estilo-con-el-atributo-style">Estilo con el atributo <code>style</code><a class="headerlink" href="#estilo-con-el-atributo-style" title="Permanent link">&para;</a></h2>
+<p>El atributo <code>style</code> puede colocarse junto con cualquier etiqueta HTML
+para cambiar el aspecto del texto que le sigue. Hoy en día, sin embargo,
+se recomienda definir el estilo de una letra <strong>mediante CSS</strong>, no en la
+propia etiqueta.</p>
+<p>Propiedades más habituales utilizadas en el atributo de estilo:
+<code>background-color</code>, <code>color</code>, <code>font-family</code>, <code>font-size</code>, <code>text-align</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-align:center; color:red&quot;</span><span class="p">&gt;</span>kaixo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 3</p>
+<p>Tomaremos el ejercicio anterior y le daremos un poco de formato: <a href="https://docs.google.com/document/d/1-elSPF7C4rMSja-fL5CdYVIvKhH__P7gnhU4qNS9XNc/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 3</a></p>
+</div>
+<h2 id="espacios-en-blanco">Espacios en blanco<a class="headerlink" href="#espacios-en-blanco" title="Permanent link">&para;</a></h2>
+<p>Los navegadores pliegan en un único espacio en blanco los múltiples
+espacios en blanco y saltos de línea del código original. Para
+controlar el espacio:</p>
+<ul>
+<li><code>&amp;nbsp;</code> crea un espacio en blanco que no se puede romper (espacio
+  duro).</li>
+<li><code>&lt;br/&gt;</code> fuerza el salto de línea.</li>
+<li><code>&lt;p&gt;</code> separa párrafos lógicos.</li>
+</ul>
+<h2 id="entidades-html">Entidades HTML<a class="headerlink" href="#entidades-html" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entidad</th>
+<th>Resultado</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;lt;</code></td>
+<td>&lt;</td>
+<td>menor que</td>
+</tr>
+<tr>
+<td><code>&amp;gt;</code></td>
+<td>&gt;</td>
+<td>mayor que</td>
+</tr>
+<tr>
+<td><code>&amp;amp;</code></td>
+<td>&amp;</td>
+<td>ampersand</td>
+</tr>
+<tr>
+<td><code>&amp;copy;</code></td>
+<td>©</td>
+<td>copyright</td>
+</tr>
+<tr>
+<td><code>&amp;trade;</code></td>
+<td>™</td>
+<td>marca comercial</td>
+</tr>
+<tr>
+<td><code>&amp;reg;</code></td>
+<td>®</td>
+<td>marca registrada</td>
+</tr>
+<tr>
+<td><code>&amp;euro;</code></td>
+<td>€</td>
+<td>euro</td>
+</tr>
+<tr>
+<td><code>&amp;yen;</code></td>
+<td>¥</td>
+<td>yen</td>
+</tr>
+<tr>
+<td><code>&amp;quot;</code></td>
+<td>"</td>
+<td>comillas</td>
+</tr>
+<tr>
+<td><code>&amp;aacute;</code> / <code>&amp;Aacute;</code></td>
+<td>á / Á</td>
+<td>a con acento</td>
+</tr>
+<tr>
+<td><code>&amp;eacute;</code> / <code>&amp;Eacute;</code></td>
+<td>é / É</td>
+<td>e con acento</td>
+</tr>
+<tr>
+<td><code>&amp;iacute;</code> / <code>&amp;Iacute;</code></td>
+<td>í / Í</td>
+<td>i con acento</td>
+</tr>
+<tr>
+<td><code>&amp;oacute;</code> / <code>&amp;Oacute;</code></td>
+<td>ó / Ó</td>
+<td>o con acento</td>
+</tr>
+<tr>
+<td><code>&amp;uacute;</code> / <code>&amp;Uacute;</code></td>
+<td>ú / Ú</td>
+<td>u con acento</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dado que las etiquetas se definen con los símbolos <code>&lt;</code> y <code>&gt;</code>, puede
+generarse ambigüedad cuando esos símbolos deben escribirse en el
+propio texto; por eso hay que usar códigos como <code>&amp;lt;</code> y <code>&amp;gt;</code> en
+lugar de escribir directamente <code>&lt;</code>/<code>&gt;</code>.</p>
+</div>
+<h2 id="texto-preformateado">Texto preformateado<a class="headerlink" href="#texto-preformateado" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>&lt;pre&gt;</code> obliga al navegador a respetar los espacios en blanco y los
+  saltos de línea del código original.</li>
+<li><code>&lt;kbd&gt;</code> indica el texto introducido por el usuario mediante el
+  teclado.</li>
+<li><code>&lt;var&gt;</code> indica una variable.</li>
+<li><code>&lt;code&gt;</code> marca código de programación.</li>
+</ul>
+<h2 id="listas">Listas<a class="headerlink" href="#listas" title="Permanent link">&para;</a></h2>
+<p><strong>Listas ordenadas y desordenadas:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Lehen elementua<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Bigarren elementua<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Ordenik gabeko elementua<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Beste elementu bat<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Las listas pueden anidarse dentro de otras listas; se pueden combinar
+todo tipo de listas (ordenadas, desordenadas y de definición).</p>
+<p><strong>Aspecto de las listas desordenadas (<code>list-style-type</code>):</strong></p>
+<p>La propiedad <code>list-style-type</code> de CSS cambia el aspecto de las viñetas
+de las listas desordenadas:</p>
+<ul>
+<li><code>disc</code>: por defecto, círculo negro relleno.</li>
+<li><code>circle</code>: círculo (hueco).</li>
+<li><code>square</code>: cuadrado.</li>
+<li><code>none</code>: sin viñeta.</li>
+</ul>
+<p><strong>Atributos de las listas ordenadas:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reversed</code></td>
+<td><code>reversed</code></td>
+<td>Ordena la lista en orden descendente (9, 8, 7...).</td>
+</tr>
+<tr>
+<td><code>start</code></td>
+<td>número</td>
+<td>Indica en qué número empieza.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>1 \| A \| a \| I \| i</code></td>
+<td>Para poner el tipo de viñeta: <code>1</code> números normales, <code>A</code> letras mayúsculas, <code>a</code> letras minúsculas, <code>I</code> números romanos mayúsculos, <code>i</code> números romanos minúsculos.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Listas de definición:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Terminoa<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Terminoa deskribatzen duen definizioa<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 4</p>
+<p>Practicaremos todas las listas vistas, para ello haremos el
+siguiente ejercicio: <a href="https://docs.google.com/document/d/1pveaqygPBLPr78U9XzY_ine5uHqWn9uhMmzeColxKY8/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 4</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 5 (Errepasoa)</p>
+<p>Haremos este ejercicio de repaso antes de empezar con las tablas: <a href="https://docs.google.com/document/d/1yNLnRmuh3gRfOAYjq5qQ2CAdDA78987bK7IwfbBcPkw/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 5</a></p>
+<p>Para hacer el ejercicio de repaso, necesitaremos este texto: <a href="https://drive.google.com/file/d/1BURGxTBSFa6vFExP35HiloBQfq5gmY2Y/view?usp=sharing" rel="noopener" target="_blank">Ariketa5_Testua.txt</a></p>
+</div>
+<h2 id="enlaces-a">Enlaces (<code>&lt;a&gt;</code>)<a class="headerlink" href="#enlaces-a" title="Permanent link">&para;</a></h2>
+<p>La fuerza de la WWW reside en la capacidad de saltar de una página a
+otra: se puede navegar fácilmente de una página a otra y acceder de
+inmediato a la información, mediante enlaces. Los enlaces se hacen con
+el elemento <code>&lt;a&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;estekaren helbidea&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Estekaren testua<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Direcciones relativas:</strong> supongamos que el proyecto está organizado
+así:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>01_PROIEKTUA/
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>├── hasiera.html
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>├── nire_orria1.html
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>├── nire_orria2.html
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>├── nire_orria3.html
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>└── 01_ARGAZKIAK/
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    ├── argazkien_orria.html
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    └── ikonoa
+</code></pre></div>
+<p>Para enlazar el resto de páginas desde <code>hasiera.html</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;nire_orria1.html&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_self&quot;</span><span class="p">&gt;</span>Lehenengo orria<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;nire_orria2.html&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Bigarren orria<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;nire_orria3.html&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_self&quot;</span><span class="p">&gt;</span>Hirugarren orria<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Como la página de fotos está en la subcarpeta <code>01_ARGAZKIAK</code>, para ir
+hasta allí el enlace debe escribirse así:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;01_ARGAZKIAK/argazkien_orria.html&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Argazkien orria<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>El navegador siempre mantiene la dirección de la página en la que
+estamos trabajando. Por tanto, para volver desde
+<code>argazkien_orria.html</code> a <code>hasiera.html</code>, hay que subir una carpeta
+usando <code>../</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../hasiera.html&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_self&quot;</span><span class="p">&gt;</span>Hasiera orria<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Atributo <code>target</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_blank</code></td>
+<td>Lo abre en una ventana o pestaña nueva.</td>
+</tr>
+<tr>
+<td><code>_self</code></td>
+<td>Lo abre en la misma pestaña en la que se hizo clic (por defecto).</td>
+</tr>
+<tr>
+<td><code>_parent</code></td>
+<td>Lo abre en la pestaña de origen.</td>
+</tr>
+<tr>
+<td><code>_top</code></td>
+<td>Lo abre en todo el cuerpo de la página.</td>
+</tr>
+<tr>
+<td><code>frame-izena</code></td>
+<td>Lo abre en el <em>frame</em> especificado.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Atributo <code>rel</code>:</strong> indica la relación entre el enlace y el documento.</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alternate</code></td>
+<td>Versión que se encuentra en otro soporte (página para imprimir, traducida...).</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>Enlace al autor del documento.</td>
+</tr>
+<tr>
+<td><code>bookmark</code></td>
+<td>URL utilizada en el apartado de "Favoritos".</td>
+</tr>
+<tr>
+<td><code>external</code></td>
+<td>Enlace externo.</td>
+</tr>
+<tr>
+<td><code>help</code></td>
+<td>Enlace al documento de ayuda.</td>
+</tr>
+<tr>
+<td><code>license</code></td>
+<td>Enlace al documento de licencia.</td>
+</tr>
+<tr>
+<td><code>next</code></td>
+<td>Enlace para ir al siguiente documento.</td>
+</tr>
+<tr>
+<td><code>nofollow</code></td>
+<td>Enlace que no se seguirá.</td>
+</tr>
+<tr>
+<td><code>noreferrer</code></td>
+<td>Que el navegador envíe la cabecera sin referencia HTTP.</td>
+</tr>
+<tr>
+<td><code>prev</code></td>
+<td>Enlace para ir al documento anterior.</td>
+</tr>
+<tr>
+<td><code>search</code></td>
+<td>Enlace para presentar una herramienta de búsqueda.</td>
+</tr>
+<tr>
+<td><code>tag</code></td>
+<td>Enlace a una etiqueta del documento de trabajo.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;nofollow&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.funcexample.com/&quot;</span><span class="p">&gt;</span>Hegaldi merkeak<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 6</p>
+<p>Haremos este ejercicio para trabajar los enlaces: <a href="https://docs.google.com/document/d/1yNLnRmuh3gRfOAYjq5qQ2CAdDA78987bK7IwfbBcPkw/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 6</a></p>
+</div>
+<p><strong>Salto a un apartado dentro de la misma página:</strong> primero hay que
+nombrar el apartado al que vamos a saltar; después, crear el enlace que
+nos lleve a ese apartado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="cm">&lt;!-- Se marca el apartado del documento --&gt;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;aurkezpena&quot;</span><span class="p">&gt;</span>AURKEZPENA<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="cm">&lt;!-- Llamada desde otro apartado al apartado de presentación --&gt;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#aurkezpena&quot;</span><span class="p">&gt;</span>Joan AURKEZPEN atalera<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="imagenes-img">Imágenes (<code>&lt;img&gt;</code>)<a class="headerlink" href="#imagenes-img" title="Permanent link">&para;</a></h2>
+<p>En un sitio web, las imágenes son elementos imprescindibles para captar
+la atención del usuario y despertar las ganas de usarlo, pero no pueden
+utilizarse sin permiso de licencia. Existen varios formatos de imagen:</p>
+<ul>
+<li><strong>GIF</strong>: tiene una compresión sin calidad. Solo admite 256 colores. Es
+  adecuado para gráficos, dibujos o iconos (<code>*.gif</code>).</li>
+<li><strong>JPG / JPEG</strong>: con la compresión se pierde calidad. Admite 16,7
+  millones de colores. Es adecuado para gestionar fotografías (<code>*.jpg</code> /
+  <code>*.jpeg</code>).</li>
+<li><strong>PNG</strong>: imagen sin compresión. Admite entre 16,7 millones de colores
+  y transparencias (<code>*.png</code>).</li>
+</ul>
+<p>Para insertar imágenes se usa la etiqueta <code>&lt;img&gt;</code>, y no tiene etiqueta de
+cierre:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/pacman.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Pacman jokoa&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Es mejor meter todas las imágenes en una carpeta, para mantener el
+proyecto ordenado; hay que tener cuidado con la ruta que se introduce en
+el atributo <code>src</code>.</p>
+<p><strong>Atributos de la etiqueta <code>&lt;img&gt;</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src</code></td>
+<td>URL</td>
+<td>URL de la imagen.</td>
+</tr>
+<tr>
+<td><code>alt</code></td>
+<td>texto</td>
+<td>Indica qué texto aparecerá si la imagen no aparece.</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>píxeles</td>
+<td>Indica la anchura de la imagen.</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>píxeles</td>
+<td>Indica la altura de la imagen.</td>
+</tr>
+<tr>
+<td><code>longdesc</code></td>
+<td>URL</td>
+<td>Da a conocer la URL de la descripción detallada de la imagen.</td>
+</tr>
+<tr>
+<td><code>usemap</code></td>
+<td><code>#mapa_izena</code></td>
+<td>Para especificar el mapa de la imagen.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Imágenes con enlaces:</strong> en las páginas web se usa mucho combinar
+imágenes con enlaces (por ejemplo, la imagen de un anuncio). Hay que
+juntar las etiquetas de la imagen y del enlace:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;estekaren helbidea&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;irudiaren helbidea&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;testu deskribatzailea&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Imagen como "icono" (favicon):</strong> una página web suele llevar un
+pequeño icono. Debe insertarse en el apartado <code>&lt;head&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/png&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;images/ikonoa.ico&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Mapa de imagen (<code>usemap</code>):</strong> se usa para vincular distintos enlaces a
+distintas regiones sobre una misma imagen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;planetak.gif&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;145&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;126&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Planetak&quot;</span> <span class="na">usemap</span><span class="o">=</span><span class="s">&quot;#planetamap&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="p">&lt;</span><span class="nt">map</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;planetamap&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    <span class="p">&lt;</span><span class="nt">area</span> <span class="na">shape</span><span class="o">=</span><span class="s">&quot;rect&quot;</span> <span class="na">coords</span><span class="o">=</span><span class="s">&quot;0,0,82,126&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Eguzkia&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;eguzkia.htm&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    <span class="p">&lt;</span><span class="nt">area</span> <span class="na">shape</span><span class="o">=</span><span class="s">&quot;circle&quot;</span> <span class="na">coords</span><span class="o">=</span><span class="s">&quot;90,58,3&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Merkurio&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;merkurio.htm&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    <span class="p">&lt;</span><span class="nt">area</span> <span class="na">shape</span><span class="o">=</span><span class="s">&quot;circle&quot;</span> <span class="na">coords</span><span class="o">=</span><span class="s">&quot;124,58,8&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Artizarra&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;artizarra.htm&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="p">&lt;/</span><span class="nt">map</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 7</p>
+<p>Tomando el ejercicio anterior, le añadiremos algunas imágenes: <a href="https://docs.google.com/document/d/1_CJtRfB0itwi-28CKiPz1CjdhrMXO0GOdG8Josb7oWc/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 7</a></p>
+</div>
+<h2 id="tablas">Tablas<a class="headerlink" href="#tablas" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>Taularen titulua<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Izena<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Adina<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Ana<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>25<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    <span class="p">&lt;</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>Guztira: 1 errenkada<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>    <span class="p">&lt;/</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>&lt;table&gt;</code> engloba la tabla completa.</li>
+<li><code>&lt;thead&gt;</code> contiene las filas de cabecera, con celdas <code>&lt;th&gt;</code>.</li>
+<li><code>&lt;tbody&gt;</code> contiene las filas de datos, con celdas <code>&lt;td&gt;</code>.</li>
+<li><code>&lt;tfoot&gt;</code> agrupa las filas de pie (totales, resúmenes...).</li>
+<li><code>&lt;caption&gt;</code> da un título a la tabla.</li>
+<li><code>&lt;colgroup&gt;</code> y <code>&lt;col&gt;</code> asocian información a columnas concretas.</li>
+<li><code>&lt;tr&gt;</code> define una fila.</li>
+</ul>
+<p><strong>Atributos para combinar celdas:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>colspan</code></td>
+<td>número</td>
+<td>Para combinar columnas en una sola celda.</td>
+</tr>
+<tr>
+<td><code>rowspan</code></td>
+<td>número</td>
+<td>Para combinar filas en una sola celda.</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo, si se pone <code>&lt;td colspan="3"&gt;</code>, se combinarán tres columnas
+en esa celda; si se pone <code>&lt;td rowspan="2"&gt;</code>, en cambio, se combinarán
+esa fila y la siguiente en una sola celda.</p>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 8</p>
+<p>En este ejercicio usaremos todos los elementos vistos hasta ahora: <a href="https://docs.google.com/document/d/10OdWh8rRAqE4MvS2_rgTyeBhYnarij9VyPsRNPoP5fc/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 8</a> </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Regla importante</p>
+<p>Todo dato, o incluso una subtabla entera, siempre debe estar dentro
+de una celda <code>&lt;td&gt;</code>. Es obligatorio: las tablas pueden anidarse
+dentro de otras celdas para construir maquetaciones complejas.</p>
+</div>
+<h2 id="etiquetas-semanticas-html5">Etiquetas semánticas (HTML5)<a class="headerlink" href="#etiquetas-semanticas-html5" title="Permanent link">&para;</a></h2>
+<p>HTML5 añadió <strong>nuevas etiquetas semánticas</strong> para organizar las páginas web de forma más clara y comprensible. Gracias a ello, tanto los navegadores como los buscadores, e incluso los propios desarrolladores, entienden mejor la estructura de la página.</p>
+<blockquote>
+<p><strong>Importante:</strong> las etiquetas semánticas no cambian el aspecto por sí mismas; dan <strong>significado</strong> al contenido.</p>
+</blockquote>
+<hr />
+<h3 id="estructura-de-una-pagina">Estructura de una página<a class="headerlink" href="#estructura-de-una-pagina" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;header&gt;</code>: <strong>cabecera</strong> de una página o de una sección. En ella se suele colocar el logo, el nombre del sitio web o el título principal.</li>
+<li><code>&lt;nav&gt;</code>: <strong>menú de navegación</strong>. Agrupa los enlaces que llevan a otras páginas o apartados.</li>
+<li><code>&lt;main&gt;</code>: <strong>contenido principal</strong> de la página.</li>
+<li><code>&lt;section&gt;</code>: agrupa contenido relacionado con un tema o apartado concreto.</li>
+<li><code>&lt;article&gt;</code>: representa un <strong>contenido independiente</strong> (una entrada de blog, una noticia, la ficha de un producto...).</li>
+<li><code>&lt;aside&gt;</code>: <strong>contenido complementario</strong> o barra lateral. Suelen colocarse enlaces de interés, anuncios o información adicional.</li>
+<li><code>&lt;footer&gt;</code>: <strong>pie</strong> de una página o de una sección. Suele contener información del autor, el copyright o el contacto.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Nire webgunea<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Nire webgunea<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>        <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Hasiera<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Produktuak<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Kontaktua<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>        <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>
+<a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a>    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a>
+<a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a>        <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a>
+<a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a>            <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Lehen artikulua<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a>                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Artikuluaren edukia...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a>            <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-24-29" name="__codelineno-24-29" href="#__codelineno-24-29"></a>
+<a id="__codelineno-24-30" name="__codelineno-24-30" href="#__codelineno-24-30"></a>            <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a>                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Bigarren artikulua<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-24-32" name="__codelineno-24-32" href="#__codelineno-24-32"></a>                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Artikuluaren edukia...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33" href="#__codelineno-24-33"></a>            <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-24-34" name="__codelineno-24-34" href="#__codelineno-24-34"></a>
+<a id="__codelineno-24-35" name="__codelineno-24-35" href="#__codelineno-24-35"></a>        <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-24-36" name="__codelineno-24-36" href="#__codelineno-24-36"></a>
+<a id="__codelineno-24-37" name="__codelineno-24-37" href="#__codelineno-24-37"></a>        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+<a id="__codelineno-24-38" name="__codelineno-24-38" href="#__codelineno-24-38"></a>            Informazio osagarria
+<a id="__codelineno-24-39" name="__codelineno-24-39" href="#__codelineno-24-39"></a>        <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<a id="__codelineno-24-40" name="__codelineno-24-40" href="#__codelineno-24-40"></a>
+<a id="__codelineno-24-41" name="__codelineno-24-41" href="#__codelineno-24-41"></a>    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<a id="__codelineno-24-42" name="__codelineno-24-42" href="#__codelineno-24-42"></a>
+<a id="__codelineno-24-43" name="__codelineno-24-43" href="#__codelineno-24-43"></a>    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+<a id="__codelineno-24-44" name="__codelineno-24-44" href="#__codelineno-24-44"></a>        <span class="ni">&amp;copy;</span> 2026 - Nire webgunea
+<a id="__codelineno-24-45" name="__codelineno-24-45" href="#__codelineno-24-45"></a>    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<a id="__codelineno-24-46" name="__codelineno-24-46" href="#__codelineno-24-46"></a>
+<a id="__codelineno-24-47" name="__codelineno-24-47" href="#__codelineno-24-47"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-24-48" name="__codelineno-24-48" href="#__codelineno-24-48"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="explicacion-de-cada-etiqueta">Explicación de cada etiqueta<a class="headerlink" href="#explicacion-de-cada-etiqueta" title="Permanent link">&para;</a></h3>
+<h4 id="header"><code>&lt;header&gt;</code><a class="headerlink" href="#header" title="Permanent link">&para;</a></h4>
+<p>Indica la cabecera de una página o sección. Normalmente contiene:</p>
+<ul>
+<li>El nombre del sitio web</li>
+<li>El logo</li>
+<li>El título principal</li>
+<li>El menú de navegación (a menudo dentro de <code>&lt;nav&gt;</code>)</li>
+</ul>
+<hr />
+<h4 id="nav"><code>&lt;nav&gt;</code><a class="headerlink" href="#nav" title="Permanent link">&para;</a></h4>
+<p>Agrupa los elementos de navegación.</p>
+<p>Normalmente contiene dentro una lista de enlaces (<code>&lt;ul&gt;</code> y <code>&lt;li&gt;</code>), pero también pueden usarse imágenes o botones.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Hasiera</li>
+<li>Guri buruz</li>
+<li>Produktuak</li>
+<li>Kontaktua</li>
+</ul>
+<hr />
+<h4 id="main"><code>&lt;main&gt;</code><a class="headerlink" href="#main" title="Permanent link">&para;</a></h4>
+<p>Agrupa el <strong>contenido principal</strong> de la página web.</p>
+<p>En cada página debe haber <strong>un único <code>&lt;main&gt;</code></strong>.</p>
+<hr />
+<h4 id="section"><code>&lt;section&gt;</code><a class="headerlink" href="#section" title="Permanent link">&para;</a></h4>
+<p>Agrupa contenido del mismo tema.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Albisteak</li>
+<li>Zerbitzuak</li>
+<li>Produktuak</li>
+<li>Harremanetarako atala</li>
+</ul>
+<p>Normalmente contiene varios <code>&lt;article&gt;</code> dentro.</p>
+<hr />
+<h4 id="article"><code>&lt;article&gt;</code><a class="headerlink" href="#article" title="Permanent link">&para;</a></h4>
+<p>Indica un contenido que tiene sentido por sí mismo.</p>
+<p>Algunos ejemplos:</p>
+<ul>
+<li>Una entrada de un blog</li>
+<li>Una noticia</li>
+<li>Un mensaje de un foro</li>
+<li>La descripción de un producto</li>
+</ul>
+<p>Dentro suele haber un título (<code>&lt;h2&gt;</code> o <code>&lt;h3&gt;</code>), texto, imágenes o vídeos.</p>
+<hr />
+<h4 id="aside"><code>&lt;aside&gt;</code><a class="headerlink" href="#aside" title="Permanent link">&para;</a></h4>
+<p>Muestra información que complementa el contenido principal.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Enlaces de interés</li>
+<li>Anuncios</li>
+<li>Encuestas</li>
+<li>Últimas noticias</li>
+</ul>
+<p>Normalmente se coloca a un lado.</p>
+<hr />
+<h4 id="footer"><code>&lt;footer&gt;</code><a class="headerlink" href="#footer" title="Permanent link">&para;</a></h4>
+<p>Indica el final de la página o de una sección.</p>
+<p>En él suele aparecer:</p>
+<ul>
+<li>El copyright</li>
+<li>El contacto</li>
+<li>Enlaces a redes sociales</li>
+<li>Avisos legales</li>
+</ul>
+<hr />
+<h3 id="etiquetas-para-organizar-el-contenido">Etiquetas para organizar el contenido<a class="headerlink" href="#etiquetas-para-organizar-el-contenido" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;hgroup&gt;</code>: agrupa varios títulos relacionados entre sí.</li>
+<li><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>: establecen la jerarquía de los títulos.</li>
+<li><code>&lt;div&gt;</code>: etiqueta genérica para agrupar contenido de bloque.</li>
+<li><code>&lt;span&gt;</code>: etiqueta genérica para agrupar contenido en línea.</li>
+</ul>
+<h4 id="div"><code>&lt;div&gt;</code><a class="headerlink" href="#div" title="Permanent link">&para;</a></h4>
+<p>Se usa para agrupar bloques de contenido.</p>
+<p>No tiene significado semántico; se usa sobre todo para organización y para aplicar estilos.</p>
+<h4 id="span"><code>&lt;span&gt;</code><a class="headerlink" href="#span" title="Permanent link">&para;</a></h4>
+<p>Se usa para dar un estilo o comportamiento especial a un pequeño fragmento de texto.</p>
+<p>No genera salto de línea.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    Hau testu normala da eta
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gorria&quot;</span><span class="p">&gt;</span>hau gorriz agertuko da<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>.
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="contenido-complementario">Contenido complementario<a class="headerlink" href="#contenido-complementario" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;address&gt;</code>: indica información de contacto.</li>
+<li><code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code>: crean información desplegable.</li>
+<li><code>&lt;hr&gt;</code>: indica una separación temática entre contenidos.</li>
+</ul>
+<p><img alt="HTML5 etiketa semantikoen egitura" src="../images/html_semantic_elements.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Recomendaciones</p>
+<p>✅ Usa siempre la etiqueta semántica adecuada.</p>
+<p>❌ No hagas toda la web mediante etiquetas <code>&lt;div&gt;</code>.</p>
+<p>Usar etiquetas semánticas tiene las siguientes ventajas:</p>
+<ul>
+<li>Código más limpio y comprensible.</li>
+<li>Mejor accesibilidad.</li>
+<li>Mejor SEO.</li>
+<li>Mantenimiento más sencillo.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Idea principal</p>
+<p>Las etiquetas semánticas de HTML5 dan <strong>significado</strong> al contenido, no solo estructura.</p>
+</div>
+<h2 id="contenido-incrustado-y-multimedia">Contenido incrustado y multimedia<a class="headerlink" href="#contenido-incrustado-y-multimedia" title="Permanent link">&para;</a></h2>
+<p>HTML5 permite incrustar directamente en la página web <strong>audio, vídeo y otros contenidos multimedia</strong>, sin usar plugins.</p>
+<p>Además, estas etiquetas usan el <strong>reproductor nativo</strong> del navegador, y ofrecen controles sin necesidad de JavaScript adicional (reproducir, pausar, volumen, barra de tiempo...).</p>
+<hr />
+<h3 id="contenidos-incrustados-genericos-object">Contenidos incrustados genéricos (<code>&lt;object&gt;</code>)<a class="headerlink" href="#contenidos-incrustados-genericos-object" title="Permanent link">&para;</a></h3>
+<p>La etiqueta <code>&lt;object&gt;</code> se usa para incrustar distintos tipos de recursos externos (imágenes, PDF, documentos...).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">&lt;</span><span class="nt">object</span> <span class="na">data</span><span class="o">=</span><span class="s">&quot;irudia.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;550&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;150&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    Irudia ezin izan da kargatu.
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">&lt;/</span><span class="nt">object</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="audio-audio">Audio (<code>&lt;audio&gt;</code>)<a class="headerlink" href="#audio-audio" title="Permanent link">&para;</a></h3>
+<p>La etiqueta <code>&lt;audio&gt;</code> se usa para incrustar archivos de audio en la página web.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;media/abestia.mp3&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    Zure nabigatzaileak ez du audio txertatua onartzen.
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="formatos-de-audio-principales">Formatos de audio principales<a class="headerlink" href="#formatos-de-audio-principales" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MP3</strong></td>
+<td>El formato más utilizado. Lo admiten todos los navegadores.</td>
+</tr>
+<tr>
+<td><strong>WAV</strong></td>
+<td>De alta calidad, pero los archivos son muy pesados. Se usa para audios cortos.</td>
+</tr>
+<tr>
+<td><strong>OGG</strong></td>
+<td>Formato libre. Ofrece buena calidad y una compresión alta.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ofrecer-varios-formatos-de-audio">Ofrecer varios formatos de audio<a class="headerlink" href="#ofrecer-varios-formatos-de-audio" title="Permanent link">&para;</a></h3>
+<p>No todos los navegadores admiten los mismos formatos. Por eso, es recomendable usar la etiqueta <code>&lt;source&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;media/abestia.mp3&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/mpeg&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;media/abestia.ogg&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/ogg&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    Zure nabigatzaileak ez du audioa onartzen.
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>El navegador usará el <strong>primer formato que admita</strong>.</p>
+<hr />
+<h3 id="video-video">Vídeo (<code>&lt;video&gt;</code>)<a class="headerlink" href="#video-video" title="Permanent link">&para;</a></h3>
+<p>La etiqueta <code>&lt;video&gt;</code> se usa para incrustar vídeos directamente en la página web.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;videos/filma.mp4&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    Zure nabigatzaileak ez du bideo txertatua onartzen.
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="formatos-de-video-principales">Formatos de vídeo principales<a class="headerlink" href="#formatos-de-video-principales" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MP4</strong></td>
+<td>El formato más utilizado. También lo recomienda YouTube.</td>
+</tr>
+<tr>
+<td><strong>WebM</strong></td>
+<td>Formato libre optimizado para la web.</td>
+</tr>
+<tr>
+<td><strong>OGG / OGV</strong></td>
+<td>Formato libre, usado en algunos navegadores.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ofrecer-varios-formatos-de-video">Ofrecer varios formatos de vídeo<a class="headerlink" href="#ofrecer-varios-formatos-de-video" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;videos/filma.mp4&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/mp4&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;videos/filma.webm&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/webm&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    Zure nabigatzaileak ez du bideoa onartzen.
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>El navegador elegirá automáticamente el más compatible.</p>
+<hr />
+<h3 id="atributos-mas-usados-de-las-etiquetas-audio-y-video">Atributos más usados de las etiquetas <code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code><a class="headerlink" href="#atributos-mas-usados-de-las-etiquetas-audio-y-video" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>controls</code></td>
+<td>Muestra los controles del reproductor.</td>
+</tr>
+<tr>
+<td><code>autoplay</code></td>
+<td>Empieza automáticamente al abrir la página.</td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>Vuelve a empezar al terminar.</td>
+</tr>
+<tr>
+<td><code>muted</code></td>
+<td>Se carga silenciado al principio.</td>
+</tr>
+<tr>
+<td><code>preload</code></td>
+<td>Indica cuándo debe cargarse el contenido multimedia.</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>Establece la anchura del vídeo. (solo <code>&lt;video&gt;</code>)</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Establece la altura del vídeo. (solo <code>&lt;video&gt;</code>)</td>
+</tr>
+<tr>
+<td><code>poster</code></td>
+<td>Imagen que se muestra antes de que empiece el vídeo. (solo <code>&lt;video&gt;</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="incrustar-videos-externos-iframe">Incrustar vídeos externos (<code>&lt;iframe&gt;</code>)<a class="headerlink" href="#incrustar-videos-externos-iframe" title="Permanent link">&para;</a></h3>
+<p>Los vídeos de YouTube, Vimeo o plataformas similares <strong>no se incrustan usando la etiqueta <code>&lt;video&gt;</code></strong>.</p>
+<p>En estos casos se usa <code>&lt;iframe&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">&lt;</span><span class="nt">iframe</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/XXXXXXXX&quot;</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>    <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>    <span class="na">allowfullscreen</span><span class="p">&gt;</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Este código se obtiene en YouTube haciendo clic en <strong>Compartir → Insertar (Embed)</strong>.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Recomendaciones</p>
+<p>✅ Usa siempre <strong>MP3</strong> para los audios y <strong>MP4</strong> para los vídeos, porque ofrecen la mayor compatibilidad.</p>
+<p>✅ Usa la etiqueta <code>&lt;source&gt;</code> si quieres ofrecer más de un formato.</p>
+<p>✅ Añade siempre un texto alternativo (<code>Zure nabigatzaileak...</code>) para los navegadores que no admitan multimedia.</p>
+<p>✅ Respeta los <strong>derechos de autor</strong> de los archivos multimedia. No todo lo que se encuentra en Internet <strong>se puede usar libremente</strong>; comprueba siempre la licencia (por ejemplo, Creative Commons).</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 9</p>
+<p>Este ejercicio nos servirá para repasar todo lo anterior: <a href="https://docs.google.com/document/d/11uI0NrI0OdJXkDNqBq0T9JxlLd77c4mzLti7Q4yVel4/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 9</a> </p>
+</div>
+<h2 id="formularios">Formularios<a class="headerlink" href="#formularios" title="Permanent link">&para;</a></h2>
+<p>Los formularios se usan para recoger información del usuario (registros, inicios de sesión, formularios de contacto, encuestas...).</p>
+<p>Dentro de un formulario puede haber varios controles: cajas de texto, contraseñas, opciones, botones, listas...</p>
+<hr />
+<h3 id="etiqueta-form">Etiqueta <code>&lt;form&gt;</code><a class="headerlink" href="#etiqueta-form" title="Permanent link">&para;</a></h3>
+<p>Todos los formularios se definen dentro de la etiqueta <code>&lt;form&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/bidali&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>    <span class="cm">&lt;!-- formularioaren kontrolak --&gt;</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="atributos-principales">Atributos principales<a class="headerlink" href="#atributos-principales" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>action</code></td>
+<td>Dirección a la que se enviarán los datos.</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td>Método para enviar los datos (<code>get</code> o <code>post</code>).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Por ahora no usaremos ningún servidor; por tanto, el atributo <code>action</code> no tendrá una función real.
+Pero en este atributo indicaremos cuál será el archivo que recibirá los elementos del formulario</p>
+</div>
+<hr />
+<h3 id="label"><code>&lt;label&gt;</code><a class="headerlink" href="#label" title="Permanent link">&para;</a></h3>
+<p>Se usa para dar nombre a un control de un formulario.</p>
+<p>El atributo <code>for</code> debe coincidir con el atributo <code>id</code> del control.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;izena&quot;</span><span class="p">&gt;</span>Izena:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;izena&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;izena&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="id-y-name"><code>id</code> y <code>name</code><a class="headerlink" href="#id-y-name" title="Permanent link">&para;</a></h3>
+<p>Ambos atributos son muy importantes, pero <strong>no hacen lo mismo</strong>. Hay que tener claro cuál es la diferencia entre ellos.</p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>¿Para qué se usa?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Para identificar el elemento de forma única. Se vincula con la etiqueta <code>&lt;label&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Será el nombre del dato al enviar el formulario.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;izena&quot;</span><span class="p">&gt;</span>Izena<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>    <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>    <span class="na">id</span><span class="o">=</span><span class="s">&quot;izena&quot;</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>    <span class="na">name</span><span class="o">=</span><span class="s">&quot;izena&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso:</p>
+<ul>
+<li><code>for="izena"</code> → se vincula con el atributo <code>id="izena"</code>.</li>
+<li><code>name="izena"</code> → será el nombre del dato que se enviará al servidor.</li>
+</ul>
+<hr />
+<h3 id="campo-de-texto-text">Campo de texto (<code>text</code>)<a class="headerlink" href="#campo-de-texto-text" title="Permanent link">&para;</a></h3>
+<p>Se usa para escribir textos cortos.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;id_izena&quot;</span><span class="p">&gt;</span>Erabiltzailea<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;id_izena&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;izena&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Testu lehenetsia&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="atributos-mas-usados">Atributos más usados<a class="headerlink" href="#atributos-mas-usados" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Nombre del dato.</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>Valor inicial.</td>
+</tr>
+<tr>
+<td><code>placeholder</code></td>
+<td>Texto de ayuda.</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>Anchura de la caja.</td>
+</tr>
+<tr>
+<td><code>maxlength</code></td>
+<td>Número máximo de caracteres.</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>Campo obligatorio.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Idatzi zure izena&quot;</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    <span class="na">required</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="contrasena-password">Contraseña (<code>password</code>)<a class="headerlink" href="#contrasena-password" title="Permanent link">&para;</a></h3>
+<p>Oculta los caracteres escritos.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pwd&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="email-email">Email (<code>email</code>)<a class="headerlink" href="#email-email" title="Permanent link">&para;</a></h3>
+<p>Se usa para introducir una dirección de correo electrónico.</p>
+<p>El navegador comprueba automáticamente que tenga el formato adecuado.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="otros-tipos-de-input-utiles">Otros tipos de <code>input</code> útiles<a class="headerlink" href="#otros-tipos-de-input-utiles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>number</code></td>
+<td>Para introducir números.</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>Para elegir una fecha.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Selector de color.</td>
+</tr>
+<tr>
+<td><code>file</code></td>
+<td>Para subir archivos.</td>
+</tr>
+<tr>
+<td><code>range</code></td>
+<td>Para elegir un valor mediante una barra.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;date&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;color&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="botones-de-opcion-radio">Botones de opción (<code>radio</code>)<a class="headerlink" href="#botones-de-opcion-radio" title="Permanent link">&para;</a></h3>
+<p>Se usan para seleccionar <strong>una única</strong> opción.</p>
+<p>Para que todos los botones de radio pertenezcan al mismo grupo, deben tener el mismo <code>name</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;generoa&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;gizona&quot;</span><span class="p">&gt;</span> Gizona
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;generoa&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;emakumea&quot;</span><span class="p">&gt;</span> Emakumea
+</code></pre></div>
+<p><img alt="Radio buttom adibidea" src="../images/form_radio.png" /></p>
+<p>Opción por defecto:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;generoa&quot;</span> <span class="na">checked</span><span class="p">&gt;</span> Gizona
+</code></pre></div>
+<img alt="Radio buttom checked" src="../images/form_radio_checked.png" /></p>
+<hr />
+<h3 id="casillas-de-verificacion-checkbox">Casillas de verificación (<code>checkbox</code>)<a class="headerlink" href="#casillas-de-verificacion-checkbox" title="Permanent link">&para;</a></h3>
+<p>Se usan para seleccionar <strong>una o más</strong> opciones.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ibilgailua[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;autoa&quot;</span><span class="p">&gt;</span> Autoa
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ibilgailua[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;motoa&quot;</span><span class="p">&gt;</span> Motoa
+</code></pre></div>
+<p><img alt="Checkbox adibidea" src="../images/form_checkbox.png" /></p>
+<p>Opción por defecto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ibilgailua[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;motoa&quot;</span> <span class="na">checked</span><span class="p">&gt;</span> Motoa
+</code></pre></div>
+<p><img alt="Radio buttom checekc" src="../images/form_checkbox_checked.png" /></p>
+<hr />
+<h3 id="lista-desplegable-select">Lista desplegable (<code>select</code>)<a class="headerlink" href="#lista-desplegable-select" title="Permanent link">&para;</a></h3>
+<p>Muestra una lista de opciones.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;probintzia&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;AB&quot;</span><span class="p">&gt;</span>Araba<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;BI&quot;</span><span class="p">&gt;</span>Bizkaia<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;GI&quot;</span> <span class="na">selected</span><span class="p">&gt;</span>Gipuzkoa<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>
+<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="Select adibidea" src="../images/form_select.png" /></p>
+<h4 id="atributos-disponibles">Atributos disponibles<a class="headerlink" href="#atributos-disponibles" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>selected</code></td>
+<td>Opción por defecto.</td>
+</tr>
+<tr>
+<td><code>multiple</code></td>
+<td>Permite seleccionar más de una opción.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="p">&lt;</span><span class="nt">select</span> <span class="na">multiple</span><span class="p">&gt;</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Euskara<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Gaztelania<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Ingelesa<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>
+<a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a><span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="area-de-texto-textarea">Área de texto (<code>textarea</code>)<a class="headerlink" href="#area-de-texto-textarea" title="Permanent link">&para;</a></h3>
+<p>Se usa para escribir textos de varias líneas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">rows</span><span class="o">=</span><span class="s">&quot;6&quot;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&quot;40&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>Hemen idatzi zure mezua...
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="sugerencias-de-datos-datalist">Sugerencias de datos (<code>datalist</code>)<a class="headerlink" href="#sugerencias-de-datos-datalist" title="Permanent link">&para;</a></h3>
+<p>Muestra sugerencias mientras el usuario escribe.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>    <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>    <span class="na">list</span><span class="o">=</span><span class="s">&quot;hizkuntzak&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a><span class="p">&lt;</span><span class="nt">datalist</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;hizkuntzak&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Euskara&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>
+<a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Gaztelania&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>
+<a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Ingelesa&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-47-12" name="__codelineno-47-12" href="#__codelineno-47-12"></a>
+<a id="__codelineno-47-13" name="__codelineno-47-13" href="#__codelineno-47-13"></a><span class="p">&lt;/</span><span class="nt">datalist</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>El usuario también puede escribir otro valor distinto.</p>
+<p><img alt="Datalist adibidea" src="../images/form_datalist.png" /></p>
+<hr />
+<h3 id="agrupacion-de-controles-fieldset-y-legend">Agrupación de controles (<code>fieldset</code> y <code>legend</code>)<a class="headerlink" href="#agrupacion-de-controles-fieldset-y-legend" title="Permanent link">&para;</a></h3>
+<p>Se usan para organizar los distintos apartados de un formulario.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>    <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Datu pertsonalak<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Izena:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>
+<a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a>    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Abizenak:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-48-10" name="__codelineno-48-10" href="#__codelineno-48-10"></a>
+<a id="__codelineno-48-11" name="__codelineno-48-11" href="#__codelineno-48-11"></a><span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="botones">Botones<a class="headerlink" href="#botones" title="Permanent link">&para;</a></h3>
+<p>En los formularios pueden usarse varios tipos de botones.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Bidali<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;reset&quot;</span><span class="p">&gt;</span>Garbitu<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Beste ekintza<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>submit</code></td>
+<td>Envía el formulario.</td>
+</tr>
+<tr>
+<td><code>reset</code></td>
+<td>Devuelve todos los valores a su estado inicial.</td>
+</tr>
+<tr>
+<td><code>button</code></td>
+<td>Se usa para controlarlo mediante JavaScript.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="validacion-html5">Validación HTML5<a class="headerlink" href="#validacion-html5" title="Permanent link">&para;</a></h3>
+<p>HTML5 realiza algunas validaciones automáticas sin usar JavaScript.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li><code>required</code></li>
+<li><code>email</code></li>
+<li><code>min</code></li>
+<li><code>max</code></li>
+<li><code>maxlength</code></li>
+<li><code>pattern</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>    <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>    <span class="na">required</span><span class="p">&gt;</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>    <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span>
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a>    <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>    <span class="na">max</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Gracias a esto, el usuario no podrá enviar datos incorrectos.</p>
+<hr />
+<h3 id="get-y-post"><code>GET</code> y <code>POST</code><a class="headerlink" href="#get-y-post" title="Permanent link">&para;</a></h3>
+<p>Un formulario tiene dos maneras principales de enviar datos.</p>
+<table>
+<thead>
+<tr>
+<th>GET</th>
+<th>POST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Los datos se envían en la URL.</td>
+<td>Los datos se envían en el cuerpo de la petición.</td>
+</tr>
+<tr>
+<td>Se usa para búsquedas.</td>
+<td>Se usa en la mayoría de logins, registros y formularios.</td>
+</tr>
+<tr>
+<td>No es adecuado para contraseñas.</td>
+<td>Es más seguro.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="ejemplo-completo-de-un-formulario">Ejemplo completo de un formulario<a class="headerlink" href="#ejemplo-completo-de-un-formulario" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/bidali&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>    <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a>
+<a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a>        <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Erregistroa<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+<a id="__codelineno-53-6" name="__codelineno-53-6" href="#__codelineno-53-6"></a>
+<a id="__codelineno-53-7" name="__codelineno-53-7" href="#__codelineno-53-7"></a>        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;izena&quot;</span><span class="p">&gt;</span>Izena<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-53-8" name="__codelineno-53-8" href="#__codelineno-53-8"></a>        <span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-53-9" name="__codelineno-53-9" href="#__codelineno-53-9"></a>            <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+<a id="__codelineno-53-10" name="__codelineno-53-10" href="#__codelineno-53-10"></a>            <span class="na">id</span><span class="o">=</span><span class="s">&quot;izena&quot;</span>
+<a id="__codelineno-53-11" name="__codelineno-53-11" href="#__codelineno-53-11"></a>            <span class="na">name</span><span class="o">=</span><span class="s">&quot;izena&quot;</span>
+<a id="__codelineno-53-12" name="__codelineno-53-12" href="#__codelineno-53-12"></a>            <span class="na">required</span><span class="p">&gt;</span>
+<a id="__codelineno-53-13" name="__codelineno-53-13" href="#__codelineno-53-13"></a>
+<a id="__codelineno-53-14" name="__codelineno-53-14" href="#__codelineno-53-14"></a>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-53-15" name="__codelineno-53-15" href="#__codelineno-53-15"></a>
+<a id="__codelineno-53-16" name="__codelineno-53-16" href="#__codelineno-53-16"></a>        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;</span>Emaila<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-53-17" name="__codelineno-53-17" href="#__codelineno-53-17"></a>        <span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-53-18" name="__codelineno-53-18" href="#__codelineno-53-18"></a>            <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span>
+<a id="__codelineno-53-19" name="__codelineno-53-19" href="#__codelineno-53-19"></a>            <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span>
+<a id="__codelineno-53-20" name="__codelineno-53-20" href="#__codelineno-53-20"></a>            <span class="na">name</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-53-21" name="__codelineno-53-21" href="#__codelineno-53-21"></a>
+<a id="__codelineno-53-22" name="__codelineno-53-22" href="#__codelineno-53-22"></a>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-53-23" name="__codelineno-53-23" href="#__codelineno-53-23"></a>
+<a id="__codelineno-53-24" name="__codelineno-53-24" href="#__codelineno-53-24"></a>        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Generoa<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-53-25" name="__codelineno-53-25" href="#__codelineno-53-25"></a>
+<a id="__codelineno-53-26" name="__codelineno-53-26" href="#__codelineno-53-26"></a>        <span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-53-27" name="__codelineno-53-27" href="#__codelineno-53-27"></a>            <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+<a id="__codelineno-53-28" name="__codelineno-53-28" href="#__codelineno-53-28"></a>            <span class="na">name</span><span class="o">=</span><span class="s">&quot;generoa&quot;</span>
+<a id="__codelineno-53-29" name="__codelineno-53-29" href="#__codelineno-53-29"></a>            <span class="na">value</span><span class="o">=</span><span class="s">&quot;gizona&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-53-30" name="__codelineno-53-30" href="#__codelineno-53-30"></a>
+<a id="__codelineno-53-31" name="__codelineno-53-31" href="#__codelineno-53-31"></a>        Gizona
+<a id="__codelineno-53-32" name="__codelineno-53-32" href="#__codelineno-53-32"></a>
+<a id="__codelineno-53-33" name="__codelineno-53-33" href="#__codelineno-53-33"></a>        <span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-53-34" name="__codelineno-53-34" href="#__codelineno-53-34"></a>            <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span>
+<a id="__codelineno-53-35" name="__codelineno-53-35" href="#__codelineno-53-35"></a>            <span class="na">name</span><span class="o">=</span><span class="s">&quot;generoa&quot;</span>
+<a id="__codelineno-53-36" name="__codelineno-53-36" href="#__codelineno-53-36"></a>            <span class="na">value</span><span class="o">=</span><span class="s">&quot;emakumea&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-53-37" name="__codelineno-53-37" href="#__codelineno-53-37"></a>
+<a id="__codelineno-53-38" name="__codelineno-53-38" href="#__codelineno-53-38"></a>        Emakumea
+<a id="__codelineno-53-39" name="__codelineno-53-39" href="#__codelineno-53-39"></a>
+<a id="__codelineno-53-40" name="__codelineno-53-40" href="#__codelineno-53-40"></a>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-53-41" name="__codelineno-53-41" href="#__codelineno-53-41"></a>
+<a id="__codelineno-53-42" name="__codelineno-53-42" href="#__codelineno-53-42"></a>        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Hobien dituzun hizkuntzak<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-53-43" name="__codelineno-53-43" href="#__codelineno-53-43"></a>
+<a id="__codelineno-53-44" name="__codelineno-53-44" href="#__codelineno-53-44"></a>        <span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-53-45" name="__codelineno-53-45" href="#__codelineno-53-45"></a>            <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+<a id="__codelineno-53-46" name="__codelineno-53-46" href="#__codelineno-53-46"></a>            <span class="na">name</span><span class="o">=</span><span class="s">&quot;hizkuntzak[]&quot;</span>
+<a id="__codelineno-53-47" name="__codelineno-53-47" href="#__codelineno-53-47"></a>            <span class="na">value</span><span class="o">=</span><span class="s">&quot;eu&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-53-48" name="__codelineno-53-48" href="#__codelineno-53-48"></a>
+<a id="__codelineno-53-49" name="__codelineno-53-49" href="#__codelineno-53-49"></a>        Euskara
+<a id="__codelineno-53-50" name="__codelineno-53-50" href="#__codelineno-53-50"></a>
+<a id="__codelineno-53-51" name="__codelineno-53-51" href="#__codelineno-53-51"></a>        <span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-53-52" name="__codelineno-53-52" href="#__codelineno-53-52"></a>            <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span>
+<a id="__codelineno-53-53" name="__codelineno-53-53" href="#__codelineno-53-53"></a>            <span class="na">name</span><span class="o">=</span><span class="s">&quot;hizkuntzak[]&quot;</span>
+<a id="__codelineno-53-54" name="__codelineno-53-54" href="#__codelineno-53-54"></a>            <span class="na">value</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-53-55" name="__codelineno-53-55" href="#__codelineno-53-55"></a>
+<a id="__codelineno-53-56" name="__codelineno-53-56" href="#__codelineno-53-56"></a>        Gaztelania
+<a id="__codelineno-53-57" name="__codelineno-53-57" href="#__codelineno-53-57"></a>
+<a id="__codelineno-53-58" name="__codelineno-53-58" href="#__codelineno-53-58"></a>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-53-59" name="__codelineno-53-59" href="#__codelineno-53-59"></a>
+<a id="__codelineno-53-60" name="__codelineno-53-60" href="#__codelineno-53-60"></a>        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;oharrak&quot;</span><span class="p">&gt;</span>Oharrak<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-53-61" name="__codelineno-53-61" href="#__codelineno-53-61"></a>
+<a id="__codelineno-53-62" name="__codelineno-53-62" href="#__codelineno-53-62"></a>        <span class="p">&lt;</span><span class="nt">textarea</span>
+<a id="__codelineno-53-63" name="__codelineno-53-63" href="#__codelineno-53-63"></a>            <span class="na">id</span><span class="o">=</span><span class="s">&quot;oharrak&quot;</span>
+<a id="__codelineno-53-64" name="__codelineno-53-64" href="#__codelineno-53-64"></a>            <span class="na">rows</span><span class="o">=</span><span class="s">&quot;5&quot;</span>
+<a id="__codelineno-53-65" name="__codelineno-53-65" href="#__codelineno-53-65"></a>            <span class="na">cols</span><span class="o">=</span><span class="s">&quot;40&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+<a id="__codelineno-53-66" name="__codelineno-53-66" href="#__codelineno-53-66"></a>
+<a id="__codelineno-53-67" name="__codelineno-53-67" href="#__codelineno-53-67"></a>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-53-68" name="__codelineno-53-68" href="#__codelineno-53-68"></a>
+<a id="__codelineno-53-69" name="__codelineno-53-69" href="#__codelineno-53-69"></a>        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-53-70" name="__codelineno-53-70" href="#__codelineno-53-70"></a>            Bidali
+<a id="__codelineno-53-71" name="__codelineno-53-71" href="#__codelineno-53-71"></a>        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-53-72" name="__codelineno-53-72" href="#__codelineno-53-72"></a>
+<a id="__codelineno-53-73" name="__codelineno-53-73" href="#__codelineno-53-73"></a>    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<a id="__codelineno-53-74" name="__codelineno-53-74" href="#__codelineno-53-74"></a>
+<a id="__codelineno-53-75" name="__codelineno-53-75" href="#__codelineno-53-75"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="Formulario adibidea" src="../images/form_example.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Recomendaciones</p>
+<p>✅ Usa siempre la etiqueta <code>&lt;label&gt;</code>.</p>
+<p>✅ Todos los controles deben tener el atributo <code>name</code>.</p>
+<p>✅ Usa <code>required</code> en los campos obligatorios.</p>
+<p>✅ Los botones de radio deben tener el mismo <code>name</code>.</p>
+<p>✅ Usa <code>fieldset</code> para organizar formularios largos.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 10</p>
+<p>Una vez vistos todos los elementos que puede tener un formulario, vamos a realizar este ejercicio: <a href="https://docs.google.com/document/d/1nGcWutwJiDm1Zvwr0glXNBbdS_D4owR-9DGjNhlMqxE/edit?usp=sharing" rel="noopener" target="_blank">Ariketa 10</a> </p>
+</div>
+<h2 id="enlaces-utiles">Enlaces útiles<a class="headerlink" href="#enlaces-utiles" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN: HTML</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../01-introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducción">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Introducción
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-css/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: CSS">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                CSS
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

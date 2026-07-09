@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/01-introduccion/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/01-introduccion/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/01-introduccion/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/02-html/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/02-html/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/02-html/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/03-css/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/03-css/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/03-css/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/04-xml/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/04-xml/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/04-xml/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/05-xslt/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/05-xslt/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/05-xslt/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/06-javascript/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/06-javascript/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/06-javascript/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/07-cms/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/07-cms/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/07-cms/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/01-introduccion/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/01-introduccion/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/01-introduccion/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/02-html/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/02-html/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/02-html/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/03-css/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/03-css/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/03-css/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/04-xml/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/04-xml/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/04-xml/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/05-xslt/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/05-xslt/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/05-xslt/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/06-javascript/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/06-javascript/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/06-javascript/"/>
+    </url>
+    <url>
+        <loc>https://martinezjone.github.io/lm_apunteak/eu/07-cms/</loc>
+        <lastmod>2026-07-09</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://martinezjone.github.io/lm_apunteak/eu/07-cms/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://martinezjone.github.io/lm_apunteak/07-cms/"/>
+    </url>
+</urlset>

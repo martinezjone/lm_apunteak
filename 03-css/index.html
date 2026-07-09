@@ -1,0 +1,1718 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak apunteak eta ariketak">
+      
+      
+      
+        <link rel="canonical" href="https://martinezjone.github.io/lm_apunteak/03-css/">
+      
+      
+        <link rel="prev" href="../02-html/">
+      
+      
+        <link rel="next" href="../04-xml/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../eu/03-css/" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>CSS - Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#004c95" data-md-color-accent="#e95f15">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#css" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" class="md-header__button md-logo" aria-label="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#004c95" data-md-color-accent="#e95f15"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#004c95" data-md-color-accent="#e95f15"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../eu/03-css/" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../01-introduccion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introducción
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../02-html/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HTML
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CSS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../04-xml/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  XML
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../05-xslt/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  XSLT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../06-javascript/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  JavaScript
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../07-cms/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CMS
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" class="md-nav__button md-logo" aria-label="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintaxis básica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formas-de-incluir-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formas de incluir CSS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selectores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudo-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pseudo-clases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fondos-e-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fondos e imágenes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bordes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bordes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedades-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de texto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlines-bordes-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outlines (bordes externos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-caja-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelo de caja (Box Model)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de caja (Box Model)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#box-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        box-sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posicionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Posicionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Posicionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#centrado-de-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Centrado de elementos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Float
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margenes-y-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Márgenes y padding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidades-de-medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades de medida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flexbox
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grid Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipografía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estilando-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estilando formularios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#less-preprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LESS (preprocesador)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-xml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-xslt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XSLT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-cms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintaxis básica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formas-de-incluir-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formas de incluir CSS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selectores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudo-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pseudo-clases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fondos-e-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fondos e imágenes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bordes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bordes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedades-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de texto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlines-bordes-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outlines (bordes externos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-caja-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelo de caja (Box Model)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de caja (Box Model)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#box-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        box-sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posicionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Posicionamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Posicionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#centrado-de-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Centrado de elementos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Float
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margenes-y-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Márgenes y padding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unidades-de-medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades de medida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flexbox
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grid Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipografía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estilando-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estilando formularios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#less-preprocesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LESS (preprocesador)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h1>
+<p>CSS permite dar estilo a las páginas web mediante hojas de estilo externas,
+lo que hace posible modificar muchos ficheros HTML actualizando un único
+documento CSS. Escribir el estilo directamente en cada etiqueta es <strong>muy
+poco práctico</strong>; lo recomendable es usar hojas de estilo externas.</p>
+<h2 id="sintaxis-basica">Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">selector</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">propiedad</span><span class="p">:</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>Una regla CSS tiene tres partes: el <strong>selector</strong> (qué elementos se ven
+afectados), la <strong>propiedad</strong> (qué se va a cambiar) y el <strong>valor</strong> (cuánto o
+cómo se cambia).</p>
+<h2 id="formas-de-incluir-css">Formas de incluir CSS<a class="headerlink" href="#formas-de-incluir-css" title="Permanent link">&para;</a></h2>
+<ol>
+<li>En línea: <code>&lt;p style="color:red;"&gt;</code></li>
+<li>Interna: <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code></li>
+<li>Externa: <code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></li>
+</ol>
+<h2 id="selectores">Selectores<a class="headerlink" href="#selectores" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Ejemplo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elemento</td>
+<td><code>h1</code></td>
+<td>Todos los <code>&lt;h1&gt;</code></td>
+</tr>
+<tr>
+<td>Varios elementos</td>
+<td><code>h1, h2</code></td>
+<td>Todos los <code>&lt;h1&gt;</code> y <code>&lt;h2&gt;</code></td>
+</tr>
+<tr>
+<td>Clase</td>
+<td><code>.destacado</code></td>
+<td>Elementos con <code>class="destacado"</code></td>
+</tr>
+<tr>
+<td>ID</td>
+<td><code>#menu</code></td>
+<td>Elemento con <code>id="menu"</code></td>
+</tr>
+<tr>
+<td>Elemento + clase</td>
+<td><code>h1.titular</code></td>
+<td><code>&lt;h1&gt;</code> con <code>class="titular"</code></td>
+</tr>
+<tr>
+<td>Elemento + id</td>
+<td><code>h1#titulonoticia</code></td>
+<td><code>&lt;h1&gt;</code> con <code>id="titulonoticia"</code></td>
+</tr>
+<tr>
+<td>Descendiente</td>
+<td><code>ul li</code></td>
+<td><code>&lt;li&gt;</code> en cualquier nivel dentro de <code>&lt;ul&gt;</code></td>
+</tr>
+<tr>
+<td>Hijo directo</td>
+<td><code>ul&gt;li</code></td>
+<td><code>&lt;li&gt;</code> hijo directo de <code>&lt;ul&gt;</code></td>
+</tr>
+<tr>
+<td>Hermano adyacente</td>
+<td><code>div + p</code></td>
+<td><code>&lt;p&gt;</code> inmediatamente después de un <code>&lt;div&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clases vs. IDs:</strong> un <strong>id</strong> identifica de forma única a un único
+elemento (solo debería usarse una vez por página); una <strong>clase</strong> puede
+aplicarse a varios elementos que comparten el mismo estilo. En el
+selector, el id se referencia con <code>#</code> y la clase con <code>.</code>.</p>
+<h2 id="pseudo-clases">Pseudo-clases<a class="headerlink" href="#pseudo-clases" title="Permanent link">&para;</a></h2>
+<p>Aplican estilo según el estado del elemento:</p>
+<ul>
+<li><code>a:link</code> — enlace no visitado.</li>
+<li><code>a:visited</code> — enlace ya visitado.</li>
+<li><code>a:active</code> — enlace mientras se hace clic sobre él.</li>
+<li><code>p:hover</code> — mientras el cursor está encima del elemento.</li>
+<li><code>input:checked</code> — casillas o radios seleccionados.</li>
+<li><code>p:first-of-type</code> — primer elemento de su tipo.</li>
+<li><code>p:first-child</code> / <code>p:last-child</code> — primer/último hijo de su padre.</li>
+<li><code>p:nth-child(4)</code> — el cuarto hijo.</li>
+<li><code>p:nth-child(even)</code> / <code>p:nth-child(odd)</code> — hijos pares/impares.</li>
+</ul>
+<h2 id="fondos-e-imagenes">Fondos e imágenes<a class="headerlink" href="#fondos-e-imagenes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>background-image: url("ruta")</code> — imagen de fondo.</li>
+<li><code>background-repeat: no-repeat | repeat-x | repeat-y</code> — control del
+  mosaico de la imagen.</li>
+<li><code>background-position: top | bottom | left | right | center</code> — posición
+  de la imagen.</li>
+<li><code>background-size</code> — controla las dimensiones de la imagen.</li>
+<li><code>background-attachment: fixed</code> — crea efectos de fondo fijo al hacer
+  scroll.</li>
+</ul>
+<h2 id="bordes">Bordes<a class="headerlink" href="#bordes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>border-style: solid | double | dashed | dotted | inset | outset</code></li>
+<li><code>border-color</code> — admite cualquier notación de color de CSS.</li>
+<li><code>border-width</code> — grosor del borde.</li>
+<li>Variantes por posición: <code>border-bottom-style</code>, <code>border-top-color</code>, etc.</li>
+<li><code>border-radius: 2px</code> — redondea las esquinas.</li>
+</ul>
+<h2 id="propiedades-de-texto">Propiedades de texto<a class="headerlink" href="#propiedades-de-texto" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>text-align: left | right | center | justify</code></li>
+<li><code>font-family</code> — indica la tipografía (Google Fonts permite usar fuentes
+  incrustadas sin depender de las instaladas en el sistema).</li>
+<li><code>text-decoration: underline | line-through | none</code></li>
+<li><code>letter-spacing: 2px</code> — espacio entre caracteres.</li>
+<li><code>word-spacing</code> — espacio entre palabras.</li>
+<li><code>line-height</code> — separación entre líneas.</li>
+<li><code>text-shadow: 2px 3px blue</code> — sombra de texto (desplazamiento
+  horizontal, desplazamiento vertical, color).</li>
+<li><code>text-transform: uppercase | lowercase | capitalize</code></li>
+</ul>
+<h2 id="outlines-bordes-externos">Outlines (bordes externos)<a class="headerlink" href="#outlines-bordes-externos" title="Permanent link">&para;</a></h2>
+<p>A diferencia del <code>border</code>, el <code>outline</code> no afecta a las dimensiones del
+elemento, pero puede solaparse fácilmente con otros elementos:</p>
+<ul>
+<li><code>outline-style: solid | dotted</code></li>
+<li><code>outline-width: thin | medium | thick</code></li>
+<li><code>outline-color</code></li>
+<li><code>outline-offset</code> — separación entre el outline y el borde.</li>
+</ul>
+<h2 id="tablas">Tablas<a class="headerlink" href="#tablas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>border: solid 1px black</code> — añade bordes a los elementos de la tabla.</li>
+<li><code>border-collapse: collapse</code> — fusiona los bordes adyacentes.</li>
+<li><code>tr:nth-child(even)</code> — filas alternas.</li>
+<li><code>tr:hover { background-color: red; }</code> — resalta la fila al pasar el
+  ratón.</li>
+</ul>
+<h2 id="modelo-de-caja-box-model">Modelo de caja (Box Model)<a class="headerlink" href="#modelo-de-caja-box-model" title="Permanent link">&para;</a></h2>
+<p>En CSS <strong>todo es una caja</strong>, formada por cuatro capas:</p>
+<p><code>content</code> → <code>padding</code> → <code>border</code> → <code>margin</code></p>
+<ul>
+<li><strong>Elementos en línea</strong> (<code>&lt;b&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>): no rompen el flujo de
+  línea e ignoran los cambios de <code>width</code>/<code>height</code>.</li>
+<li><strong>Elementos de bloque</strong> (<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>): generan una nueva línea
+  y sí aceptan modificaciones de tamaño.</li>
+</ul>
+<p>La propiedad <code>display</code> controla este comportamiento:</p>
+<ul>
+<li><code>display: block</code> — se comporta como un bloque.</li>
+<li><code>display: inline</code> — fluye en línea.</li>
+<li><code>display: inline-block</code> — fluye en línea pero admite <code>width</code>/<code>height</code>.</li>
+</ul>
+<h3 id="box-sizing"><code>box-sizing</code><a class="headerlink" href="#box-sizing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>box-sizing: content-box</code> (por defecto) — el <code>width</code> se refiere solo al
+  contenido; los bordes se suman aumentando el tamaño total.</li>
+<li><code>box-sizing: border-box</code> — el <code>width</code> incluye los bordes; el contenido
+  se reduce al añadir bordes.</li>
+</ul>
+<h2 id="posicionamiento">Posicionamiento<a class="headerlink" href="#posicionamiento" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>position: static</code> — colocación por defecto controlada por el
+  navegador.</li>
+<li><code>position: relative</code> — se desplaza respecto a su posición natural.</li>
+<li><code>position: absolute</code> — se posiciona respecto a un antecesor
+  posicionado, pudiendo "desaparecer" del flujo al hacer scroll.</li>
+<li><code>position: fixed</code> — permanece fijo en pantalla al margen del scroll.</li>
+<li><code>position: sticky</code> — semi-fijo: se desplaza con la página hasta alcanzar
+  una posición mínima (definida con <code>top</code>, <code>left</code>...) y a partir de ahí se
+  queda fijo.</li>
+</ul>
+<h3 id="centrado-de-elementos">Centrado de elementos<a class="headerlink" href="#centrado-de-elementos" title="Permanent link">&para;</a></h3>
+<p><strong>Horizontal:</strong></p>
+<ul>
+<li>Elementos en línea: al contenedor padre se le aplica
+  <code>text-align: center</code>.</li>
+<li>Elementos de bloque: se les da un <code>width</code> y <code>margin: auto</code> (o
+  <code>margin: 40px auto</code>).</li>
+<li>Elementos <code>inline-block</code>: el propio elemento necesita <code>width</code>, y al
+  padre se le aplica <code>text-align: center</code>.</li>
+</ul>
+<p><strong>Vertical:</strong></p>
+<ul>
+<li>Padre con <code>display: table</code> e hijos con <code>display: table-cell</code> más
+  <code>vertical-align: middle</code>.</li>
+<li>Alternativa sencilla: mismo <code>padding</code> arriba y abajo.</li>
+</ul>
+<h2 id="float">Float<a class="headerlink" href="#float" title="Permanent link">&para;</a></h2>
+<p><code>float</code> permite que el contenido de alrededor ocupe el espacio restante
+junto al elemento flotante. Cuando hay varios elementos flotantes puede
+ser necesario <code>clear: both</code> para evitar solapamientos no deseados; en
+diseños complejos suele hacer falta un contenedor extra para "limpiar" los
+flotantes.</p>
+<h2 id="margenes-y-padding">Márgenes y padding<a class="headerlink" href="#margenes-y-padding" title="Permanent link">&para;</a></h2>
+<p>Las propiedades <code>padding-</code> y <code>margin-</code> (con las variantes <code>-top</code>,
+<code>-bottom</code>, <code>-left</code>, <code>-right</code>) controlan el espaciado interno y externo,
+respectivamente.</p>
+<h2 id="colores">Colores<a class="headerlink" href="#colores" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Nombres de color: <code>red</code>, <code>yellow</code>, <code>green</code>...</li>
+<li>RGB: <code>rgb(255, 0, 0)</code> (valores de 0 a 255).</li>
+<li>Hexadecimal: <code>#ffffff</code> (componentes rojo, verde y azul).</li>
+<li>HSL: <code>hsl(num, num, num)</code>.</li>
+</ul>
+<h2 id="unidades-de-medida">Unidades de medida<a class="headerlink" href="#unidades-de-medida" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>1cm</code>, <code>1in</code> — útiles para hojas de estilo de impresión.</li>
+<li><code>1px</code> — depende de la resolución de pantalla.</li>
+<li><code>1%</code> — adecuado para maquetación en pantalla.</li>
+<li><code>1em</code> — aproximadamente el ancho de la letra "m" en la fuente actual.</li>
+</ul>
+<h2 id="flexbox">Flexbox<a class="headerlink" href="#flexbox" title="Permanent link">&para;</a></h2>
+<p><code>display: flex</code> crea contenedores flexibles que distribuyen a sus hijos de
+forma eficiente.</p>
+<p><strong>Dirección:</strong></p>
+<ul>
+<li><code>flex-direction: row</code> — horizontal, izquierda a derecha (por defecto).</li>
+<li><code>flex-direction: row-reverse</code> — horizontal, derecha a izquierda.</li>
+<li><code>flex-direction: column</code> — vertical, arriba a abajo.</li>
+<li><code>flex-direction: column-reverse</code> — vertical, abajo a arriba.</li>
+</ul>
+<p><strong>Ajuste de línea:</strong></p>
+<ul>
+<li><code>flex-wrap: nowrap</code> — los elementos se aprietan en una sola fila (por
+  defecto).</li>
+<li><code>flex-wrap: wrap</code> — los elementos que sobran pasan a la siguiente fila.</li>
+<li><code>flex-wrap: wrap-reverse</code> — los elementos que sobran pasan a la fila
+  anterior.</li>
+</ul>
+<p>Se puede usar la forma abreviada <code>flex-flow: column wrap</code>.</p>
+<p><strong>Distribución horizontal (<code>justify-content</code>):</strong></p>
+<ul>
+<li><code>flex-start</code> — alineados a la izquierda, espacio a la derecha.</li>
+<li><code>flex-end</code> — alineados a la derecha, espacio a la izquierda.</li>
+<li><code>space-between</code> — los elementos de los extremos tocan los bordes; el
+  espacio se reparte entre el resto.</li>
+<li><code>space-around</code> — el espacio se reparte de forma no uniforme, con
+  márgenes más pequeños en los extremos.</li>
+<li><code>space-evenly</code> — el espacio se reparte de forma completamente uniforme.</li>
+</ul>
+<h2 id="grid-layout">Grid Layout<a class="headerlink" href="#grid-layout" title="Permanent link">&para;</a></h2>
+<p><code>display: grid</code> crea estructuras tipo tabla con colocación flexible de
+celdas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="nc">contenedor</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">.</span><span class="nc">elemento</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="o">/</span><span class="mi">6</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>grid-template-rows</code> / <code>grid-template-columns</code> definen las proporciones
+  de filas y columnas.</li>
+<li><code>grid-row: 1/3</code> — ocupa desde la fila 1 hasta la 3 (filas 1 y 2).</li>
+<li><code>grid-column: 4/6</code> — ocupa desde la columna 4 hasta la 6 (columnas 4 y
+  5).</li>
+</ul>
+<h2 id="media-queries">Media Queries<a class="headerlink" href="#media-queries" title="Permanent link">&para;</a></h2>
+<p>Permiten aplicar CSS condicional según el medio de salida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">xx-large</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">print</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Puntos de ruptura responsive:</strong></p>
+<ul>
+<li><code>@media screen and (min-width: 800px)</code> — pantallas de 800px o más.</li>
+<li><code>@media screen and (max-width: 799px)</code> — pantallas más estrechas de
+  800px.</li>
+<li><code>@media (orientation: portrait)</code> — orientación vertical.</li>
+<li><code>@media (orientation: landscape)</code> — orientación horizontal.</li>
+</ul>
+<h2 id="tipografia">Tipografía<a class="headerlink" href="#tipografia" title="Permanent link">&para;</a></h2>
+<p><code>font-family: "Arial"</code> permite indicar varias preferencias separadas por
+comas, como alternativa por si la primera no está disponible. Existen
+varias familias de fuentes: <strong>serif</strong> (con remates decorativos),
+<strong>sans-serif</strong> (líneas limpias, sin remates) y <strong>monoespaciadas</strong> (todos
+los caracteres ocupan el mismo ancho).</p>
+<h2 id="estilando-formularios">Estilando formularios<a class="headerlink" href="#estilando-formularios" title="Permanent link">&para;</a></h2>
+<p>Enfoques habituales:</p>
+<ul>
+<li><code>display: block</code> en labels/inputs para apilar los controles
+  verticalmente.</li>
+<li><code>margin-bottom: 50px</code> para separar elementos.</li>
+<li><code>width: 80%</code> para dar una anchura uniforme a los campos.</li>
+<li><code>padding: 10px</code> para el espaciado interno.</li>
+<li><code>input:focus</code> para aplicar estilo cuando el campo está activo.</li>
+<li><code>padding</code> en el <code>fieldset</code> para crear un margen interno.</li>
+</ul>
+<h2 id="bootstrap">Bootstrap<a class="headerlink" href="#bootstrap" title="Permanent link">&para;</a></h2>
+<p>Framework CSS que requiere una estructura HTML mínima con un
+<code>&lt;div class="container"&gt;</code> envolvente. Usa un sistema de rejilla
+(<em>grid</em>) responsive de 12 columnas.</p>
+<p><strong>Clases de columna según el ancho del dispositivo:</strong></p>
+<ul>
+<li><code>col-xs-3</code> — extra pequeño (&lt; 768px).</li>
+<li><code>col-sm-3</code> — pequeño (768–992px).</li>
+<li><code>col-md-6</code> — mediano (~992px).</li>
+<li><code>col-lg-9</code> — grande (&gt; 992px).</li>
+</ul>
+<p><strong>Otras utilidades:</strong></p>
+<ul>
+<li><code>class="lead"</code> — resalta un párrafo.</li>
+<li><code>&lt;mark&gt;</code> — resalta texto en amarillo.</li>
+</ul>
+<h2 id="less-preprocesador">LESS (preprocesador)<a class="headerlink" href="#less-preprocesador" title="Permanent link">&para;</a></h2>
+<p>Extiende CSS con características de programación y genera CSS estándar
+como salida.</p>
+<p><strong>Variables</strong> (prefijo <code>@</code>, admiten operaciones matemáticas):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">@grosorborde</span><span class="o">:</span><span class="w"> </span><span class="nt">3px</span><span class="o">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">@grosorcabecera</span><span class="o">:</span><span class="w"> </span><span class="nv">@grosorborde</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">2px</span><span class="o">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">border</span><span class="o">:</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nv">@grosorborde</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
+</code></pre></div>
+<p><strong>Mixins</strong> (definiciones reutilizables que se invocan como funciones,
+evitando repetir código):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="nc">margenesnoticias</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">padding-top</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">#</span><span class="nn">caja1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">.margenesnoticias()</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../02-html/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: HTML">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                HTML
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-xml/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: XML">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                XML
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
