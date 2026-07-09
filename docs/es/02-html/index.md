@@ -1358,7 +1358,8 @@ Ejemplo:
 
     ✅ Usa `fieldset` para organizar formularios largos.
 
-
+!!! example "Ariketa 10"
+    Una vez vistos todos los elementos que puede tener un formulario, vamos a realizar este ejercicio: [Ariketa 10](https://docs.google.com/document/d/1nGcWutwJiDm1Zvwr0glXNBbdS_D4owR-9DGjNhlMqxE/edit?usp=sharing){: target="_blank" rel="noopener" } 
 
 ## Enlaces útiles
 

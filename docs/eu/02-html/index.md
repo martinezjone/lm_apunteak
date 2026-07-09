@@ -1349,6 +1349,9 @@ Adibidea:
     ✅ Erabili `fieldset` formulario luzeak antolatzeko.
 
 
+!!! example "Ariketa 10"
+    Behin formulario baten elementu guztiak ikusita, ondorengo ariketa egingo dugu: [Ariketa 10](https://docs.google.com/document/d/1nGcWutwJiDm1Zvwr0glXNBbdS_D4owR-9DGjNhlMqxE/edit?usp=sharing){: target="_blank" rel="noopener" } 
+
 
 ## Esteka erabilgarriak
 
