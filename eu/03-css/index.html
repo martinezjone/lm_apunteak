@@ -1,0 +1,2200 @@
+
+<!doctype html>
+<html lang="eu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak apunteak eta ariketak">
+      
+      
+      
+        <link rel="canonical" href="https://martinezjone.github.io/lm_apunteak/eu/03-css/">
+      
+      
+        <link rel="prev" href="../02-html/">
+      
+      
+        <link rel="next" href="../04-xml/">
+      
+      
+        
+          <link rel="alternate" href="../../03-css/" hreflang="es">
+        
+          <link rel="alternate" href="./" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>CSS - Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#004c95" data-md-color-accent="#e95f15">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#css" class="md-skip">
+          Joan zuzenean edukira
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Atalburua">
+    <a href="../" title="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" class="md-header__button md-logo" aria-label="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#004c95" data-md-color-accent="#e95f15"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#004c95" data-md-color-accent="#e95f15"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Hautatu hizkuntza">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../03-css/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Bilatu" placeholder="Bilatu" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Bilatu">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Garbitu" aria-label="Garbitu" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Bilaketa hasieratzen
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Fitxak" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hasiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../01-introduccion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Sarrera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../02-html/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HTML
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CSS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../04-xml/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  XML
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../05-xslt/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  XSLT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../06-javascript/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  JavaScript
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../07-cms/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CMS
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Nabigazioa" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" class="md-nav__button md-logo" aria-label="Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Markatzeko Lengoaiak eta Informazioa Kudeatzeko Sistemak
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zer-da-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer da CSS?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-html-batean-txertatzeko-moduak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSS HTML batean txertatzeko moduak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS HTML batean txertatzeko moduak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-elementuari-zuzenean-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Elementuari zuzenean (inline)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-head-barruko-style-elementuan-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. &lt;head&gt; barruko &lt;style&gt; elementuan (internal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kanpoko-fitxategi-baten-bidez-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Kanpoko fitxategi baten bidez (external)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oinarrizko-sintaxia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oinarrizko sintaxia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hautatzaileak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hautatzaileak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hautatzaileak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementu-hautatzailea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementu-hautatzailea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-hautatzailea-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class hautatzailea: .class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id-hautatzailea-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Id hautatzailea: #id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hautatzaileen-konbinazioak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hautatzaileen konbinazioak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-klaseak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pseudo-klaseak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kutxen-eredua-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kutxen eredua (Box model)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kutxen eredua (Box model)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#box-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        box-sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neurri-unitateak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neurri-unitateak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#koloreak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Koloreak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipografia-eta-testu-formatua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipografia eta testu-formatua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atzeko-planoa-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atzeko planoa (background)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ertzak-border-eta-outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ertzak (border) eta outline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin-eta-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Margin eta padding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-elementu-motak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        display: elementu motak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kokapena-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kokapena: position
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-eta-clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Float eta clear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flexbox
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flexbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edukiontziaren-propietate-nagusiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edukiontziaren propietate nagusiak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semeen-propietate-nagusia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semeen propietate nagusia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grid
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-queries-diseinu-erantzunkorra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Queries: diseinu erantzunkorra
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaur-egungo-praktika-onak-css-aldagaiak-custom-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaur egungo praktika onak: CSS aldagaiak (custom properties)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esteka-erabilgarriak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esteka erabilgarriak
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-xml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-xslt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XSLT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-cms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zer-da-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer da CSS?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-html-batean-txertatzeko-moduak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSS HTML batean txertatzeko moduak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS HTML batean txertatzeko moduak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-elementuari-zuzenean-inline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Elementuari zuzenean (inline)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-head-barruko-style-elementuan-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. &lt;head&gt; barruko &lt;style&gt; elementuan (internal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kanpoko-fitxategi-baten-bidez-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Kanpoko fitxategi baten bidez (external)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oinarrizko-sintaxia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oinarrizko sintaxia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hautatzaileak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hautatzaileak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hautatzaileak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementu-hautatzailea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementu-hautatzailea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-hautatzailea-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class hautatzailea: .class
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id-hautatzailea-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Id hautatzailea: #id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hautatzaileen-konbinazioak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hautatzaileen konbinazioak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-klaseak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pseudo-klaseak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kutxen-eredua-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kutxen eredua (Box model)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kutxen eredua (Box model)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#box-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        box-sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neurri-unitateak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neurri-unitateak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#koloreak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Koloreak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipografia-eta-testu-formatua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipografia eta testu-formatua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atzeko-planoa-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atzeko planoa (background)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ertzak-border-eta-outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ertzak (border) eta outline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#margin-eta-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Margin eta padding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-elementu-motak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        display: elementu motak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kokapena-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kokapena: position
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-eta-clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Float eta clear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flexbox
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flexbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edukiontziaren-propietate-nagusiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edukiontziaren propietate nagusiak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semeen-propietate-nagusia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semeen propietate nagusia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grid
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-queries-diseinu-erantzunkorra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Queries: diseinu erantzunkorra
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaur-egungo-praktika-onak-css-aldagaiak-custom-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaur egungo praktika onak: CSS aldagaiak (custom properties)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esteka-erabilgarriak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esteka erabilgarriak
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h1>
+<p>CSS3, CSS estandarraren berrikuspenik berriena da eta orriaren <strong>itxura</strong> kontrolatzeko erabiltzen den lengoaia da: koloreak, tipografiak, kokapenak, animazioak eta orriaren egitura bera nola erakusten den zehazten du.</p>
+<h2 id="zer-da-css">Zer da CSS?<a class="headerlink" href="#zer-da-css" title="Permanent link">&para;</a></h2>
+<ol>
+<li>CSSk <strong>Cascading Style Sheets</strong> esan nahi du (kaskada-estilo orriak).</li>
+<li>HTML dokumentuen <strong>itxura eta maketazioa</strong> definitzeko erabiltzen den lengoaia da.</li>
+<li><strong>Ez da</strong> markatze-lengoaia bat, ezta programazio-lengoaia bat ere; <strong>estilo-lengoaia</strong> bat da.</li>
+<li>"Kaskada" izena du araua batzuk beste batzuei gainjartzen zaizkielako, lehentasun-ordena jakin bati jarraituz.</li>
+<li>HTMLrekin (edukiarekin) eta JavaScriptekin (interakzioarekin) batera funtzionatzen du.</li>
+<li>CSS fitxategiek <strong>.css</strong> luzapena dute.</li>
+</ol>
+<h2 id="css-html-batean-txertatzeko-moduak">CSS HTML batean txertatzeko moduak<a class="headerlink" href="#css-html-batean-txertatzeko-moduak" title="Permanent link">&para;</a></h2>
+<p>Hiru modu daude CSSa HTML dokumentu bati lotzeko:</p>
+<h3 id="1-elementuari-zuzenean-inline">1. Elementuari zuzenean (inline)<a class="headerlink" href="#1-elementuari-zuzenean-inline" title="Permanent link">&para;</a></h3>
+<p><code>style</code> atributuaren bidez, elementuari zuzenean estiloa jartzen zaio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;p style="color: red; text-align: center;"&gt;Testu hau gorriz eta zentratuta agertuko da&lt;/p&gt;
+</code></pre></div>
+<h3 id="2-head-barruko-style-elementuan-internal">2. <code>&lt;head&gt;</code> barruko <code>&lt;style&gt;</code> elementuan (internal)<a class="headerlink" href="#2-head-barruko-style-elementuan-internal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;head&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &lt;style&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        p {
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>            color: red;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        }
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &lt;/style&gt;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&lt;/head&gt;
+</code></pre></div>
+<h3 id="3-kanpoko-fitxategi-baten-bidez-external">3. Kanpoko fitxategi baten bidez (external)<a class="headerlink" href="#3-kanpoko-fitxategi-baten-bidez-external" title="Permanent link">&para;</a></h3>
+<p>Hau da <strong>modu gomendatuena</strong>, HTML kodea txukunago geratzen delako eta CSS berbera hainbat HTML orriren artean birrerabil daitekeelako:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;head&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &lt;link rel="stylesheet" type="text/css" href="css/estiloak.css"&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;/head&gt;
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hiru moduak batera erabiliz gero, gogoratu <strong>lehentasun-ordena</strong>: elementuko <code>style</code> atributuak &gt; <code>&lt;head&gt;</code>-eko <code>&lt;style&gt;</code>-k &gt; kanpoko fitxategiak. 
+Hau da, gatazkarik badago, elementuari zuzenean jarritako estiloak irabaziko du beti.</p>
+</div>
+<h2 id="oinarrizko-sintaxia">Oinarrizko sintaxia<a class="headerlink" href="#oinarrizko-sintaxia" title="Permanent link">&para;</a></h2>
+<p>CSS <strong>arauen</strong> bidez funtzionatzen du. Araua osatzen duten hiru osagaiak hauek dira:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hautatzailea {
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    propietatea: balioa;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    propietatea: balioa;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>}
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Osagaia</th>
+<th>Adibidea</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hautatzailea (selektorea)</td>
+<td><code>p</code></td>
+<td>Zein elementuri eragingo dion adierazten du.</td>
+</tr>
+<tr>
+<td>Propietatea</td>
+<td><code>color</code></td>
+<td>Aldatu nahi den ezaugarria.</td>
+</tr>
+<tr>
+<td>Balioa</td>
+<td><code>blue</code></td>
+<td>Propietateari ezarritako balioa.</td>
+</tr>
+<tr>
+<td>Deklarazioa</td>
+<td><code>color: blue;</code></td>
+<td>Propietatea eta balioa batera, puntu eta komarekin amaituta.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>p {
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    color: blue;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    font-size: 16px;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>}
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 1</p>
+<p>Sintaxi hau praktikatzeko, lehenengo ariketa hau egingo dugu: <em>(ariketaren esteka hemen gehituko da)</em></p>
+</div>
+<h2 id="hautatzaileak">Hautatzaileak<a class="headerlink" href="#hautatzaileak" title="Permanent link">&para;</a></h2>
+<p>Elementuak "hautatzeko" hainbat modu daude. Hauek dira garrantzitsuenak.</p>
+<h3 id="elementu-hautatzailea">Elementu-hautatzailea<a class="headerlink" href="#elementu-hautatzailea" title="Permanent link">&para;</a></h3>
+<p>Etiketa-mota bereko elementu <strong>guztiei</strong> eragiten die:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>p {
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    color: blue;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>}
+</code></pre></div>
+<p>Koma bidez, hainbat elementu-motari estilo bera eman dakieke:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>h1, h2, p {
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    color: blue;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>}
+</code></pre></div>
+<h3 id="class-hautatzailea-class">Class hautatzailea: <code>.class</code><a class="headerlink" href="#class-hautatzailea-class" title="Permanent link">&para;</a></h3>
+<p><code>.class="izena"</code> hautatzaileak zehaztuta dauden elementu guztiak hautatzen ditu. HTML elementu askori class bera jar dakieke:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;p class="arrosa"&gt;Paragrafo hau arrosa-kolorekoa izango da.&lt;/p&gt;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&lt;div class="arrosa"&gt;Div hau ere arrosa-kolorekoa izango da.&lt;/div&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>.arrosa {
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    background-color: pink;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>}
+</code></pre></div>
+<p>Elementu-motari lotuta ere erabil daiteke (kasu horretan, elementu mota horretan bakarrik izango du eragina):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>p.arrosa {
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    background-color: pink;
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>}
+</code></pre></div>
+<h3 id="id-hautatzailea-id">Id hautatzailea: <code>#id</code><a class="headerlink" href="#id-hautatzailea-id" title="Permanent link">&para;</a></h3>
+<p><code>#id</code> hautatzaileak <code>id</code> horrekin zehaztuta dagoen elementu <strong>bakarra</strong> hautatzen du. Garrantzitsua da HTML dokumentu batean ez errepikatzea <code>id</code> bera bi elementutan:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&lt;h1 id="izenburu_nagusia"&gt;Titulua&lt;/h1&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>#izenburu_nagusia {
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    color: blue;
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    font-size: 30px;
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>}
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>.class</code></th>
+<th><code>#id</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elementu batean erabiltzeko aldiak</td>
+<td>Behin baino gehiagotan (elementu asko)</td>
+<td>Behin bakarrik (elementu bat)</td>
+</tr>
+<tr>
+<td>HTML batean errepika daiteke?</td>
+<td>Bai</td>
+<td>Ez</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hautatzaileen-konbinazioak">Hautatzaileen konbinazioak<a class="headerlink" href="#hautatzaileen-konbinazioak" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>/* Ondorengo (descendant): ul baten barruan dauden li GUZTIAK, 
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>   zuzeneko seme izan ala ez */
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>ul li {
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    color: blue;
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>}
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>/* Ume zuzena (child): ul baten UME ZUZENAK diren li-ak bakarrik */
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>ul &gt; li {
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    color: blue;
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>}
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>/* Elkarren ondoko anaia (adjacent sibling): div baten ONDOREN 
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>   datorren lehen p-a bakarrik */
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>div + p {
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    color: blue;
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>}
+</code></pre></div>
+<h3 id="pseudo-klaseak">Pseudo-klaseak<a class="headerlink" href="#pseudo-klaseak" title="Permanent link">&para;</a></h3>
+<p>Elementu bat egoera berezi batean dagoenean aplikatzen dira:</p>
+<table>
+<thead>
+<tr>
+<th>Pseudo-klasea</th>
+<th>Erabilera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a:link</code></td>
+<td>Oraindik bisitatu gabeko esteka.</td>
+</tr>
+<tr>
+<td><code>a:visited</code></td>
+<td>Aurretik bisitatutako esteka.</td>
+</tr>
+<tr>
+<td><code>a:hover</code></td>
+<td>Sagua elementuaren gainean dagoenean.</td>
+</tr>
+<tr>
+<td><code>a:active</code></td>
+<td>Elementuan klik egiten ari garenean.</td>
+</tr>
+<tr>
+<td><code>input:checked</code></td>
+<td>Markatutako checkbox/radio bat.</td>
+</tr>
+<tr>
+<td><code>p:first-child</code></td>
+<td>Elementua bere gurasoaren lehen semea denean.</td>
+</tr>
+<tr>
+<td><code>p:last-child</code></td>
+<td>Elementua bere gurasoaren azken semea denean.</td>
+</tr>
+<tr>
+<td><code>p:nth-child(2)</code></td>
+<td>Elementua bere gurasoaren N. semea denean.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>a:hover {
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    color: red;
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    text-decoration: underline;
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>}
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 2</p>
+<p>Hautatzaileak lantzeko ariketa hau egingo dugu: <em>(ariketaren esteka hemen gehituko da)</em></p>
+</div>
+<h2 id="kutxen-eredua-box-model">Kutxen eredua (Box model)<a class="headerlink" href="#kutxen-eredua-box-model" title="Permanent link">&para;</a></h2>
+<p>CSSn <strong>elementu guztiak kutxak</strong> dira. Kutxa bakoitzak lau geruza ditu, kanpotik barrurantz:</p>
+<ol>
+<li><strong>Margin</strong> (marjina): kutxaren kanpoko espazioa, beste kutxekiko banaketa.</li>
+<li><strong>Border</strong> (ertza): kutxaren muga.</li>
+<li><strong>Padding</strong> (betegarria): edukiaren eta ertzaren arteko barruko espazioa.</li>
+<li><strong>Content</strong> (edukia): testua, irudia edo beste elementuak.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>div {
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    width: 300px;
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    padding: 20px;
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    border: 2px solid black;
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    margin: 10px;
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>}
+</code></pre></div>
+<h3 id="box-sizing"><code>box-sizing</code><a class="headerlink" href="#box-sizing" title="Permanent link">&para;</a></h3>
+<p><code>width</code> batek zer neurtzen duen zehazteko erabiltzen da:</p>
+<ul>
+<li><code>box-sizing: content-box;</code> (lehenetsia): <code>width</code>-ek <strong>edukiaren</strong> zabalera bakarrik adierazten du. Padding eta border gehitu egiten dira, eta kutxa idatzitakoa baino handiagoa geratzen da.</li>
+<li><code>box-sizing: border-box;</code>: <code>width</code>-ek <strong>kutxa osoaren</strong> zabalera adierazten du (edukia + padding + border). Gaur egun <strong>oso gomendagarria</strong> da, kalkuluak asko errazten dituelako.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>* {
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    box-sizing: border-box;
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>}
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Aholkua</p>
+<p>Proiektu berri baten hasieran, ohikoa da <code>*  { box-sizing: border-box; }</code> jartzea CSS fitxategiaren hasieran, kutxen kalkulua errazteko.</p>
+</div>
+<h2 id="neurri-unitateak">Neurri-unitateak<a class="headerlink" href="#neurri-unitateak" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Absolutuak</strong>: <code>px</code> (pixela, ohikoena), <code>cm</code>, <code>mm</code>, <code>in</code>, <code>pt</code>.</li>
+<li><strong>Erlatiboak</strong>: pantailaren edo gurasoaren araberakoak dira, eta gaur egun <strong>hauek dira gomendatuenak</strong>, diseinu erantzunkorra (responsive) lortzeko:<ul>
+<li><code>%</code>: gurasoaren neurriaren araberakoa.</li>
+<li><code>em</code>: elementuaren letra-tamainaren araberakoa.</li>
+<li><code>rem</code>: <strong>dokumentu osoaren</strong> oinarrizko letra-tamainaren araberakoa (<code>&lt;html&gt;</code>-ena). <code>em</code> baino erabilgarriagoa da, ez baita metatzen elementu habiaratuetan.</li>
+<li><code>vw</code> / <code>vh</code>: leihoaren zabaleraren / altueraren % (<code>1vw</code> = leihoaren zabaleraren %1).</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>html {
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    font-size: 16px;
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>}
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>h1 {
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    font-size: 2rem; /* 32px beti, mailatik edo habiaratzetik independente */
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>}
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>.banner {
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    height: 50vh; /* pantailaren altueraren erdia */
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>}
+</code></pre></div>
+<h2 id="koloreak">Koloreak<a class="headerlink" href="#koloreak" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Modua</th>
+<th>Adibidea</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Izena</td>
+<td><code>color: red;</code></td>
+<td>Ingelesezko izena.</td>
+</tr>
+<tr>
+<td>Hamaseitarra</td>
+<td><code>color: #ff0000;</code></td>
+<td>Gorria, berdea, urdina (00-FF).</td>
+</tr>
+<tr>
+<td>Hamaseitar laburtua</td>
+<td><code>color: #f00;</code></td>
+<td>Digitu bakarra kolore bakoitzeko.</td>
+</tr>
+<tr>
+<td>RGB</td>
+<td><code>color: rgb(255, 0, 0);</code></td>
+<td>0-255 arteko balioak.</td>
+</tr>
+<tr>
+<td>RGBA</td>
+<td><code>color: rgba(255, 0, 0, 0.5);</code></td>
+<td>RGB + opakutasuna (0-1).</td>
+</tr>
+<tr>
+<td>HSL</td>
+<td><code>color: hsl(0, 100%, 50%);</code></td>
+<td>Ñabardura, saturazioa, argitasuna.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Aholkua</p>
+<p><code>rgba()</code> eta <code>hsl()</code> oso erabilgarriak dira gardentasuna behar denean, adibidez atzeko plano erdi-gardenak egiteko.</p>
+</div>
+<h2 id="tipografia-eta-testu-formatua">Tipografia eta testu-formatua<a class="headerlink" href="#tipografia-eta-testu-formatua" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Propietatea</th>
+<th>Azalpena</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>font-family</code></td>
+<td>Letra-tipoaren familia.</td>
+<td><code>font-family: Arial, sans-serif;</code></td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td>Letra-tamaina.</td>
+<td><code>font-size: 18px;</code></td>
+</tr>
+<tr>
+<td><code>font-weight</code></td>
+<td>Letra-lodiera (100-900, <code>normal</code>, <code>bold</code>).</td>
+<td><code>font-weight: bold;</code></td>
+</tr>
+<tr>
+<td><code>font-style</code></td>
+<td>Estiloa.</td>
+<td><code>font-style: italic;</code></td>
+</tr>
+<tr>
+<td><code>line-height</code></td>
+<td>Lerro-artea.</td>
+<td><code>line-height: 1.5;</code></td>
+</tr>
+<tr>
+<td><code>text-align</code></td>
+<td>Lerrokadura (<code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>).</td>
+<td><code>text-align: center;</code></td>
+</tr>
+<tr>
+<td><code>text-decoration</code></td>
+<td>Apaingarria (<code>underline</code>, <code>line-through</code>, <code>none</code>).</td>
+<td><code>text-decoration: none;</code></td>
+</tr>
+<tr>
+<td><code>text-transform</code></td>
+<td>Maiuskula/minuskula (<code>uppercase</code>, <code>lowercase</code>, <code>capitalize</code>).</td>
+<td><code>text-transform: uppercase;</code></td>
+</tr>
+<tr>
+<td><code>letter-spacing</code></td>
+<td>Karaktereen arteko tartea.</td>
+<td><code>letter-spacing: 1px;</code></td>
+</tr>
+<tr>
+<td><code>text-shadow</code></td>
+<td>Testuaren itzala (horizontala, bertikala, kolorea).</td>
+<td><code>text-shadow: 2px 2px gray;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Kontuz</p>
+<p><code>font-family</code>-rekin: erabiltzaileak ez badu letra-tipo hori instalatuta, nabigatzaileak bere ordezkoa erabiliko du. Horregatik ohikoa da hainbat aukera jartzea lehentasun-hurrenkeran, azkenengoa familia generiko bat izanik:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>p {
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    font-family: "Segoe UI", Arial, sans-serif;
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>}
+</code></pre></div></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Google Fonts</p>
+<p><strong>Google Fonts</strong> bezalako zerbitzuek doako letra-tipoak eskaintzen dituzte, erraz txertatzeko <code>&lt;link&gt;</code> etiketa baten bidez.</p>
+</div>
+<h2 id="atzeko-planoa-background">Atzeko planoa (background)<a class="headerlink" href="#atzeko-planoa-background" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Propietatea</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-color</code></td>
+<td>Atzeko planoaren kolorea.</td>
+</tr>
+<tr>
+<td><code>background-image</code></td>
+<td>Atzeko planoko irudia (<code>url(...)</code>).</td>
+</tr>
+<tr>
+<td><code>background-repeat</code></td>
+<td>Errepikapena (<code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>).</td>
+</tr>
+<tr>
+<td><code>background-position</code></td>
+<td>Kokapena (<code>center</code>, <code>top left</code>...).</td>
+</tr>
+<tr>
+<td><code>background-size</code></td>
+<td>Tamaina (<code>cover</code>, <code>contain</code>, neurriak).</td>
+</tr>
+<tr>
+<td><code>background-attachment</code></td>
+<td>Scroll egitean nola jokatzen duen (<code>fixed</code>, <code>scroll</code>).</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>body {
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    background-image: url("irudiak/atzekoa.jpg");
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    background-repeat: no-repeat;
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    background-size: cover;
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    background-position: center;
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>}
+</code></pre></div>
+<p>Modu laburrean (shorthand):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>body {
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    background: #ffffff url("irudiak/atzekoa.jpg") no-repeat fixed center;
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>}
+</code></pre></div>
+<h2 id="ertzak-border-eta-outline">Ertzak (border) eta outline<a class="headerlink" href="#ertzak-border-eta-outline" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>div {
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    border-width: 2px;
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    border-style: solid;
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    border-color: black;
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    border-radius: 8px; /* izkinak biribiltzeko */
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>}
+</code></pre></div>
+<p>Modu laburrean: <code>border: 2px solid black;</code></p>
+<p>Ertz banaka alda daitezke: <code>border-top-color</code>, <code>border-bottom-width</code>, etab.</p>
+<p><strong><code>outline</code></strong> ertzaren antzekoa da, baina ez da kutxaren neurrien parte, eta ez du espaziorik hartzen. Elementuak nabarmentzeko erabili ohi da (adib. <code>input:focus</code>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>input:focus {
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    outline: 2px solid blue;
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>}
+</code></pre></div>
+<h2 id="margin-eta-padding">Margin eta padding<a class="headerlink" href="#margin-eta-padding" title="Permanent link">&para;</a></h2>
+<p>Bien sintaxia berdina da: lau balio, erlojuaren orratzen norabidean (goitik hasita: goian, eskuinean, behean, ezkerrean).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>div {
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    margin: 10px 20px 10px 20px;  /* goian eskuinean behean ezkerrean */
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    padding: 10px 20px;           /* goian/behean 10px, ezkerrean/eskuinean 20px */
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>}
+</code></pre></div>
+<p>Norabide bakarra alda daiteke: <code>margin-top</code>, <code>padding-left</code>, etab.</p>
+<div class="admonition tip">
+<p class="admonition-title">Aholkua</p>
+<p><code>margin: 0 auto;</code> da elementu bat <strong>horizontalki zentratzeko</strong> modurik ohikoena, betiere elementuak <code>width</code> zehaztua badu eta <code>display: block;</code> bada.</p>
+</div>
+<h2 id="display-elementu-motak"><code>display</code>: elementu motak<a class="headerlink" href="#display-elementu-motak" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>block</strong>: bere lerro propioa sortzen du (<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>...). Altuera eta zabalera alda dakizkioke.</li>
+<li><strong>inline</strong>: ez du lerro-jauzirik sortzen (<code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;b&gt;</code>...). Altuera/zabalera <strong>ezin dira</strong> aldatu.</li>
+<li><strong>inline-block</strong>: lerro barruan geratzen da, baina altuera/zabalera aldatu daitezke.</li>
+<li><strong>none</strong>: elementua ezkutatzen du erabat (ez du lekurik hartzen).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>span {
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    display: inline-block;
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    width: 100px;
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>}
+</code></pre></div>
+<h2 id="kokapena-position">Kokapena: <code>position</code><a class="headerlink" href="#kokapena-position" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Balioa</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static</code></td>
+<td>Lehenetsia. Fluxu normalean kokatzen da.</td>
+</tr>
+<tr>
+<td><code>relative</code></td>
+<td>Bere kokapen normaletik desplazatzen da (<code>top</code>, <code>left</code>...), baina lekua gordetzen du.</td>
+</tr>
+<tr>
+<td><code>absolute</code></td>
+<td><code>position: relative</code> (edo antzekoa) duen gurasoarekiko kokatzen da. Ez du lekurik gordetzen.</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>Pantailarekiko finko geratzen da, scroll egin arren.</td>
+</tr>
+<tr>
+<td><code>sticky</code></td>
+<td>Fluxu normalean doa harik eta zehaztutako mugara iritsi arte; orduantxe <code>fixed</code> bihurtzen da.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>.menu {
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    position: sticky;
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    top: 0;
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>    background-color: white;
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>}
+</code></pre></div>
+<h2 id="float-eta-clear">Float eta clear<a class="headerlink" href="#float-eta-clear" title="Permanent link">&para;</a></h2>
+<p>Historikoki, orriak maketatzeko <code>float</code> asko erabili izan da: elementu bat ezkerrera edo eskuinera "flotarazten" du, eta gainerako testua/elementuak inguruan kokatzen dira.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>img {
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    float: left;
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    margin-right: 10px;
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>}
+</code></pre></div>
+<p><code>clear</code> propietatea flotazio bati "atxikita" ez egoteko erabiltzen da:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>footer {
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    clear: both;
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>}
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Gaur egun <code>float</code> <strong>ez da gomendagarria</strong> orri osoak maketatzeko; horretarako <strong>Flexbox</strong> eta <strong>Grid</strong> erabiltzen dira (hurrengo puntuetan ikusiko ditugu). <code>float</code> erabilera nagusia gaur egun irudi txiki bat testuz inguratzea da.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 3</p>
+<p>Kutxen eredua eta kokapena praktikatzeko ariketa hau egingo dugu: <em>(ariketaren esteka hemen gehituko da)</em></p>
+</div>
+<h2 id="flexbox">Flexbox<a class="headerlink" href="#flexbox" title="Permanent link">&para;</a></h2>
+<p><strong>Flexbox</strong> elementuak lerro batean (edo zutabe batean) modu malguan antolatzeko erabiltzen da. Edukiontzi bati (<code>display: flex</code>) ezartzen zaio, eta bere seme guztiak automatikoki antolatzen ditu.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>.edukiontzia {
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    display: flex;
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>}
+</code></pre></div>
+<h3 id="edukiontziaren-propietate-nagusiak">Edukiontziaren propietate nagusiak<a class="headerlink" href="#edukiontziaren-propietate-nagusiak" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Propietatea</th>
+<th>Balioak</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flex-direction</code></td>
+<td><code>row</code> | <code>row-reverse</code> | <code>column</code> | <code>column-reverse</code></td>
+<td>Elementuak lerroan ala zutabean antolatzen dituen.</td>
+</tr>
+<tr>
+<td><code>flex-wrap</code></td>
+<td><code>nowrap</code> | <code>wrap</code></td>
+<td>Elementuak lerro/zutabe berrira pasatzen diren edo ez, lekurik ez badago.</td>
+</tr>
+<tr>
+<td><code>justify-content</code></td>
+<td><code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> | <code>space-around</code></td>
+<td>Elementuak nola banatzen diren ardatz nagusian (normalean horizontalean).</td>
+</tr>
+<tr>
+<td><code>align-items</code></td>
+<td><code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>stretch</code></td>
+<td>Elementuak nola lerrokatzen diren ardatz gurutzatuan (normalean bertikalean).</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>.menu {
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    display: flex;
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    justify-content: space-between;
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    align-items: center;
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>}
+</code></pre></div>
+<h3 id="semeen-propietate-nagusia">Semeen propietate nagusia<a class="headerlink" href="#semeen-propietate-nagusia" title="Permanent link">&para;</a></h3>
+<p><code>flex-grow</code> propietateak elementu batek gainerako espazio librea zenbat "hartu" behar duen adierazten du:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>.card {
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    flex-grow: 1; /* espazio librea era berean banatzen du elementu guztien artean */
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>}
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Aholkua</p>
+<p>Flexbox oso erabilgarria da menu bat, txartel-multzo bat edo elementu-zerrenda bat lerrokatzeko. Kutxen zerrenda bat (1 dimentsiokoa: lerroa edo zutabea) maketatzeko da bereziki egokia.</p>
+</div>
+<h2 id="grid">Grid<a class="headerlink" href="#grid" title="Permanent link">&para;</a></h2>
+<p><strong>Grid</strong> sistemarekin edukiontzi bat sareta (errenkadak eta zutabeak) moduan antolatzen da. Flexbox ez bezala, <strong>bi dimentsiotan</strong> (lerroan eta zutabean) lan egiteko pentsatuta dago.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>.edukiontzia {
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    display: grid;
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    grid-template-columns: 200px 1fr 1fr;
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    grid-template-rows: auto 1fr auto;
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    gap: 10px;
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>}
+</code></pre></div>
+<ul>
+<li><code>grid-template-columns</code> / <code>grid-template-rows</code>: zutabeen/errenkaden neurriak zehazten dituzte. <code>fr</code> unitateak "zati bat" adierazten du espazio librearekiko (adib. <code>1fr 2fr</code> bigarren zutabea lehenengoa baino bi aldiz zabalagoa izango da).</li>
+<li><code>gap</code>: sareta osatzen duten kutxen arteko tartea.</li>
+</ul>
+<p>Elementu bat sareta barruan kokatzeko:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>.buruko_atala {
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    grid-column: 1 / 4; /* 1. zutabetik 4.era */
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    grid-row: 1;
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>}
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Aholkua</p>
+<p>Erabaki azkarra: orri baten <strong>egitura orokorra</strong> (buruko atala, alboko barra, edukia, oina) maketatzeko, Grid da normalean aukerarik erosoena. Elementu batzuk lerro batean lerrokatzeko (menu bat, botoi-zerrenda bat), Flexbox nahikoa da.</p>
+</div>
+<h2 id="media-queries-diseinu-erantzunkorra">Media Queries: diseinu erantzunkorra<a class="headerlink" href="#media-queries-diseinu-erantzunkorra" title="Permanent link">&para;</a></h2>
+<p><em>Media queries</em>-en bidez, pantailaren neurriaren (edo beste ezaugarrien) arabera CSS ezberdina aplika daiteke. Horri <strong>diseinu erantzunkorra</strong> (responsive design) deitzen zaio.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>/* Pantaila 600px baino handiagoa denean */
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>@media screen and (min-width: 600px) {
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>    .edukiontzia {
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>        display: flex;
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    }
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>}
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>/* Pantaila 599px edo txikiagoa denean */
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>@media screen and (max-width: 599px) {
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>    .edukiontzia {
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>        display: block;
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>    }
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>}
+</code></pre></div>
+<p>Erabilgarrienak diren aldagaiak <code>min-width</code> eta <code>max-width</code> dira, baina <code>orientation: portrait</code> / <code>orientation: landscape</code> ere erabil daitezke gailua horizontalki edo bertikalki dagoen egiaztatzeko.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ez ahaztu</p>
+<p>Gaur egun HTMLren <code>&lt;head&gt;</code> atalean beti jarri behar dugu ondorengo lerroa, media queriek gailu mugikorretan ondo funtziona dezaten:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ariketa 4</p>
+<p>Flexbox, Grid eta Media Queries praktikatzeko ariketa hau egingo dugu: <em>(ariketaren esteka hemen gehituko da)</em></p>
+</div>
+<h2 id="gaur-egungo-praktika-onak-css-aldagaiak-custom-properties">Gaur egungo praktika onak: CSS aldagaiak (custom properties)<a class="headerlink" href="#gaur-egungo-praktika-onak-css-aldagaiak-custom-properties" title="Permanent link">&para;</a></h2>
+<p>CSS3k <strong>berezko aldagaiak</strong> onartzen ditu, <code>--izena</code> sintaxiarekin. Kolore-paleta edo neurri errepikakorrak kudeatzeko oso erabilgarriak dira, aldaketa bakar batekin CSS osoa eguneratu ahal izateko:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>:root {
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    --kolore_nagusia: #2a7de1;
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>    --tarte_estandarra: 16px;
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>}
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>h1 {
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>    color: var(--kolore_nagusia);
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>}
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>.card {
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>    padding: var(--tarte_estandarra);
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>}
+</code></pre></div>
+<p>Gomendioak</p>
+<p>✅ Erabili beti kanpoko CSS fitxategiak (ez inline estiloak).</p>
+<p>✅ Erabili <code>box-sizing: border-box;</code> proiektu guztietan.</p>
+<p>✅ Diseinua egiteko, hobetsi <strong>Flexbox</strong> eta <strong>Grid</strong>, <code>float</code> baino.</p>
+<p>✅ Erabili unitate erlatiboak (<code>%</code>, <code>rem</code>, <code>vw/vh</code>) diseinu erantzunkorra errazteko.</p>
+<p>❌ Ez erabili <code>!important</code> estiloak "konpontzeko"; ia beti hautatzaileen espezifikotasuna hobeto ulertuz konpon daiteke arazoa.</p>
+<h2 id="esteka-erabilgarriak">Esteka erabilgarriak<a class="headerlink" href="#esteka-erabilgarriak" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/CSS">MDN: CSS</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks: A Complete Guide to Flexbox</a></li>
+<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-Tricks: A Complete Guide to Grid</a></li>
+<li><a href="https://fonts.google.com/">Google Fonts</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Igo goraino
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Orri-oina" >
+        
+          
+          <a href="../02-html/" class="md-footer__link md-footer__link--prev" aria-label="Aurrekoa: HTML">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Aurrekoa
+              </span>
+              <div class="md-ellipsis">
+                HTML
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-xml/" class="md-footer__link md-footer__link--next" aria-label="Hurrengoa: XML">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Hurrengoa
+              </span>
+              <div class="md-ellipsis">
+                XML
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Arbelean kopiatuta", "clipboard.copy": "Kopiatu arbelean", "search.result.more.one": "Bat gehiago orri honetan", "search.result.more.other": "# gehiago orri honetan", "search.result.none": "Bat datorren dokumenturik ez", "search.result.one": "Bat datorren dokumentu bat", "search.result.other": "Bat datozen # dokumentu", "search.result.placeholder": "Idatzi bilatzen hasteko", "search.result.term.missing": "Falta da", "select.version": "Hautatu bertsioa"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
