@@ -417,7 +417,7 @@ usando `../`:
 ```
 
 !!! example "Ariketa 6"
-    Haremos este ejercicio para trabajar los enlaces: [Ariketa 6](https://docs.google.com/document/d/1yNLnRmuh3gRfOAYjq5qQ2CAdDA78987bK7IwfbBcPkw/edit?usp=sharing){: target="_blank" rel="noopener" }
+    Haremos este ejercicio para trabajar los enlaces: [Ariketa 6](https://docs.google.com/document/d/1F_WgjdFtKQeQh6jSobSamE70sAJP9OaY7Ixx2kEI92E/edit?usp=sharing){: target="_blank" rel="noopener" }
 
 **Salto a un apartado dentro de la misma página:** primero hay que
 nombrar el apartado al que vamos a saltar; después, crear el enlace que

@@ -410,7 +410,7 @@ adierazten du.
 ```
 
 !!! example "Ariketa 6"
-    Estekak lantzeko hurrengo ariketa hau egingo dugu: [Ariketa 6](https://docs.google.com/document/d/1yNLnRmuh3gRfOAYjq5qQ2CAdDA78987bK7IwfbBcPkw/edit?usp=sharing){: target="_blank" rel="noopener" }
+    Estekak lantzeko hurrengo ariketa hau egingo dugu: [Ariketa 6](https://docs.google.com/document/d/1F_WgjdFtKQeQh6jSobSamE70sAJP9OaY7Ixx2kEI92E/edit?usp=sharing){: target="_blank" rel="noopener" }
 
 **Orri bereko atal batera saltoa:** lehenengo, salto egingo dugun atala
 izendatu behar da; ondoren, atal horretara eramango gaituen esteka sortu:
