@@ -279,16 +279,21 @@ bakar batean tolesten dituzte. Espazioa kontrolatzeko:
 **Zerrenda ordenatuak eta ez-ordenatuak:**
 
 ```html
+// Hau zerrenda ordenatugabea da
+<ul>
+    <li>Ordenik gabeko elementua</li>
+    <li>Beste elementu bat</li>
+</ul>
+
+// Hau zerrenda ordenatua da
 <ol>
     <li>Lehen elementua</li>
     <li>Bigarren elementua</li>
 </ol>
 
-<ul>
-    <li>Ordenik gabeko elementua</li>
-    <li>Beste elementu bat</li>
-</ul>
 ```
+
+![Zerrendak](../../images/zerrendak.png)
 
 Zerrendak beste zerrenda batzuen barruan habiaratu daitezke; era
 guztietakoak nahas daitezke (ordenatuak, desordenatuak eta definizioak).
@@ -319,6 +324,8 @@ aldatzen du:
     <dd>Terminoa deskribatzen duen definizioa</dd>
 </dl>
 ```
+[W3 Schools - Lists](https://www.w3schools.com/html/html_lists.asp)
+
 
 !!! example "Ariketa 4"
     Praktikak jarriko dugu ikusitako zerrenda guztiak, horretarako hurrengo ariketa hau egingo dugu: [Ariketa 4](https://docs.google.com/document/d/1pveaqygPBLPr78U9XzY_ine5uHqWn9uhMmzeColxKY8/edit?usp=sharing){: target="_blank" rel="noopener" }

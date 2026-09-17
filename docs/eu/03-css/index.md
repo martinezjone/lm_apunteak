@@ -1,548 +1,1186 @@
 # CSS
 
-CSS3, CSS estandarraren berrikuspenik berriena da eta orriaren **itxura** kontrolatzeko erabiltzen den lengoaia da: koloreak, tipografiak, kokapenak, animazioak eta orriaren egitura bera nola erakusten den zehazten du.
+CSS (**Cascading Style Sheets**) web-orri baten **itxura eta diseinua**
+definitzeko erabiltzen den lengoaia da.
 
-## Zer da CSS?
+HTML dokumentuaren egitura eta edukia definitzeko erabiltzen dugu; CSS
+bidez, berriz, elementu horien itxura alda dezakegu.
 
-1. CSSk **Cascading Style Sheets** esan nahi du (kaskada-estilo orriak).
-2. HTML dokumentuen **itxura eta maketazioa** definitzeko erabiltzen den lengoaia da.
-3. **Ez da** markatze-lengoaia bat, ezta programazio-lengoaia bat ere; **estilo-lengoaia** bat da.
-4. "Kaskada" izena du araua batzuk beste batzuei gainjartzen zaizkielako, lehentasun-ordena jakin bati jarraituz.
-5. HTMLrekin (edukiarekin) eta JavaScriptekin (interakzioarekin) batera funtzionatzen du.
-6. CSS fitxategiek **.css** luzapena dute.
+Adibidez, HTML dokumentu honetan:
 
-
-## CSS HTML batean txertatzeko moduak
-
-Hiru modu daude CSSa HTML dokumentu bati lotzeko:
-
-### 1. Elementuari zuzenean (inline)
-
-`style` atributuaren bidez, elementuari zuzenean estiloa jartzen zaio:
-
-```
-<p style="color: red; text-align: center;">Testu hau gorriz eta zentratuta agertuko da</p>
+``` html
+<h1>Nire lehen web-orria</h1>
+<p>Hau paragrafo bat da.</p>
 ```
 
-### 2. `<head>` barruko `<style>` elementuan (internal)
+CSS erabiliz, izenburuaren kolorea eta paragrafoaren tamaina alda
+ditzakegu:
 
-```
-<head>
-    <style>
-        p {
-            color: red;
-        }
-    </style>
-</head>
-```
+``` css
+h1 {
+    color: blue;
+}
 
-### 3. Kanpoko fitxategi baten bidez (external)
-
-Hau da **modu gomendatuena**, HTML kodea txukunago geratzen delako eta CSS berbera hainbat HTML orriren artean birrerabil daitekeelako:
-
-```
-<head>
-    <link rel="stylesheet" type="text/css" href="css/estiloak.css">
-</head>
+p {
+    font-size: 18px;
+}
 ```
 
-!!! note
-    Hiru moduak batera erabiliz gero, gogoratu **lehentasun-ordena**: elementuko `style` atributuak > `<head>`-eko `<style>`-k > kanpoko fitxategiak. 
-    Hau da, gatazkarik badago, elementuari zuzenean jarritako estiloak irabaziko du beti.
+!!! tip "HTML eta CSS"
 
-## Oinarrizko sintaxia
+    **HTML → egitura eta edukia**
 
-CSS **arauen** bidez funtzionatzen du. Araua osatzen duten hiru osagaiak hauek dira:
+    **CSS → itxura eta diseinua**
 
+## CSS sintaxia
+
+CSS arau batek **hautatzaile** bat eta deklarazio bat edo gehiago ditu:
+
+``` css
+p {
+    color: blue;
+    font-size: 18px;
+}
 ```
+
+-   `p` → **hautatzailea**: estiloa zein elementuri aplikatuko zaion
+    adierazten du.
+-   `color`, `font-size` → **propietateak**: zer aldatu nahi dugun
+    adierazten dute.
+-   `blue`, `18px` → **balioak**: propietateak zer balio izango duen
+    adierazten dute.
+
+Deklarazio bakoitzak egitura hau du:
+
+``` css
+propietatea: balioa;
+```
+
+Deklarazioak `{ }` giltzen artean idazten dira:
+
+``` css
 hautatzailea {
     propietatea: balioa;
     propietatea: balioa;
 }
 ```
 
-| Osagaia | Adibidea | Azalpena |
-| --- | --- | --- |
-| Hautatzailea (selektorea) | `p` | Zein elementuri eragingo dion adierazten du. |
-| Propietatea | `color` | Aldatu nahi den ezaugarria. |
-| Balioa | `blue` | Propietateari ezarritako balioa. |
-| Deklarazioa | `color: blue;` | Propietatea eta balioa batera, puntu eta komarekin amaituta. |
+!!! note "Kontuan izan"
 
+    Propietatea eta balioa `:` bidez bereizten dira, eta deklarazio bakoitzaren amaieran `;` erabiltzen da.
+
+## CSS HTML dokumentuan erabiltzea
+
+CSS HTML dokumentu bati hiru modutan gehi diezaiokegu.
+
+### Inline estiloak
+
+CSS zuzenean HTML elementuaren `style` atributuan idazten da:
+
+``` html
+<p style="color: blue;">Paragrafo urdina</p>
 ```
-p {
+
+Metodo hau erabil daitekeen arren, **ez da gomendagarria web-orri baten
+estilo orokorra definitzeko**, HTML egitura eta CSS estiloak nahasten
+baitira.
+
+### Barneko estilo-orria
+
+CSS kodea dokumentuaren `<head>` barruko `<style>` elementuan idatz
+daiteke:
+
+``` html
+<head>
+    <style>
+        p {
+            color: blue;
+        }
+    </style>
+</head>
+```
+
+Metodo hau erabilgarria izan daiteke orri bakar batean estilo gutxi
+batzuk definitzeko.
+
+### Kanpoko estilo-orria
+
+Ohikoena eta gomendagarriena CSS kodea aparteko `.css` fitxategi batean
+gordetzea da.
+
+Adibidez, proiektuak honako egitura izan dezake:
+
+``` text
+proiektua/
+│
+├── index.html
+└── css/
+    └── estiloak.css
+```
+
+`estiloak.css` fitxategian:
+
+``` css
+h1 {
     color: blue;
-    font-size: 16px;
+}
+
+p {
+    font-size: 18px;
 }
 ```
 
-!!! example "Ariketa 1"
-    Sintaxi hau praktikatzeko, lehenengo ariketa hau egingo dugu: *(ariketaren esteka hemen gehituko da)*
+HTML dokumentutik CSS fitxategia lotzeko `<link>` elementua erabiltzen
+da, `<head>` barruan:
+
+``` html
+<head>
+    <link rel="stylesheet" href="css/estiloak.css">
+</head>
+```
+
+!!! tip "Gomendioa"
+
+    Ahal den guztietan, **kanpoko estilo-orriak** erabiliko ditugu. Horrela HTML egitura eta CSS estiloak bananduta mantentzen dira, eta kodea txukunagoa eta mantentzeko errazagoa da.
+
+### Lehenengo adibidea
+
+Sortu honako egitura:
+
+``` text
+lehen-css/
+│
+├── index.html
+└── css/
+    └── estiloak.css
+```
+
+`index.html`:
+
+``` html
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Nire lehen CSS</title>
+    <link rel="stylesheet" href="css/estiloak.css">
+</head>
+<body>
+
+    <h1>Nire lehen CSS</h1>
+
+    <p>HTML erabiliz web-orriaren egitura sortzen dugu.</p>
+
+    <p>CSS erabiliz web-orriaren itxura aldatzen dugu.</p>
+
+</body>
+</html>
+```
+
+`estiloak.css`:
+
+``` css
+h1 {
+    color: darkblue;
+}
+
+p {
+    color: #333;
+    font-size: 18px;
+}
+```
+
+Aldatu CSS fitxategiko balioak eta ikusi zer gertatzen den
+nabigatzailean.
+
+!!! example "Probatu"
+
+    Aldatu `h1` elementuaren `color` propietatea.
+
+    Gehitu `font-size: 40px;`.
+
+    Zer gertatzen da nabigatzailean?
 
 ## Hautatzaileak
 
-Elementuak "hautatzeko" hainbat modu daude. Hauek dira garrantzitsuenak.
+CSS erabiltzean, lehenengo erabaki behar dugu **zein HTML elementuri
+aplikatu nahi diogun estiloa**.
+
+Horretarako **hautatzaileak** erabiltzen ditugu.
 
 ### Elementu-hautatzailea
 
-Etiketa-mota bereko elementu **guztiei** eragiten die:
+HTML elementu mota bereko elementu guztiak hautatzen ditu.
 
-```
+``` css
 p {
     color: blue;
 }
 ```
 
-Koma bidez, hainbat elementu-motari estilo bera eman dakieke:
-
+``` html
+<p>Lehenengo paragrafoa</p>
+<p>Bigarren paragrafoa</p>
 ```
+
+Bi paragrafoek estilo bera jasoko dute.
+
+### Hainbat elementu hautatzea
+
+Hainbat elementuri estilo bera aplikatzeko, hautatzaileak komaz
+bereizten dira:
+
+``` css
 h1, h2, p {
     color: blue;
 }
 ```
 
-### Class hautatzailea: `.class`
+Kasu honetan `<h1>`, `<h2>` eta `<p>` elementuek kolore bera izango
+dute.
 
-`.class="izena"` hautatzaileak zehaztuta dauden elementu guztiak hautatzen ditu. HTML elementu askori class bera jar dakieke:
+### Class hautatzailea
 
-```
-<p class="arrosa">Paragrafo hau arrosa-kolorekoa izango da.</p>
-<div class="arrosa">Div hau ere arrosa-kolorekoa izango da.</div>
+`class` atributuak hainbat elementu taldekatzea ahalbidetzen du.
+
+HTML:
+
+``` html
+<p class="nabarmendua">Paragrafo garrantzitsua</p>
+<p>Paragrafo arrunta</p>
+<p class="nabarmendua">Beste paragrafo garrantzitsu bat</p>
 ```
 
-```
-.arrosa {
-    background-color: pink;
+CSS:
+
+``` css
+.nabarmendua {
+    background-color: yellow;
 }
 ```
 
-Elementu-motari lotuta ere erabil daiteke (kasu horretan, elementu mota horretan bakarrik izango du eragina):
+CSSn `class` bat hautatzeko **puntua (`.`)** erabiltzen da:
 
-```
-p.arrosa {
-    background-color: pink;
+``` css
+.klasearen-izena {
+    propietatea: balioa;
 }
 ```
 
-### Id hautatzailea: `#id`
+`class` bera hainbat HTML elementutan erabil daiteke.
 
-`#id` hautatzaileak `id` horrekin zehaztuta dagoen elementu **bakarra** hautatzen du. Garrantzitsua da HTML dokumentu batean ez errepikatzea `id` bera bi elementutan:
+### Elementu batek hainbat class izan ditzake
 
-```
-<h1 id="izenburu_nagusia">Titulua</h1>
+HTML elementu batek `class` bat baino gehiago izan ditzake. Izenak
+zuriunez bereizten dira:
+
+``` html
+<p class="nabarmendua handia">Testu garrantzitsua</p>
 ```
 
+``` css
+.nabarmendua {
+    background-color: yellow;
+}
+
+.handia {
+    font-size: 24px;
+}
 ```
-#izenburu_nagusia {
+
+Elementuak bi klaseen estiloak jasoko ditu.
+
+### ID hautatzailea
+
+`id` atributua dokumentuko elementu **bakar bat identifikatzeko**
+erabiltzen da.
+
+HTML:
+
+``` html
+<h1 id="izenburua">Nire web-orria</h1>
+```
+
+CSS:
+
+``` css
+#izenburua {
+    color: darkblue;
+}
+```
+
+CSSn `id` bat hautatzeko `#` erabiltzen da:
+
+``` css
+#id-izena {
+    propietatea: balioa;
+}
+```
+
+!!! note "`class` edo `id`?"
+
+    `class` → hainbat elementutan erabil daiteke.
+
+    `id` → dokumentuko elementu bakarra identifikatzeko erabiltzen da.
+
+    Estiloak aplikatzeko, normalean **class erabiltzea komeni da**.
+
+### Ondorengo elementuak hautatzea
+
+Beste elementu baten barruan dauden elementuak hauta ditzakegu:
+
+``` html
+<header>
+    <p>Header barruko paragrafoa</p>
+</header>
+
+<main>
+    <p>Main barruko paragrafoa</p>
+</main>
+```
+
+``` css
+header p {
     color: blue;
-    font-size: 30px;
 }
 ```
 
-| | `.class` | `#id` |
-| --- | --- | --- |
-| Elementu batean erabiltzeko aldiak | Behin baino gehiagotan (elementu asko) | Behin bakarrik (elementu bat) |
-| HTML batean errepika daiteke? | Bai | Ez |
+Kasu honetan, `<header>` elementuaren barruan dauden `<p>` elementuek
+bakarrik jasoko dute estiloa.
 
-### Hautatzaileen konbinazioak
+### Hautatzaile unibertsala
 
-```
-/* Ondorengo (descendant): ul baten barruan dauden li GUZTIAK, 
-   zuzeneko seme izan ala ez */
-ul li {
-    color: blue;
-}
+`*` hautatzaileak dokumentuko elementu guztiak hautatzen ditu:
 
-/* Ume zuzena (child): ul baten UME ZUZENAK diren li-ak bakarrik */
-ul > li {
-    color: blue;
-}
-
-/* Elkarren ondoko anaia (adjacent sibling): div baten ONDOREN 
-   datorren lehen p-a bakarrik */
-div + p {
-    color: blue;
-}
-```
-
-### Pseudo-klaseak
-
-Elementu bat egoera berezi batean dagoenean aplikatzen dira:
-
-| Pseudo-klasea | Erabilera |
-| --- | --- |
-| `a:link` | Oraindik bisitatu gabeko esteka. |
-| `a:visited` | Aurretik bisitatutako esteka. |
-| `a:hover` | Sagua elementuaren gainean dagoenean. |
-| `a:active` | Elementuan klik egiten ari garenean. |
-| `input:checked` | Markatutako checkbox/radio bat. |
-| `p:first-child` | Elementua bere gurasoaren lehen semea denean. |
-| `p:last-child` | Elementua bere gurasoaren azken semea denean. |
-| `p:nth-child(2)` | Elementua bere gurasoaren N. semea denean. |
-
-```
-a:hover {
-    color: red;
-    text-decoration: underline;
-}
-```
-
-
-!!! example "Ariketa 2"
-    Hautatzaileak lantzeko ariketa hau egingo dugu: *(ariketaren esteka hemen gehituko da)*
-
-## Kutxen eredua (Box model)
-
-CSSn **elementu guztiak kutxak** dira. Kutxa bakoitzak lau geruza ditu, kanpotik barrurantz:
-
-1. **Margin** (marjina): kutxaren kanpoko espazioa, beste kutxekiko banaketa.
-2. **Border** (ertza): kutxaren muga.
-3. **Padding** (betegarria): edukiaren eta ertzaren arteko barruko espazioa.
-4. **Content** (edukia): testua, irudia edo beste elementuak.
-
-```
-div {
-    width: 300px;
-    padding: 20px;
-    border: 2px solid black;
-    margin: 10px;
-}
-```
-
-### `box-sizing`
-
-`width` batek zer neurtzen duen zehazteko erabiltzen da:
-
-- `box-sizing: content-box;` (lehenetsia): `width`-ek **edukiaren** zabalera bakarrik adierazten du. Padding eta border gehitu egiten dira, eta kutxa idatzitakoa baino handiagoa geratzen da.
-- `box-sizing: border-box;`: `width`-ek **kutxa osoaren** zabalera adierazten du (edukia + padding + border). Gaur egun **oso gomendagarria** da, kalkuluak asko errazten dituelako.
-
-```
+``` css
 * {
     box-sizing: border-box;
 }
 ```
 
+### Pseudo-klaseak
 
-!!! tip "Aholkua"
-    Proiektu berri baten hasieran, ohikoa da `*  { box-sizing: border-box; }` jartzea CSS fitxategiaren hasieran, kutxen kalkulua errazteko.
+Pseudo-klaseek elementu baten **egoeraren arabera** estiloa aplikatzeko
+aukera ematen dute.
 
-## Neurri-unitateak
+Adibidez, `:hover` pseudo-klasea sagua elementuaren gainean dagoenean
+aktibatzen da:
 
-- **Absolutuak**: `px` (pixela, ohikoena), `cm`, `mm`, `in`, `pt`.
-- **Erlatiboak**: pantailaren edo gurasoaren araberakoak dira, eta gaur egun **hauek dira gomendatuenak**, diseinu erantzunkorra (responsive) lortzeko:
-    - `%`: gurasoaren neurriaren araberakoa.
-    - `em`: elementuaren letra-tamainaren araberakoa.
-    - `rem`: **dokumentu osoaren** oinarrizko letra-tamainaren araberakoa (`<html>`-ena). `em` baino erabilgarriagoa da, ez baita metatzen elementu habiaratuetan.
-    - `vw` / `vh`: leihoaren zabaleraren / altueraren % (`1vw` = leihoaren zabaleraren %1).
-
-```
-html {
-    font-size: 16px;
-}
-h1 {
-    font-size: 2rem; /* 32px beti, mailatik edo habiaratzetik independente */
-}
-.banner {
-    height: 50vh; /* pantailaren altueraren erdia */
+``` css
+a:hover {
+    color: red;
 }
 ```
+
+Esteketan ohikoak dira:
+
+``` css
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: orange;
+}
+```
+
+!!! example "Probatu"
+
+    Sortu hainbat esteka dituen HTML dokumentu bat eta definitu egoera bakoitzerako kolore desberdin bat.
+
+## Cascada, herentzia eta espezifikotasuna
+
+Batzuetan, elementu bati CSS arau batek baino gehiagok eragiten diote.
+
+Adibidez:
+
+``` css
+p {
+    color: blue;
+}
+
+.nabarmendua {
+    color: red;
+}
+```
+
+``` html
+<p class="nabarmendua">Zein kolore izango dut?</p>
+```
+
+Kasu honetan testua **gorria** izango da, `.nabarmendua` hautatzailea
+`p` hautatzailea baino espezifikoagoa delako.
+
+CSSk hainbat arau erabiltzen ditu zein estilo aplikatu erabakitzeko:
+
+-   **Espezifikotasuna**: hautatzaile zehatzagoek lehentasun handiagoa
+    dute.
+-   **Ordena**: espezifikotasun bera badute, geroago idatzitako arauak
+    lehentasuna izango du.
+-   **Herentzia**: propietate batzuk guraso-elementutik
+    seme-elementuetara heredatzen dira.
+
+Adibidez:
+
+``` html
+<section>
+    <h2>Izenburua</h2>
+    <p>Paragrafoa</p>
+</section>
+```
+
+``` css
+section {
+    color: blue;
+}
+```
+
+`color` heredatzen den propietatea denez, `<h2>` eta `<p>` elementuek
+ere kolore urdina hartuko dute.
+
+!!! tip "Ideia nagusia"
+
+    Ez dugu espezifikotasunaren kalkulua buruz ikasi behar. Garrantzitsuena da ulertzea **elementu batek hainbat CSS arau jaso ditzakeela** eta nabigatzaileak erabakitzen duela zein aplikatu.
 
 ## Koloreak
 
-| Modua | Adibidea | Azalpena |
-| --- | --- | --- |
-| Izena | `color: red;` | Ingelesezko izena. |
-| Hamaseitarra | `color: #ff0000;` | Gorria, berdea, urdina (00-FF). |
-| Hamaseitar laburtua | `color: #f00;` | Digitu bakarra kolore bakoitzeko. |
-| RGB | `color: rgb(255, 0, 0);` | 0-255 arteko balioak. |
-| RGBA | `color: rgba(255, 0, 0, 0.5);` | RGB + opakutasuna (0-1). |
-| HSL | `color: hsl(0, 100%, 50%);` | Ñabardura, saturazioa, argitasuna. |
+CSSn koloreak hainbat modutan adieraz daitezke.
 
-!!! tip "Aholkua"
-    `rgba()` eta `hsl()` oso erabilgarriak dira gardentasuna behar denean, adibidez atzeko plano erdi-gardenak egiteko.
+### Kolorearen izena
 
-## Tipografia eta testu-formatua
-
-| Propietatea | Azalpena | Adibidea |
-| --- | --- | --- |
-| `font-family` | Letra-tipoaren familia. | `font-family: Arial, sans-serif;` |
-| `font-size` | Letra-tamaina. | `font-size: 18px;` |
-| `font-weight` | Letra-lodiera (100-900, `normal`, `bold`). | `font-weight: bold;` |
-| `font-style` | Estiloa. | `font-style: italic;` |
-| `line-height` | Lerro-artea. | `line-height: 1.5;` |
-| `text-align` | Lerrokadura (`left`, `right`, `center`, `justify`). | `text-align: center;` |
-| `text-decoration` | Apaingarria (`underline`, `line-through`, `none`). | `text-decoration: none;` |
-| `text-transform` | Maiuskula/minuskula (`uppercase`, `lowercase`, `capitalize`). | `text-transform: uppercase;` |
-| `letter-spacing` | Karaktereen arteko tartea. | `letter-spacing: 1px;` |
-| `text-shadow` | Testuaren itzala (horizontala, bertikala, kolorea). | `text-shadow: 2px 2px gray;` |
-
-!!! warning "Kontuz"
-    `font-family`-rekin: erabiltzaileak ez badu letra-tipo hori instalatuta, nabigatzaileak bere ordezkoa erabiliko du. Horregatik ohikoa da hainbat aukera jartzea lehentasun-hurrenkeran, azkenengoa familia generiko bat izanik:
-    ```
-    p {
-        font-family: "Segoe UI", Arial, sans-serif;
-    }
-    ```
-
-!!! tip "Google Fonts"
-    **Google Fonts** bezalako zerbitzuek doako letra-tipoak eskaintzen dituzte, erraz txertatzeko `<link>` etiketa baten bidez.
-
-## Atzeko planoa (background)
-
-| Propietatea | Azalpena |
-| --- | --- |
-| `background-color` | Atzeko planoaren kolorea. |
-| `background-image` | Atzeko planoko irudia (`url(...)`). |
-| `background-repeat` | Errepikapena (`no-repeat`, `repeat-x`, `repeat-y`). |
-| `background-position` | Kokapena (`center`, `top left`...). |
-| `background-size` | Tamaina (`cover`, `contain`, neurriak). |
-| `background-attachment` | Scroll egitean nola jokatzen duen (`fixed`, `scroll`). |
-
-```
-body {
-    background-image: url("irudiak/atzekoa.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+``` css
+p {
+    color: red;
 }
 ```
 
-Modu laburrean (shorthand):
+### Notazio hamaseitarra
 
-```
-body {
-    background: #ffffff url("irudiak/atzekoa.jpg") no-repeat fixed center;
+``` css
+p {
+    color: #ff0000;
 }
 ```
 
-## Ertzak (border) eta outline
+Notazio laburtua ere erabil daiteke zenbakiak errepikatzen direnean:
 
+``` css
+p {
+    color: #f00;
+}
 ```
+
+### RGB
+
+RGB sistemak gorriaren (**Red**), berdearen (**Green**) eta urdinaren
+(**Blue**) kantitatea adierazten du.
+
+Balio bakoitza `0` eta `255` artekoa da:
+
+``` css
+p {
+    color: rgb(255, 0, 0);
+}
+```
+
+Gardentasuna ere zehaztu daiteke:
+
+``` css
+p {
+    color: rgb(255 0 0 / 50%);
+}
+```
+
+### HSL
+
+HSL sistemak hiru balio erabiltzen ditu: tonua (**Hue**), saturazioa
+(**Saturation**) eta argitasuna (**Lightness**).
+
+``` css
+p {
+    color: hsl(0, 100%, 50%);
+}
+```
+
+!!! tip "Gomendioa"
+
+    Ez da beharrezkoa kolore-kodeak buruz ikastea. Garapen-tresnek eta editoreek kolorea aukeratzen laguntzen dute.
+
+## Neurri-unitateak
+
+CSSn propietate askok neurri bat behar dute:
+
+``` css
+p {
+    font-size: 18px;
+}
+```
+
+Unitateak **absolutuak** edo **erlatiboak** izan daitezke.
+
+### Unitate absolutuak
+
+Ohikoena `px` da:
+
+``` css
+p {
+    font-size: 18px;
+}
+```
+
+Beste unitate absolutu batzuk `cm`, `mm`, `in`, `pt` eta `pc` dira,
+baina web-diseinuan gutxiago erabiltzen dira.
+
+### Unitate erlatiboak
+
+Diseinu moldagarriak egiteko oso erabilgarriak dira.
+
+  Unitatea   Erreferentzia
+  ---------- ----------------------------------------------------
+  `%`        Beste neurri batekiko portzentajea.
+  `em`       Elementuaren letra-tamainarekiko.
+  `rem`      Dokumentuaren erroko (`html`) letra-tamainarekiko.
+  `vw`       Nabigatzailearen zabalerarekiko.
+  `vh`       Nabigatzailearen altuerarekiko.
+
+Adibidez:
+
+``` css
+main {
+    width: 80%;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+header {
+    min-height: 50vh;
+}
+```
+
+!!! note
+
+    Web-diseinuan ez dugu unitate bakarra erabiliko egoera guztietarako. Aukera egokia aldatu egiten da neurtzen ari garen elementuaren arabera.
+
+## Testua eta tipografia
+
+### Testuaren kolorea
+
+`color` propietateak testuaren kolorea definitzen du:
+
+``` css
+p {
+    color: #333;
+}
+```
+
+### Letra-tamaina
+
+``` css
+p {
+    font-size: 18px;
+}
+```
+
+### Letra-familia
+
+`font-family` propietateak letra-tipoa definitzen du:
+
+``` css
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+Hainbat letra-tipo jartzea gomendatzen da. Lehenengoa erabilgarri ez
+badago, nabigatzaileak hurrengoa probatuko du.
+
+Izenak zuriuneak baditu, komatxo artean idazten dira:
+
+``` css
+body {
+    font-family: "Times New Roman", serif;
+}
+```
+
+### Letra-lodiera
+
+``` css
+p {
+    font-weight: bold;
+}
+```
+
+Zenbakiz ere adieraz daiteke:
+
+``` css
+h1 {
+    font-weight: 700;
+}
+```
+
+### Letra-estiloa
+
+``` css
+p {
+    font-style: italic;
+}
+```
+
+### Lerrokatzea
+
+``` css
+p {
+    text-align: center;
+}
+```
+
+Ohiko balioak:
+
+-   `left`
+-   `right`
+-   `center`
+-   `justify`
+
+### Lerroartea
+
+`line-height` propietateak testu-lerroen arteko distantzia kontrolatzen
+du:
+
+``` css
+p {
+    line-height: 1.5;
+}
+```
+
+### Testuaren dekorazioa
+
+``` css
+a {
+    text-decoration: none;
+}
+```
+
+Beste balio batzuk:
+
+``` css
+.azpimarratua {
+    text-decoration: underline;
+}
+
+.marratua {
+    text-decoration: line-through;
+}
+```
+
+### Maiuskulak eta minuskulak
+
+``` css
+h1 {
+    text-transform: uppercase;
+}
+```
+
+Balio erabilienak:
+
+-   `uppercase`
+-   `lowercase`
+-   `capitalize`
+-   `none`
+
+## Box Model
+
+HTML elementu guztiak **kutxa baten moduan** irudika ditzakegu.
+
+Kutxa bakoitzak lau atal nagusi ditu:
+
+1.  **Content** → elementuaren edukia.
+2.  **Padding** → edukiaren eta ertzaren arteko barneko espazioa.
+3.  **Border** → elementuaren ertza.
+4.  **Margin** → elementuaren kanpoko espazioa.
+
+``` text
++-------------------------+
+|         MARGIN          |
+|  +-------------------+  |
+|  |      BORDER       |  |
+|  |  +-------------+  |  |
+|  |  |   PADDING   |  |  |
+|  |  |  +-------+  |  |  |
+|  |  |  |CONTENT|  |  |  |
+|  |  |  +-------+  |  |  |
+|  |  +-------------+  |  |
+|  +-------------------+  |
++-------------------------+
+```
+
+### Width eta height
+
+``` css
+div {
+    width: 300px;
+    height: 150px;
+}
+```
+
+`width` elementuaren zabalera da eta `height` altuera.
+
+### Padding
+
+Elementuaren edukiaren eta ertzaren arteko espazioa da:
+
+``` css
+div {
+    padding: 20px;
+}
+```
+
+Alde bakoitza banaka ere defini daiteke:
+
+``` css
+div {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+```
+
+Forma laburtua:
+
+``` css
+div {
+    padding: 10px 20px;
+}
+```
+
+### Border
+
+Elementu baten ertza definitzeko:
+
+``` css
 div {
     border-width: 2px;
     border-style: solid;
     border-color: black;
-    border-radius: 8px; /* izkinak biribiltzeko */
 }
 ```
 
-Modu laburrean: `border: 2px solid black;`
+Normalean forma laburtua erabiltzen da:
 
-Ertz banaka alda daitezke: `border-top-color`, `border-bottom-width`, etab.
-
-**`outline`** ertzaren antzekoa da, baina ez da kutxaren neurrien parte, eta ez du espaziorik hartzen. Elementuak nabarmentzeko erabili ohi da (adib. `input:focus`):
-
-```
-input:focus {
-    outline: 2px solid blue;
-}
-```
-
-## Margin eta padding
-
-Bien sintaxia berdina da: lau balio, erlojuaren orratzen norabidean (goitik hasita: goian, eskuinean, behean, ezkerrean).
-
-```
+``` css
 div {
-    margin: 10px 20px 10px 20px;  /* goian eskuinean behean ezkerrean */
-    padding: 10px 20px;           /* goian/behean 10px, ezkerrean/eskuinean 20px */
+    border: 2px solid black;
 }
 ```
 
-Norabide bakarra alda daiteke: `margin-top`, `padding-left`, etab.
+Ertzak biribiltzeko:
 
-!!! tip "Aholkua"
-    `margin: 0 auto;` da elementu bat **horizontalki zentratzeko** modurik ohikoena, betiere elementuak `width` zehaztua badu eta `display: block;` bada.
-
-## `display`: elementu motak
-
-- **block**: bere lerro propioa sortzen du (`<div>`, `<p>`, `<h1>`...). Altuera eta zabalera alda dakizkioke.
-- **inline**: ez du lerro-jauzirik sortzen (`<span>`, `<a>`, `<b>`...). Altuera/zabalera **ezin dira** aldatu.
-- **inline-block**: lerro barruan geratzen da, baina altuera/zabalera aldatu daitezke.
-- **none**: elementua ezkutatzen du erabat (ez du lekurik hartzen).
-
+``` css
+div {
+    border-radius: 10px;
+}
 ```
+
+### Margin
+
+Elementuaren kanpoko espazioa definitzen du:
+
+``` css
+div {
+    margin: 20px;
+}
+```
+
+Alde bakoitza banaka ere defini daiteke:
+
+``` css
+div {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+```
+
+Elementu bat horizontalki zentratzeko ohiko aukera:
+
+``` css
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+```
+
+### `box-sizing`
+
+Lehenespenez, `width` propietateak edukiaren zabalera bakarrik hartzen
+du kontuan. `padding` eta `border` gehitu egiten zaizkio.
+
+Horregatik, oso ohikoa da honako araua erabiltzea:
+
+``` css
+* {
+    box-sizing: border-box;
+}
+```
+
+`border-box` erabilita, zehaztutako zabalera barruan sartzen dira
+`content`, `padding` eta `border`.
+
+!!! tip "Gomendioa"
+
+    Proiektuaren hasieran honako hau erabiltzea ohitura ona da:
+
+    ```css
+    * {
+        box-sizing: border-box;
+    }
+    ```
+
+## Atzeko planoa
+
+### Atzeko planoaren kolorea
+
+``` css
+body {
+    background-color: #f5f5f5;
+}
+```
+
+### Atzeko planoko irudia
+
+``` css
+header {
+    background-image: url("../images/fondoa.jpg");
+}
+```
+
+CSS fitxategian erabiltzen diren bide erlatiboak **CSS fitxategia dagoen
+kokalekutik** kalkulatzen dira.
+
+Adibidez:
+
+``` text
+proiektua/
+│
+├── index.html
+├── css/
+│   └── estiloak.css
+└── images/
+    └── fondoa.jpg
+```
+
+`estiloak.css` fitxategitik `images` karpetara joateko:
+
+``` css
+header {
+    background-image: url("../images/fondoa.jpg");
+}
+```
+
+Atzeko planoko irudiekin beste propietate batzuk ere erabil daitezke:
+
+``` css
+header {
+    background-image: url("../images/fondoa.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+```
+
+## `display` propietatea
+
+`display` propietateak elementu bat dokumentuan nola antolatzen den
+definitzen du.
+
+### Block elementuak
+
+`block` elementuek erabilgarri dagoen zabalera hartzen dute eta hurrengo
+elementua beste lerro batean hasten da.
+
+``` css
+div {
+    display: block;
+}
+```
+
+HTMLko `<div>`, `<p>`, `<section>` edo `<h1>` bezalako elementuak
+`block` dira lehenespenez.
+
+### Inline elementuak
+
+`inline` elementuak edukiarentzako behar duten espazioa bakarrik hartzen
+dute eta ez dute lerro-jauzirik sortzen.
+
+``` css
 span {
+    display: inline;
+}
+```
+
+`<span>` edo `<a>` bezalako elementuak `inline` dira lehenespenez.
+
+### Inline-block
+
+`inline-block` elementuak lerro berean koka daitezke, baina `width`,
+`height`, `padding` eta `margin` propietateak kontrolatzeko aukera
+ematen dute.
+
+``` css
+a {
     display: inline-block;
-    width: 100px;
+    padding: 10px;
 }
 ```
 
-## Kokapena: `position`
+### Elementu bat ezkutatzea
 
-| Balioa | Azalpena |
-| --- | --- |
-| `static` | Lehenetsia. Fluxu normalean kokatzen da. |
-| `relative` | Bere kokapen normaletik desplazatzen da (`top`, `left`...), baina lekua gordetzen du. |
-| `absolute` | `position: relative` (edo antzekoa) duen gurasoarekiko kokatzen da. Ez du lekurik gordetzen. |
-| `fixed` | Pantailarekiko finko geratzen da, scroll egin arren. |
-| `sticky` | Fluxu normalean doa harik eta zehaztutako mugara iritsi arte; orduantxe `fixed` bihurtzen da. |
-
-```
-.menu {
-    position: sticky;
-    top: 0;
-    background-color: white;
+``` css
+.elementua {
+    display: none;
 }
 ```
 
-## Float eta clear
+Elementua ez da bistaratuko eta ez du espaziorik hartuko.
 
-Historikoki, orriak maketatzeko `float` asko erabili izan da: elementu bat ezkerrera edo eskuinera "flotarazten" du, eta gainerako testua/elementuak inguruan kokatzen dira.
+## Flexbox
 
+Flexbox elementuak **lerro edo zutabe batean antolatzeko** erabiltzen
+den CSS sistema da.
+
+Flexbox erabiltzeko, elementuen gurasoari hau aplikatzen zaio:
+
+``` css
+.edukiontzia {
+    display: flex;
+}
 ```
+
+HTML:
+
+``` html
+<div class="edukiontzia">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+```
+
+### Norabidea
+
+``` css
+.edukiontzia {
+    display: flex;
+    flex-direction: row;
+}
+```
+
+Balio nagusiak:
+
+-   `row`
+-   `row-reverse`
+-   `column`
+-   `column-reverse`
+
+### Ardatz nagusiko lerrokatzea
+
+`justify-content` propietateak elementuak ardatz nagusian banatzen ditu:
+
+``` css
+.edukiontzia {
+    display: flex;
+    justify-content: center;
+}
+```
+
+Balio erabilienak:
+
+-   `flex-start`
+-   `flex-end`
+-   `center`
+-   `space-between`
+-   `space-around`
+-   `space-evenly`
+
+### Zeharkako ardatzeko lerrokatzea
+
+``` css
+.edukiontzia {
+    display: flex;
+    align-items: center;
+}
+```
+
+Balio erabilienak:
+
+-   `stretch`
+-   `flex-start`
+-   `flex-end`
+-   `center`
+
+### Elementuak hurrengo lerrora pasatzea
+
+``` css
+.edukiontzia {
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+
+### Elementuen arteko tartea
+
+``` css
+.edukiontzia {
+    display: flex;
+    gap: 20px;
+}
+```
+
+!!! example "Probatu"
+
+    Sortu hiru kutxa dituen edukiontzi bat eta probatu `flex-direction`, `justify-content`, `align-items` eta `gap` propietateen balio desberdinak.
+
+## Grid
+
+CSS Grid elementuak **errenkada eta zutabeetan** antolatzeko erabiltzen
+da.
+
+``` css
+.edukiontzia {
+    display: grid;
+}
+```
+
+Adibidez, hiru zutabe berdin sortzeko:
+
+``` css
+.edukiontzia {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+```
+
+Forma laburragoan:
+
+``` css
+.edukiontzia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+```
+
+Elementuen arteko tartea:
+
+``` css
+.edukiontzia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+```
+
+!!! note "`fr` unitatea"
+
+    `fr` Grid-en erabiltzen den unitatea da eta erabilgarri dagoen espazioaren zati bat adierazten du.
+
+    `1fr 1fr 1fr` erabiliz, espazioa hiru zati berdinetan banatzen da.
+
+## Diseinu moldagarria
+
+Web-orriak pantaila-tamaina desberdinetara egokitu behar dira:
+ordenagailuak, tabletak eta mugikorrak.
+
+Horretarako, besteak beste, neurri erlatiboak, Flexbox, Grid eta **media
+queries** erabil ditzakegu.
+
+### Media queries
+
+Media query batek CSS arauak baldintza baten arabera aplikatzeko aukera
+ematen du.
+
+Adibidez:
+
+``` css
+.edukiontzia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    .edukiontzia {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
+Pantailaren zabalera `768px` edo txikiagoa denean, hiru zutabe izan
+beharrean zutabe bakarra izango dugu.
+
+!!! tip "Ideia nagusia"
+
+    Diseinu moldagarria ez da webgunearen amaieran gehitzen den zerbait. Web-orria sortzen dugun momentutik kontuan hartu behar dugu pantaila-tamaina desberdinetan erabiliko dela.
+
+## `float` eta `clear`
+
+`float` propietateak elementu bat ezkerrera edo eskuinera eramateko
+aukera ematen du, eta ondorengo edukia haren inguruan kokatzen da.
+
+Adibidez, irudi baten inguruan testua jartzeko:
+
+``` css
 img {
     float: left;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 ```
 
-`clear` propietatea flotazio bati "atxikita" ez egoteko erabiltzen da:
+Balio nagusiak:
 
-```
+-   `none`
+-   `left`
+-   `right`
+
+`clear` propietateak aurreko `float` baten eragina kontrolatzeko
+erabiltzen da:
+
+``` css
 footer {
     clear: both;
 }
 ```
 
-!!! note
-    Gaur egun `float` **ez da gomendagarria** orri osoak maketatzeko; horretarako **Flexbox** eta **Grid** erabiltzen dira (hurrengo puntuetan ikusiko ditugu). `float` erabilera nagusia gaur egun irudi txiki bat testuz inguratzea da.
+!!! warning "`float` maketaziorako?"
 
-!!! example "Ariketa 3"
-    Kutxen eredua eta kokapena praktikatzeko ariketa hau egingo dugu: *(ariketaren esteka hemen gehituko da)*
+    Garai batean `float` web-orriak maketatzeko asko erabiltzen zen.
 
-## Flexbox
+    Gaur egun, elementuen kokapena eta web-orriaren maketazioa egiteko **Flexbox eta Grid erabiltzea gomendatzen da**.
 
-**Flexbox** elementuak lerro batean (edo zutabe batean) modu malguan antolatzeko erabiltzen da. Edukiontzi bati (`display: flex`) ezartzen zaio, eta bere seme guztiak automatikoki antolatzen ditu.
-
-```
-.edukiontzia {
-    display: flex;
-}
-```
-
-### Edukiontziaren propietate nagusiak
-
-| Propietatea | Balioak | Azalpena |
-| --- | --- | --- |
-| `flex-direction` | `row` \| `row-reverse` \| `column` \| `column-reverse` | Elementuak lerroan ala zutabean antolatzen dituen. |
-| `flex-wrap` | `nowrap` \| `wrap` | Elementuak lerro/zutabe berrira pasatzen diren edo ez, lekurik ez badago. |
-| `justify-content` | `flex-start` \| `flex-end` \| `center` \| `space-between` \| `space-around` | Elementuak nola banatzen diren ardatz nagusian (normalean horizontalean). |
-| `align-items` | `flex-start` \| `flex-end` \| `center` \| `stretch` | Elementuak nola lerrokatzen diren ardatz gurutzatuan (normalean bertikalean). |
-
-```
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-```
-
-### Semeen propietate nagusia
-
-`flex-grow` propietateak elementu batek gainerako espazio librea zenbat "hartu" behar duen adierazten du:
-
-```
-.card {
-    flex-grow: 1; /* espazio librea era berean banatzen du elementu guztien artean */
-}
-```
-
-!!! tip "Aholkua"
-    Flexbox oso erabilgarria da menu bat, txartel-multzo bat edo elementu-zerrenda bat lerrokatzeko. Kutxen zerrenda bat (1 dimentsiokoa: lerroa edo zutabea) maketatzeko da bereziki egokia.
-
-## Grid
-
-**Grid** sistemarekin edukiontzi bat sareta (errenkadak eta zutabeak) moduan antolatzen da. Flexbox ez bezala, **bi dimentsiotan** (lerroan eta zutabean) lan egiteko pentsatuta dago.
-
-```
-.edukiontzia {
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    gap: 10px;
-}
-```
-
-- `grid-template-columns` / `grid-template-rows`: zutabeen/errenkaden neurriak zehazten dituzte. `fr` unitateak "zati bat" adierazten du espazio librearekiko (adib. `1fr 2fr` bigarren zutabea lehenengoa baino bi aldiz zabalagoa izango da).
-- `gap`: sareta osatzen duten kutxen arteko tartea.
-
-Elementu bat sareta barruan kokatzeko:
-
-```
-.buruko_atala {
-    grid-column: 1 / 4; /* 1. zutabetik 4.era */
-    grid-row: 1;
-}
-```
-
-!!! tip "Aholkua"
-    Erabaki azkarra: orri baten **egitura orokorra** (buruko atala, alboko barra, edukia, oina) maketatzeko, Grid da normalean aukerarik erosoena. Elementu batzuk lerro batean lerrokatzeko (menu bat, botoi-zerrenda bat), Flexbox nahikoa da.
-
-## Media Queries: diseinu erantzunkorra
-
-*Media queries*-en bidez, pantailaren neurriaren (edo beste ezaugarrien) arabera CSS ezberdina aplika daiteke. Horri **diseinu erantzunkorra** (responsive design) deitzen zaio.
-
-```
-/* Pantaila 600px baino handiagoa denean */
-@media screen and (min-width: 600px) {
-    .edukiontzia {
-        display: flex;
-    }
-}
-
-/* Pantaila 599px edo txikiagoa denean */
-@media screen and (max-width: 599px) {
-    .edukiontzia {
-        display: block;
-    }
-}
-```
-
-Erabilgarrienak diren aldagaiak `min-width` eta `max-width` dira, baina `orientation: portrait` / `orientation: landscape` ere erabil daitezke gailua horizontalki edo bertikalki dagoen egiaztatzeko.
-
-!!! tip "Ez ahaztu"
-    Gaur egun HTMLren `<head>` atalean beti jarri behar dugu ondorengo lerroa, media queriek gailu mugikorretan ondo funtziona dezaten:
-    ```
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    ```
-
-!!! example "Ariketa 4"
-    Flexbox, Grid eta Media Queries praktikatzeko ariketa hau egingo dugu: *(ariketaren esteka hemen gehituko da)*
-
-## Gaur egungo praktika onak: CSS aldagaiak (custom properties)
-
-CSS3k **berezko aldagaiak** onartzen ditu, `--izena` sintaxiarekin. Kolore-paleta edo neurri errepikakorrak kudeatzeko oso erabilgarriak dira, aldaketa bakar batekin CSS osoa eguneratu ahal izateko:
-
-```
-:root {
-    --kolore_nagusia: #2a7de1;
-    --tarte_estandarra: 16px;
-}
-
-h1 {
-    color: var(--kolore_nagusia);
-}
-
-.card {
-    padding: var(--tarte_estandarra);
-}
-```
-
-Gomendioak
-
-✅ Erabili beti kanpoko CSS fitxategiak (ez inline estiloak).
-
-✅ Erabili `box-sizing: border-box;` proiektu guztietan.
-
-✅ Diseinua egiteko, hobetsi **Flexbox** eta **Grid**, `float` baino.
-
-✅ Erabili unitate erlatiboak (`%`, `rem`, `vw/vh`) diseinu erantzunkorra errazteko.
-
-❌ Ez erabili `!important` estiloak "konpontzeko"; ia beti hautatzaileen espezifikotasuna hobeto ulertuz konpon daiteke arazoa.
+    `float` erabilgarria da oraindik, adibidez, **irudi baten inguruan testua kokatzeko**.
 
 ## Esteka erabilgarriak
 
-- [MDN: CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-- [CSS-Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [CSS-Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- [Google Fonts](https://fonts.google.com/)
+-   [MDN: CSS](https://developer.mozilla.org/en-US/docs/Web/CSS){:
+    target="\_blank" rel="noopener" }
+-   [MDN: CSS
+    selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors){:
+    target="\_blank" rel="noopener" }
+-   [MDN: CSS Box
+    Model](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model){:
+    target="\_blank" rel="noopener" }
+-   [MDN:
+    Flexbox](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox){:
+    target="\_blank" rel="noopener" }
+-   [MDN:
+    Grid](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids){:
+    target="\_blank" rel="noopener" }
