@@ -756,6 +756,35 @@ Ez du lerro-jauzirik sortzen.
     HTML5eko etiketa semantikoek edukiari **esanahia** ematen diote, ez soilik egitura.
 
 
+## Bloke-elementuak eta lerroko elementuak
+
+HTML elementuek, lehenespenez, portaera desberdina dute nabigatzailean:
+
+| **Bloke-elementuak (block)** | **Lerroko elementuak (inline)** |
+|------------------------------|---------------------------------|
+| `<h1>` - `<h6>` | `<a>` |
+| `<p>` | `<span>` |
+| `<div>` | `<strong>` |
+| `<header>` | `<em>` |
+| `<nav>` | `<b>` |
+| `<main>` | `<i>` |
+| `<section>` | `<small>` |
+| `<article>` | `<mark>` |
+| `<aside>` | `<code>` |
+| `<footer>` | `<img>` |
+| `<ul>` | `<br>` |
+| `<ol>` |  |
+| `<li>` |  |
+| `<table>` |  |
+| `<form>` |  |
+
+- **Bloke-elementuek** normalean lerro berri batean hasten dira eta erabilgarri dagoen zabalera hartzen dute.
+- **Lerroko elementuek** ez dute lerro berririk sortzen eta edukiak behar duen espazioa bakarrik hartzen dute.
+
+!!! note "Kontuan izan"
+
+    Hau elementuen **portaera lehenetsia** da. CSS erabiliz portaera hori alda daiteke `display` propietatearen bidez.
+
 ## Eduki txertatua eta multimedia
 
 HTML5ek aukera ematen du **audioa, bideoa eta bestelako multimedia-edukiak** zuzenean web-orrian txertatzeko, pluginik erabili gabe.
