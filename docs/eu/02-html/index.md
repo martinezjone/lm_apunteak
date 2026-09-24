@@ -609,6 +609,8 @@ HTML5ek **etiketa semantiko berriak** gehitu zituen web-orriak modu argiago eta 
 </html>
 ```
 
+![Web Semantikoa](../../images/web_semantikoa.png)
+
 ### Etiketa bakoitzaren azalpena
 
 #### `<header>`
