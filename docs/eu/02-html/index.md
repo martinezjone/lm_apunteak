@@ -760,17 +760,19 @@ Ez du lerro-jauzirik sortzen.
 
 HTML5ek aukera ematen du **audioa, bideoa eta bestelako multimedia-edukiak** zuzenean web-orrian txertatzeko, pluginik erabili gabe.
 
-Gainera, etiketa hauek nabigatzailearen **erreproduzigailu natiboa** erabiltzen dute, eta JavaScript gehigarririk gabe kontrolak eskaintzen dituzte (erreproduzitu, pausatu, bolumena, denbora-barra...).
+Gainera, `<audio>` eta `<video>` etiketek nabigatzailearen **erreproduzigailu natiboa** erabiltzen dute, eta JavaScript gehigarririk gabe kontrolak eskaintzen dituzte (erreproduzitu, pausatu, bolumena, denbora-barra...).
 
 ---
 
 ### Eduki txertatu generikoak (`<object>`)
 
-`<object>` etiketa kanpoko baliabide mota desberdinak txertatzeko erabiltzen da (irudiak, PDFak, dokumentuak...).
+`<object>` etiketak kanpoko baliabideak txertatzeko aukera ematen du. Gaur egun ez da irudiak, audioak edo bideoak txertatzeko ohiko aukera, horretarako etiketa espezifikoak erabiltzen baitira (`<img>`, `<audio>` eta `<video>`).
+
+Adibidez, PDF dokumentu bat txertatzeko erabil daiteke:
 
 ```html
-<object data="irudia.png" width="550" height="150">
-    Irudia ezin izan da kargatu.
+<object data="dokumentuak/gida.pdf" type="application/pdf" width="600" height="500">
+    PDF dokumentua ezin izan da kargatu.
 </object>
 ```
 
@@ -790,13 +792,13 @@ Gainera, etiketa hauek nabigatzailearen **erreproduzigailu natiboa** erabiltzen 
 
 | Formatua | Azalpena |
 |----------|----------|
-| **MP3** | Formaturik erabiliena. Nabigatzaile guztiek onartzen dute. |
-| **WAV** | Kalitate handikoa, baina fitxategiak oso handiak dira. Audio laburretarako erabiltzen da. |
-| **OGG** | Formatu librea. Kalitate ona eta konpresio handia eskaintzen ditu. |
+| **MP3** | Formaturik erabiliena eta bateragarritasun handiena duena. |
+| **WAV** | Kalitate handikoa, baina fitxategiak oso handiak dira. Audio laburretarako erabil daiteke. |
+| **OGG** | Formatu irekia. Kalitate ona eta konpresio ona eskaintzen ditu. |
 
 ### Hainbat audio-formatu eskaintzea
 
-Nabigatzaile guztiek ez dituzte formatu berdinak onartzen. Horregatik, gomendagarria da `<source>` etiketa erabiltzea.
+Audio bera formatu desberdinetan eskaini nahi bada, `<source>` etiketa erabil daiteke.
 
 ```html
 <audio controls>
@@ -809,13 +811,13 @@ Nabigatzaile guztiek ez dituzte formatu berdinak onartzen. Horregatik, gomendaga
 </audio>
 ```
 
-Nabigatzaileak **lehenengo onartzen duen formatua** erabiliko du.
+Nabigatzaileak **onartzen duen lehenengo formatua** erabiliko du.
 
 ---
 
 ### Bideoa (`<video>`)
 
-`<video>` etiketa bideoak zuzenean web-orrian txertatzeko erabiltzen da.
+`<video>` etiketa bideo-fitxategiak zuzenean web-orrian txertatzeko erabiltzen da.
 
 ```html
 <video controls src="videos/filma.mp4">
@@ -827,11 +829,13 @@ Nabigatzaileak **lehenengo onartzen duen formatua** erabiliko du.
 
 | Formatua | Azalpena |
 |----------|----------|
-| **MP4** | Formaturik erabiliena. YouTubek ere gomendatzen du. |
-| **WebM** | Weberako optimizatuta dagoen formatu librea. |
-| **OGG / OGV** | Formatu librea, nabigatzaile batzuetan erabilia. |
+| **MP4** | Formaturik erabiliena eta bateragarritasun handiena duena. |
+| **WebM** | Weberako diseinatutako formatu irekia. |
+| **OGG / OGV** | Formatu irekia, gaur egun gutxiago erabiltzen dena. |
 
 ### Hainbat bideo-formatu eskaintzea
+
+Bideo bera formatu desberdinetan eskaini nahi bada, `<source>` etiketa erabil daiteke.
 
 ```html
 <video controls width="640">
@@ -844,7 +848,7 @@ Nabigatzaileak **lehenengo onartzen duen formatua** erabiliko du.
 </video>
 ```
 
-Nabigatzaileak automatikoki bateragarriena aukeratuko du.
+Nabigatzaileak **onartzen duen lehenengo formatua** erabiliko du.
 
 ---
 
@@ -853,13 +857,23 @@ Nabigatzaileak automatikoki bateragarriena aukeratuko du.
 | Atributua | Azalpena |
 |-----------|----------|
 | `controls` | Erreproduzigailuaren kontrolak erakusten ditu. |
-| `autoplay` | Orria irekitzean automatikoki hasten da. |
+| `autoplay` | Multimedia automatikoki erreproduzitzen saiatzen da. Nabigatzaileek soinua duen erreprodukzio automatikoa blokeatu dezakete. |
 | `loop` | Amaitzean berriro hasten da. |
-| `muted` | Hasieran isilduta kargatzen da. |
-| `preload` | Multimedia noiz kargatu behar den adierazten du. |
+| `muted` | Hasieran isilduta erreproduzitzen da. |
+| `preload` | Multimedia aurrez kargatzeari buruzko informazioa ematen dio nabigatzaileari. |
 | `width` | Bideoaren zabalera ezartzen du. (`<video>` bakarrik) |
 | `height` | Bideoaren altuera ezartzen du. (`<video>` bakarrik) |
-| `poster` | Bideoa hasi aurretik erakusten den irudia. (`<video>` bakarrik) |
+| `poster` | Bideoa erreproduzitu aurretik erakusten den irudia. (`<video>` bakarrik) |
+
+!!! note "`autoplay` atributua"
+
+    Nabigatzaile modernoek normalean **soinua duen erreprodukzio automatikoa blokeatzen dute**. Horregatik, automatikoki erreproduzitu nahi diren bideoetan ohikoa da `autoplay` eta `muted` batera erabiltzea.
+
+    ```html
+    <video autoplay muted loop>
+        <source src="videos/aurkezpena.mp4" type="video/mp4">
+    </video>
+    ```
 
 ---
 
@@ -874,6 +888,7 @@ Horrelako kasuetan `<iframe>` erabiltzen da.
     src="https://www.youtube.com/embed/XXXXXXXX"
     width="560"
     height="315"
+    title="YouTube bideoa"
     allowfullscreen>
 </iframe>
 ```
@@ -884,11 +899,13 @@ YouTuben bertan, **Partekatu → Kapsulatu (Embed)** aukeran klik eginez lortzen
 
 !!! tip "Gomendioak"
 
-    ✅ Erabili beti **MP3** audioetarako eta **MP4** bideoetarako, bateragarritasun handiena eskaintzen dutelako.
+    ✅ Audio-fitxategietarako **MP3** eta bideoetarako **MP4** aukera egokiak dira bateragarritasun handia dutelako.
 
-    ✅ Erabili `<source>` etiketa formatu bat baino gehiago eskaini nahi baduzu.
+    ✅ Erabili `<source>` etiketa multimedia bera formatu bat baino gehiagotan eskaini nahi baduzu.
 
-    ✅ Gehitu beti ordezko testu bat (`Zure nabigatzaileak...`) multimedia onartzen ez duten nabigatzaileentzat.
+    ✅ Gehitu ordezko testua (`Zure nabigatzaileak...`) multimedia-elementuaren edukia erakutsi ezin den kasuetarako.
+
+    ✅ Kanpoko bideoak txertatzeko, erabili plataformak berak eskaintzen duen **Embed/Kapsulatu kodea**.
 
     ✅ Errespetatu multimedia-fitxategien **egile-eskubideak**. Interneten aurkitzen den guztia **ez da libreki erabil daitekeena**; egiaztatu beti lizentzia (adibidez, Creative Commons).
 
