@@ -732,20 +732,11 @@ Kutxa bakoitzak lau atal nagusi ditu:
 3.  **Border** → elementuaren ertza.
 4.  **Margin** → elementuaren kanpoko espazioa.
 
-``` text
-+-------------------------+
-|         MARGIN          |
-|  +-------------------+  |
-|  |      BORDER       |  |
-|  |  +-------------+  |  |
-|  |  |   PADDING   |  |  |
-|  |  |  +-------+  |  |  |
-|  |  |  |CONTENT|  |  |  |
-|  |  |  +-------+  |  |  |
-|  |  +-------------+  |  |
-|  +-------------------+  |
-+-------------------------+
-```
+![Box Model](../../images/box_model.png)
+
+!!!note w3Schools
+    Egin frogak hurrengo estekan atal guztiak zeintzuk diren ulertu ahal izateko:
+    <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_boxmodel" target="_blank"> CSS Box Model </a>
 
 ### Width eta height
 
@@ -847,29 +838,75 @@ main {
 
 ### `box-sizing`
 
-Lehenespenez, `width` propietateak edukiaren zabalera bakarrik hartzen
-du kontuan. `padding` eta `border` gehitu egiten zaizkio.
+Lehenespenez, elementu bati `width` ezartzen diogunean, zabalera horrek **edukiaren (`content`) zabalera bakarrik** adierazten du.
 
-Horregatik, oso ohikoa da honako araua erabiltzea:
+Adibidez:
 
-``` css
-* {
-    box-sizing: border-box;
+```css
+.kutxa {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
 }
 ```
 
-`border-box` erabilita, zehaztutako zabalera barruan sartzen dira
-`content`, `padding` eta `border`.
+Kasu honetan, elementuaren benetako zabalera **ez da 300px**:
+
+- Content → `300px`
+- Padding → `20px + 20px`
+- Border → `5px + 5px`
+
+Beraz:
+
+**300 + 40 + 10 = 350px**
+
+Elementuak guztira **350px-ko zabalera** izango du.
+
+Hori gertatzen da lehenetsitako balioa `content-box` delako:
+
+```css
+box-sizing: content-box;
+```
+
+---
+
+`box-sizing: border-box` erabiltzen badugu:
+
+```css
+.kutxa {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+}
+```
+
+Orain `width: 300px` balioak **kutxa osoaren zabalera** adierazten du.
+
+Hau da:
+
+**Content + Padding + Border = 300px**
+
+Nabigatzaileak automatikoki edukiaren (`content`) tamaina txikitzen du `padding` eta `border` elementuaren 300px-en barruan sartzeko.
 
 !!! tip "Gomendioa"
 
-    Proiektuaren hasieran honako hau erabiltzea ohitura ona da:
+    Horregatik, oso ohikoa da CSS fitxategiaren hasieran elementu guztiei `border-box` aplikatzea:
 
     ```css
     * {
         box-sizing: border-box;
     }
     ```
+
+    Horrela, elementu bati `width: 300px` ezartzen badiogu, **badakigu elementuak guztira 300px-ko zabalera izango duela**, `padding` edo `border` izan arren.
+
+!!! note Laburpen moduan
+    **content-box: width = content**
+
+    **border-box: width = content + padding + border**
+
+    Ikusten dugunez **margin** ez da sartzen inongo kalkuluan
 
 ## Atzeko planoa
 
@@ -928,6 +965,8 @@ header {
 `display` propietateak elementu bat dokumentuan nola antolatzen den
 definitzen du.
 
+![Display](../../images/display.png)
+
 ### Block elementuak
 
 `block` elementuek erabilgarri dagoen zabalera hartzen dute eta hurrengo
@@ -977,6 +1016,14 @@ a {
 ```
 
 Elementua ez da bistaratuko eta ez du espaziorik hartuko.
+
+
+!!! note Praktikatzen
+    Praktikatu <a href="https://www.w3schools.com/css/css_display.asp" target="_blank" >W3Schools - Display</a> orrian.
+
+!!! example "Ariketa 1 - CSS"
+    Hartu HTML atalean egindako Ariketa8B eta estiloak eman. Momentuz estiloak orrialdean bertan sartuko ditugu.
+
 
 ## Flexbox
 
