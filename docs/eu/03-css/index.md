@@ -65,6 +65,8 @@ hautatzailea {
 }
 ```
 
+![CSS sintaxia](../../images/css_sintaxis.png)
+
 !!! note "Kontuan izan"
 
     Propietatea eta balioa `:` bidez bereizten dira, eta deklarazio bakoitzaren amaieran `;` erabiltzen da.
@@ -358,6 +360,12 @@ bakarrik jasoko dute estiloa.
 }
 ```
 
+!!! example "Probatu"
+
+    Sartu w3schools orrian eta frogatu gauza ezberdinak:
+    <a href="https://www.w3schools.com/css/css_challenges_selectors.asp" target="_blank"/>CSS Selectors - Code Challenge</a>
+
+
 ### Pseudo-klaseak
 
 Pseudo-klaseek elementu baten **egoeraren arabera** estiloa aplikatzeko
@@ -478,6 +486,11 @@ p {
 }
 ```
 
+!!!note 
+    Hexadezimal koloreak zelan nahasten diren ikusteko hurrengo estekan sartu: 
+
+    <a href="https://www.w3schools.com/css/css_colors_hex.asp" tarjet="_blank">Css Colors Hex</a>
+
 ### RGB
 
 RGB sistemak gorriaren (**Red**), berdearen (**Green**) eta urdinaren
@@ -499,20 +512,18 @@ p {
 }
 ```
 
-### HSL
-
-HSL sistemak hiru balio erabiltzen ditu: tonua (**Hue**), saturazioa
-(**Saturation**) eta argitasuna (**Lightness**).
-
-``` css
-p {
-    color: hsl(0, 100%, 50%);
-}
-```
 
 !!! tip "Gomendioa"
 
-    Ez da beharrezkoa kolore-kodeak buruz ikastea. Garapen-tresnek eta editoreek kolorea aukeratzen laguntzen dute.
+    Ez da beharrezkoa kolore-kodeak buruz ikastea. Garapen-tresnek eta hainbat ewbgune kolorea aukeratzen laguntzen dute.
+
+    Adibidez:
+
+    <a href="https://htmlcolorcodes.com/es/selector-de-color/" tarjet="_blank">- Selector de Color</a><br/>
+    <a href="https://imagecolorpicker.com/" tarjet="_blank">- Irudi baten kolorea aukeratzeko</a><br/>
+    
+
+
 
 ## Neurri-unitateak
 
@@ -543,27 +554,40 @@ baina web-diseinuan gutxiago erabiltzen dira.
 
 Diseinu moldagarriak egiteko oso erabilgarriak dira.
 
-  Unitatea   Erreferentzia
-  ---------- ----------------------------------------------------
-  `%`        Beste neurri batekiko portzentajea.
-  `em`       Elementuaren letra-tamainarekiko.
-  `rem`      Dokumentuaren erroko (`html`) letra-tamainarekiko.
-  `vw`       Nabigatzailearen zabalerarekiko.
-  `vh`       Nabigatzailearen altuerarekiko.
+| Unitatea | Erreferentzia |
+|----------|--------------|
+| `%` | Beste neurri batekiko portzentajea. |
+| `em` | Elementuaren letra-tamainarekiko. |
+| `rem` | Dokumentuaren erroko (`html`) letra-tamainarekiko. |
+| `vw` | Nabigatzailearen zabalerarekiko. |
+| `vh` | Nabigatzailearen altuerarekiko. |
 
 Adibidez:
 
 ``` css
+html {
+    font-size: 16px;
+}
+
 main {
-    width: 80%;
+    width: 80%; /* Elementu gurasoaren zabaleraren %80 */
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* 2 × 16px = 32px */
+}
+
+article {
+    font-size: 20px;
+}
+
+article p {
+    font-size: 1.5em; /* 1.5 × 20px = 30px */
 }
 
 header {
-    min-height: 50vh;
+    width: 100vw; /* Viewport-aren zabaleraren %100 */
+    min-height: 50vh; /* Viewport-aren altueraren %50 */
 }
 ```
 

@@ -13,6 +13,8 @@ selector {
 }
 ```
 
+![Sintaxis CSS](../../images/css_sintaxis.png)
+
 Una regla CSS tiene tres partes: el **selector** (qué elementos se ven
 afectados), la **propiedad** (qué se va a cambiar) y el **valor** (cuánto o
 cómo se cambia).
