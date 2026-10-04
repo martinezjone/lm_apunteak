@@ -835,6 +835,8 @@ main {
     margin: 0 auto;
 }
 ```
+![Padding eta Margin](../../images/paggin_margin.png)
+
 
 ### `box-sizing`
 
@@ -1030,7 +1032,9 @@ Elementua ez da bistaratuko eta ez du espaziorik hartuko.
 Flexbox elementuak **lerro edo zutabe batean antolatzeko** erabiltzen
 den CSS sistema da.
 
-Flexbox erabiltzeko, elementuen gurasoari hau aplikatzen zaio:
+<a href="https://docs.google.com/presentation/d/1Cw6K1nx-ZARDHwGN_9gBqwP7rTqYJDDZMJMa0N5tRPo/edit?usp=sharing" target="_blank">APUNTE ZEHATZAGOAK</a>
+
+Flexbox erabiltzeko, elementuen gurasoari (kontenedoreari) hau aplikatzen zaio:
 
 ``` css
 .edukiontzia {
@@ -1119,8 +1123,12 @@ Balio erabilienak:
 ```
 
 !!! example "Probatu"
+    Hainbat webgune daude praktikatzeko, adibidez:
+    - <a href="https://elementor.com/tools/flexbox-generator/" target="_blank">Flexbox Generator</a><br/>
+    - <a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a><br/>
+    - <a href="https://codingfantasy.com/" target="_blank">Coding Fantasy</a>
 
-    Sortu hiru kutxa dituen edukiontzi bat eta probatu `flex-direction`, `justify-content`, `align-items` eta `gap` propietateen balio desberdinak.
+![Flex_kontendores_items](../../images/flex.png)
 
 ## Grid
 
