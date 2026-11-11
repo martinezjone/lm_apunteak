@@ -65,12 +65,16 @@ plugins:
           nav_translations:
             Inicio: Hasiera
             Introducción: Sarrera
+            General: Orokorra
+            Selectores: Hautatzaileak
 
 nav:
   - Inicio: index.md
   - Introducción: 01-introduccion/index.md
   - HTML: 02-html/index.md
-  - CSS: 03-css/index.md
+  - CSS:
+      - General: 03-css/index.md
+      - Selectores: 03-css/hautatzaileak.md
   - XML: 04-xml/index.md
   - XSLT: 05-xslt/index.md
   - JavaScript: 06-javascript/index.md
