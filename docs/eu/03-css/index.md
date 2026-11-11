@@ -205,206 +205,9 @@ nabigatzailean.
 
 ## Hautatzaileak
 
-CSS erabiltzean, lehenengo erabaki behar dugu **zein HTML elementuri
-aplikatu nahi diogun estiloa**.
+[Hautatzaileak (selectores)](hautatzaileak.md)
 
-Horretarako **hautatzaileak** erabiltzen ditugu.
-
-### Elementu-hautatzailea
-
-HTML elementu mota bereko elementu guztiak hautatzen ditu.
-
-``` css
-p {
-    color: blue;
-}
-```
-
-``` html
-<p>Lehenengo paragrafoa</p>
-<p>Bigarren paragrafoa</p>
-```
-
-Bi paragrafoek estilo bera jasoko dute.
-
-### Hainbat elementu hautatzea
-
-Hainbat elementuri estilo bera aplikatzeko, hautatzaileak komaz
-bereizten dira:
-
-``` css
-h1, h2, p {
-    color: blue;
-}
-```
-
-Kasu honetan `<h1>`, `<h2>` eta `<p>` elementuek kolore bera izango
-dute.
-
-### Class hautatzailea
-
-`class` atributuak hainbat elementu taldekatzea ahalbidetzen du.
-
-HTML:
-
-``` html
-<p class="nabarmendua">Paragrafo garrantzitsua</p>
-<p>Paragrafo arrunta</p>
-<p class="nabarmendua">Beste paragrafo garrantzitsu bat</p>
-```
-
-CSS:
-
-``` css
-.nabarmendua {
-    background-color: yellow;
-}
-```
-
-CSSn `class` bat hautatzeko **puntua (`.`)** erabiltzen da:
-
-``` css
-.klasearen-izena {
-    propietatea: balioa;
-}
-```
-
-`class` bera hainbat HTML elementutan erabil daiteke.
-
-### Elementu batek hainbat class izan ditzake
-
-HTML elementu batek `class` bat baino gehiago izan ditzake. Izenak
-zuriunez bereizten dira:
-
-``` html
-<p class="nabarmendua handia">Testu garrantzitsua</p>
-```
-
-``` css
-.nabarmendua {
-    background-color: yellow;
-}
-
-.handia {
-    font-size: 24px;
-}
-```
-
-Elementuak bi klaseen estiloak jasoko ditu.
-
-### ID hautatzailea
-
-`id` atributua dokumentuko elementu **bakar bat identifikatzeko**
-erabiltzen da.
-
-HTML:
-
-``` html
-<h1 id="izenburua">Nire web-orria</h1>
-```
-
-CSS:
-
-``` css
-#izenburua {
-    color: darkblue;
-}
-```
-
-CSSn `id` bat hautatzeko `#` erabiltzen da:
-
-``` css
-#id-izena {
-    propietatea: balioa;
-}
-```
-
-!!! note "`class` edo `id`?"
-
-    `class` → hainbat elementutan erabil daiteke.
-
-    `id` → dokumentuko elementu bakarra identifikatzeko erabiltzen da.
-
-    Estiloak aplikatzeko, normalean **class erabiltzea komeni da**.
-
-### Ondorengo elementuak hautatzea
-
-Beste elementu baten barruan dauden elementuak hauta ditzakegu:
-
-``` html
-<header>
-    <p>Header barruko paragrafoa</p>
-</header>
-
-<main>
-    <p>Main barruko paragrafoa</p>
-</main>
-```
-
-``` css
-header p {
-    color: blue;
-}
-```
-
-Kasu honetan, `<header>` elementuaren barruan dauden `<p>` elementuek
-bakarrik jasoko dute estiloa.
-
-### Hautatzaile unibertsala
-
-`*` hautatzaileak dokumentuko elementu guztiak hautatzen ditu:
-
-``` css
-* {
-    box-sizing: border-box;
-}
-```
-
-!!! example "Probatu"
-
-    Sartu w3schools orrian eta frogatu gauza ezberdinak:
-    <a href="https://www.w3schools.com/css/css_challenges_selectors.asp" target="_blank"/>CSS Selectors - Code Challenge</a>
-
-
-### Pseudo-klaseak
-
-Pseudo-klaseek elementu baten **egoeraren arabera** estiloa aplikatzeko
-aukera ematen dute.
-
-Adibidez, `:hover` pseudo-klasea sagua elementuaren gainean dagoenean
-aktibatzen da:
-
-``` css
-a:hover {
-    color: red;
-}
-```
-
-Esteketan ohikoak dira:
-
-``` css
-a:link {
-    color: blue;
-}
-
-a:visited {
-    color: purple;
-}
-
-a:hover {
-    color: red;
-}
-
-a:active {
-    color: orange;
-}
-```
-
-!!! example "Probatu"
-
-    Sortu hainbat esteka dituen HTML dokumentu bat eta definitu egoera bakoitzerako kolore desberdin bat.
-
-## Cascada, herentzia eta espezifikotasuna
+## Kaskada, herentzia eta espezifikotasuna
 
 Batzuetan, elementu bati CSS arau batek baino gehiagok eragiten diote.
 
@@ -418,25 +221,44 @@ p {
 .nabarmendua {
     color: red;
 }
+
+#oharra {
+    color: green;
+}
 ```
 
 ``` html
-<p class="nabarmendua">Zein kolore izango dut?</p>
+<p id="oharra" class="nabarmendua">Zein kolore izango dut?</p>
 ```
 
-Kasu honetan testua **gorria** izango da, `.nabarmendua` hautatzailea
-`p` hautatzailea baino espezifikoagoa delako.
+Hautatzaile arrunten espezifikotasuna, txikienetik handienera, honela
+doa: etiketa (`p`), klasea (`.nabarmendua`) eta IDa (`#oharra`).
+Beraz, testua **berdea** izango da: ID-hautatzailea espezifikoena da.
 
 CSSk hainbat arau erabiltzen ditu zein estilo aplikatu erabakitzeko:
 
--   **Espezifikotasuna**: hautatzaile zehatzagoek lehentasun handiagoa
-    dute.
--   **Ordena**: espezifikotasun bera badute, geroago idatzitako arauak
-    lehentasuna izango du.
+-   **Espezifikotasuna**: hautatzaile zehatzagoek lehentasun handiagoa dute.
+-   **Ordena**: espezifikotasun bera badute, geroago idatzitako arauak lehentasuna izango du.
 -   **Herentzia**: propietate batzuk guraso-elementutik
     seme-elementuetara heredatzen dira.
 
-Adibidez:
+Ordena azaltzeko hurrengo adibidean, lehentasun bereko CSS arau
+arruntak erabiltzen dira (ez `!important` edo estilo txertatuak):
+
+``` css
+p {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+```
+
+Bi hautatzaileek espezifikotasun bera dutenez, bigarren araua
+aplikatuko da eta paragrafoa gorria izango da.
+
+Herentzia ikusteko, gehitu `border` propietatea aurreko adibideari:
 
 ``` html
 <section>
@@ -448,15 +270,24 @@ Adibidez:
 ``` css
 section {
     color: blue;
+    border: 1px solid black;
+}
+
+h2 {
+    color: red;
 }
 ```
 
-`color` heredatzen den propietatea denez, `<h2>` eta `<p>` elementuek
-ere kolore urdina hartuko dute.
+`color` heredatzen denez, `<p>` elementuak urdina hartuko du; `<h2>`-ak,
+berriz, gorria, bere arau zuzenak gurasotik jasotako kolorea ordezkatzen
+duelako. `border` ez da heredatzen: ertza `<section>` elementuaren
+inguruan bakarrik agertuko da, ez barruko elementu bakoitzean.
 
 !!! tip "Ideia nagusia"
 
     Ez dugu espezifikotasunaren kalkulua buruz ikasi behar. Garrantzitsuena da ulertzea **elementu batek hainbat CSS arau jaso ditzakeela** eta nabigatzaileak erabakitzen duela zein aplikatu.
+
+[Hautatzaileak (selectores)](hautatzaileak.md)
 
 ## Koloreak
 
