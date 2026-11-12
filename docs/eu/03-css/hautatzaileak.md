@@ -163,6 +163,9 @@ HTML elementuen atributuak eta balioak aztertzen dituzte.
 | `[href$=".pdf"]` | Balioa horrekin amaitzen da | `a[href$=".pdf"]` |
 | `[href*="bilbao"]` | Balioak testu hori dauka | `a[href*="bilbao"]` |
 
+
+![CSS atributuak](../../images/css_atributuak.png)
+
 ### Adibide erabilgarria: PDF estekak bereiztea
 
 === "HTML"

@@ -163,6 +163,8 @@ Estos selectores analizan los atributos y los valores de los elementos HTML.
 | `[href$=".pdf"]` | El valor termina por ese texto | `a[href$=".pdf"]` |
 | `[href*="bilbao"]` | El valor contiene ese texto | `a[href*="bilbao"]` |
 
+![CSS atributos](../../images/css_atributuak.png)
+
 ### Ejemplo útil: distinguir enlaces PDF
 
 === "HTML"
