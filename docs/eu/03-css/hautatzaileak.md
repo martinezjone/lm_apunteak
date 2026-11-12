@@ -73,7 +73,7 @@ Klase bera hainbat elementutan erabil daiteke. IDak, aldiz, **bakarra izan behar
 ### 2.3. Hautatzaile unibertsala
 
 ```css
-*, *::before, *::after {
+*{
     box-sizing: border-box;
 }
 ```
@@ -90,6 +90,8 @@ Hautatzaile hauek HTMLko **egituran** oinarritzen dira.
 | `section > p` | Seme zuzena | `section` elementuaren seme zuzen diren `p` elementuak |
 | `h2 + p` | Ondoko anaia | `h2` baten ondoren **berehala** datorren `p` anaia |
 | `h2 ~ p` | Ondorengo anaiak | `h2` baten ondoren datozen `p` anaiak, ez derrigor jarraian |
+
+![CSS hautatzaile konbinatuak](../../images/css_konbinatuak.png)
 
 ### 3.1. Ondorengoa (` `) eta seme zuzena (`>`) alderatzea
 

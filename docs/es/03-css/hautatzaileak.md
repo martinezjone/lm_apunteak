@@ -73,7 +73,7 @@ La misma clase puede usarse en varios elementos. Los IDs, en cambio, deben ser *
 ### 2.3. Selector universal
 
 ```css
-*, *::before, *::after {
+*{
     box-sizing: border-box;
 }
 ```
@@ -90,6 +90,8 @@ Estos selectores se basan en la **estructura** del HTML.
 | `section > p` | Hijo directo | Los `p` que son hijos directos del elemento `section` |
 | `h2 + p` | Hermano adyacente | El `p` que viene **inmediatamente** después de un `h2` |
 | `h2 ~ p` | Hermanos siguientes | Los `p` que aparecen después de un `h2`, no necesariamente de forma inmediata |
+
+![CSS selectores combinados](../../images/css_konbinatuak.png)
 
 ### 3.1. Comparando descendiente (` `) y hijo directo (`>`) 
 
