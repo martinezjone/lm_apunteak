@@ -963,48 +963,7 @@ Balio erabilienak:
 
 ## Grid
 
-CSS Grid elementuak **errenkada eta zutabeetan** antolatzeko erabiltzen
-da.
-
-``` css
-.edukiontzia {
-    display: grid;
-}
-```
-
-Adibidez, hiru zutabe berdin sortzeko:
-
-``` css
-.edukiontzia {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-```
-
-Forma laburragoan:
-
-``` css
-.edukiontzia {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-```
-
-Elementuen arteko tartea:
-
-``` css
-.edukiontzia {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-```
-
-!!! note "`fr` unitatea"
-
-    `fr` Grid-en erabiltzen den unitatea da eta erabilgarri dagoen espazioaren zati bat adierazten du.
-
-    `1fr 1fr 1fr` erabiliz, espazioa hiru zati berdinetan banatzen da.
+[CSS Grid](grid.md)
 
 ## Diseinu moldagarria
 

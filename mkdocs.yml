@@ -67,6 +67,7 @@ plugins:
             Introducción: Sarrera
             General: Orokorra
             Selectores: Hautatzaileak
+            Grid: Grid
 
 nav:
   - Inicio: index.md
@@ -75,6 +76,7 @@ nav:
   - CSS:
       - General: 03-css/index.md
       - Selectores: 03-css/hautatzaileak.md
+      - Grid: 03-css/grid.md
   - XML: 04-xml/index.md
   - XSLT: 05-xslt/index.md
   - JavaScript: 06-javascript/index.md
