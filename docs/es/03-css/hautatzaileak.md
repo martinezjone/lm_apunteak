@@ -413,7 +413,6 @@ Algunos elementos HTML **heredan** los valores de las propiedades CSS del padre.
 
 [**Abrir laboratorio de selectores CSS — 54 ejercicios**](https://css-hautatzaileen-laborategia.jone-m.chatgpt.site){ .md-button .md-button--primary }
 
-Antes de hacer los ejercicios del laboratorio, intenta explicar **por qué** la respuesta es correcta. Que un selector funcione no es suficiente: el objetivo es entender qué elementos selecciona.
 
 ### Más referencias
 

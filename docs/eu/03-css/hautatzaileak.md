@@ -415,8 +415,6 @@ HTML elementu batzuek gurasoaren CSS propietateen balioak **heredatzen** dituzte
 
 [**Ireki CSS hautatzaileen laborategia — 54 ariketa**](https://css-hautatzaileen-laborategia.jone-m.chatgpt.site){ .md-button .md-button--primary }
 
-Laborategiko ariketak egin aurretik, saiatu erantzuna **zergatik** den zuzena azaltzen. Hautatzaile batek funtzionatzea ez da nahikoa: zer elementu hautatzen duen ulertzea da helburua.
-
 ### Erreferentzia gehiago
 
 - [MDN — CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)

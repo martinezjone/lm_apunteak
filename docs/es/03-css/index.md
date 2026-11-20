@@ -895,6 +895,8 @@ Valores más utilizados:
 
 ## Diseño adaptable
 
+[Explicación completa sobre diseño adaptable](responsive.md)
+
 Las páginas web deben adaptarse a diferentes tamaños de pantalla: ordenadores, tabletas y móviles.
 
 Para ello podemos utilizar, entre otras cosas, medidas relativas, Flexbox, Grid y **media queries**.

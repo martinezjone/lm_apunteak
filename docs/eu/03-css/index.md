@@ -967,6 +967,8 @@ Balio erabilienak:
 
 ## Diseinu moldagarria
 
+[Diseinu moldagarriaren azalpen osoa](responsive.md)
+
 Web-orriak pantaila-tamaina desberdinetara egokitu behar dira:
 ordenagailuak, tabletak eta mugikorrak.
 
