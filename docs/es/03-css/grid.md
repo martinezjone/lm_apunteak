@@ -36,7 +36,7 @@ empieza la magia: `grid-template-columns`, `grid-template-rows`,
 `display: grid` se aplica al **elemento padre**. Este se convierte en el
 **contenedor Grid**, y sus **hijos directos** son los **elementos Grid**.
 
-### Ejemplo: tarjetas en tres columnas
+## Ejemplo: tarjetas en tres columnas
 
 ```html
 <section class="tarjetas">
@@ -77,7 +77,7 @@ primera fila, crea automáticamente la siguiente.
 
 ## Columnas, filas y espacios
 
-### Ancho de las columnas
+## Ancho de las columnas
 
 Cada valor de la propiedad `grid-template-columns` define una columna.
 La unidad `fr` representa una fracción del espacio libre de Grid. Antes de
@@ -91,7 +91,7 @@ espacios entre elementos.
 | `2fr 1fr` | Dos columnas; la primera ocupa dos partes y la segunda una. |
 | `220px 1fr` | La primera columna ocupa 220 px y la segunda, el espacio restante. |
 
-### Altura de las filas
+## Altura de las filas
 
 La propiedad `grid-template-rows` define la altura de las filas. Si quieres
 que las filas crezcan según su contenido, deja la altura sin especificar.
@@ -111,7 +111,7 @@ La primera fila tiene una altura de `6rem`. La altura de la segunda se
 calcula según su contenido. Si se añaden más tarjetas, Grid crea
 automáticamente más filas.
 
-### Espacio entre elementos
+## Espacio entre elementos
 
 La propiedad `gap` establece el espacio **entre** las filas y las columnas;
 en la imagen anterior, es el espacio que aparece en naranja. Si también

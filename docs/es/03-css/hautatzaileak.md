@@ -32,7 +32,7 @@ h1 {
 | Universal | `*` | Todos los elementos |
 | Agrupación | `h1, h2, p` | Cualquier elemento que coincida con cualquiera de los tres selectores |
 
-### 2.1. Elementos y clases
+## 2.1. Elementos y clases
 
 === "HTML"
     ```html
@@ -61,7 +61,7 @@ h1 {
 
 **¿Por qué?** El selector `p` selecciona los tres párrafos; el selector `.destacada`, en cambio, selecciona solo el que tiene esa clase. En este último, la regla que define `color` es más específica.
 
-### 2.2. Clase y tipo de elemento a la vez
+## 2.2. Clase y tipo de elemento a la vez
 
 ```css
 .destacada { color: red; }    /* Cualquier elemento con esa clase */
@@ -70,7 +70,7 @@ p.destacada { color: blue; }  /* Solo los elementos p con esa clase */
 
 La misma clase puede usarse en varios elementos. Los IDs, en cambio, deben ser **únicos dentro del mismo documento HTML**. Para aplicar estilos generales, normalmente es recomendable **usar clases**, porque son más reutilizables.
 
-### 2.3. Selector universal
+## 2.3. Selector universal
 
 ```css
 *{
@@ -93,7 +93,7 @@ Estos selectores se basan en la **estructura** del HTML.
 
 ![CSS selectores combinados](../../images/css_konbinatuak.png)
 
-### 3.1. Comparando descendiente (` `) y hijo directo (`>`) 
+## 3.1. Comparando descendiente (` `) y hijo directo (`>`) 
 
 === "HTML"
     ```html
@@ -123,7 +123,7 @@ Estos selectores se basan en la **estructura** del HTML.
 !!! note "Cuidado con el resultado"
     Si se aplican ambas reglas CSS **a la vez**, A y C serán rojos porque la regla `section > p` está escrita después y ambos selectores tienen la misma especificidad. B será azul.
 
-### 3.2. Hermano adyacente (`+`) y hermanos siguientes (`~`)
+## 3.2. Hermano adyacente (`+`) y hermanos siguientes (`~`)
 
 === "HTML"
     ```html
@@ -165,7 +165,7 @@ Estos selectores analizan los atributos y los valores de los elementos HTML.
 
 ![CSS atributos](../../images/css_atributuak.png)
 
-### Ejemplo útil: distinguir enlaces PDF
+## Ejemplo útil: distinguir enlaces PDF
 
 === "HTML"
     ```html
@@ -194,7 +194,7 @@ Estos selectores analizan los atributos y los valores de los elementos HTML.
 
 Las pseudoclases indican el **estado** o la **posición** de un elemento.
 
-### 5.1. Interacción del usuario
+## 5.1. Interacción del usuario
 
 | Pseudoclase | ¿Cuándo se aplica? |
 |---|---|
@@ -216,7 +216,7 @@ nav a:focus-visible {
 !!! tip "Accesibilidad"
     No elimines el indicador de foco con `outline: none` sin proporcionar otra indicación visual. Los usuarios que navegan con teclado deben poder ver dónde está el foco. Usar solo `:hover` no es suficiente.
 
-### 5.2. Posición de los elementos
+## 5.2. Posición de los elementos
 
 | Pseudoclase | ¿Qué selecciona? |
 |---|---|
@@ -263,7 +263,7 @@ nav a:focus-visible {
     - `p:nth-child(2)` → **primer párrafo** (el segundo hijo del `div`)
     - `p:nth-of-type(2)` → **segundo párrafo** (el segundo elemento `p`)
 
-### 5.3. Negación: `:not()`
+## 5.3. Negación: `:not()`
 
 ```css
 /* li elementos sin la clase .especial */
@@ -319,7 +319,7 @@ Para los principiantes, lo primero es hacer estas preguntas:
 4. Si las reglas tienen la misma capa e importancia, ¿cuál tiene **más especificidad**?
 5. Si la especificidad es igual, ¿cuál aparece **más tarde**?
 
-### 7.1. Especificidad: patrón
+## 7.1. Especificidad: patrón
 
 | Selector | ID | Clase / atributo / pseudoclase | Elemento / pseudoelemento |
 |---|---:|---:|---:|
@@ -348,7 +348,7 @@ La especificidad se compara **columna por columna, de izquierda a derecha**: un 
 
 **¿Por qué?** Las tres reglas seleccionan el párrafo, pero el selector `#mensaje` tiene mayor especificidad.
 
-### 7.2. Especificidad igual: orden
+## 7.2. Especificidad igual: orden
 
 ```css
 .aviso { color: blue; }
@@ -357,7 +357,7 @@ La especificidad se compara **columna por columna, de izquierda a derecha**: un 
 
 Como ambas reglas tienen el mismo origen, importancia, capa y especificidad, se aplica la **última**.
 
-### 7.3. `!important`: con cuidado
+## 7.3. `!important`: con cuidado
 
 ```css
 .aviso { color: red !important; }
@@ -409,12 +409,12 @@ Algunos elementos HTML **heredan** los valores de las propiedades CSS del padre.
     La regla `.caja p` selecciona directamente el párrafo. En cambio, la regla `.caja { color: green; }` selecciona la caja y el párrafo puede recibir el color **por herencia**. Son dos mecanismos distintos.
 
 
-### Para practicar
+## Para practicar
 
 [**Abrir laboratorio de selectores CSS — 54 ejercicios**](https://css-hautatzaileen-laborategia.jone-m.chatgpt.site){ .md-button .md-button--primary }
 
 
-### Más referencias
+## Más referencias
 
 - [MDN — CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)
 - [MDN — Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade)

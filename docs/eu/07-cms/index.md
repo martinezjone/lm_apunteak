@@ -39,7 +39,7 @@ modulu honetan zentratuko garen CMSa izango da.
 
 ## WordPress
 
-### WordPress-en bi bertsioak
+## WordPress-en bi bertsioak
 
 Ohikoa da izen bera partekatzen duten bi produktu ezberdin nahastea:
 
@@ -50,14 +50,14 @@ Ohikoa da izen bera partekatzen duten bi produktu ezberdin nahastea:
   bat, software bera erabiltzen duena, baina aukera gratuito mugatuekin
   eta funtzio gehiagorako ordainpeko planekin.
 
-### Orrialde ofizialak
+## Orrialde ofizialak
 
 - **wordpress.org**: software libreko proiektuaren gune ofiziala. Hemen
   aurkitzen dira CMSaren deskarga, gaien biltegi ofiziala, pluginen
   biltegi ofiziala eta dokumentazio teknikoa.
 - **wordpress.com**: kudeatutako ostalaritza-zerbitzuaren atari.
 
-### Non deskargatu
+## Non deskargatu
 
 Instalazio-paketea **wordpress.org**-eko deskarga-atalean deskargatzen
 da, `.zip` (edo `.tar.gz`) formatuan, eta CMSaren funtzionamendurako
@@ -77,7 +77,7 @@ instalatzen dituena, zerbitzuak abiarazteko eta gelditzeko kontrol-panel
 grafiko batekin batera. XAMPPen baliokidea da, baina beste fabrikatzaile
 batek garatua.
 
-### Instalazio-urratsak
+## Instalazio-urratsak
 
 1. **MAMP instalatu**: MAMP-en webgune ofizialetik instalatzailea
    deskargatu eta exekutatu, lehenetsitako aukerak onartuz.

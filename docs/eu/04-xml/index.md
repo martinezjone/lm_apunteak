@@ -48,7 +48,7 @@ pentsatuak.
 XML DTD (*Document Type Definition*) baten edo XML Schema (XSD) baten
 aurrean balida daiteke, egitura zehatz bat betetzen duela bermatzeko.
 
-### DTD
+## DTD
 
 DTD batek zein elementu eta atributu onartzen diren eta zein egiturarekin
 formalizatzen du.
@@ -112,7 +112,7 @@ dira):
 Salmenta-zerrenda bat edo erosketa-zerrenda bat onartzen du, baina ez bi
 motak nahastea.
 
-### XML Schema (XSD)
+## XML Schema (XSD)
 
 DTD bat baino ahaltsuagoa: XML formatuan bertan idazten da, datu-moten
 balidazioa gehitzen du eta izen-espazioak (*namespaces*) onartzen ditu.

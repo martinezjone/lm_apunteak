@@ -69,7 +69,7 @@ selector {
 
 Podemos añadir CSS a un documento HTML de tres formas.
 
-### Estilos en línea
+## Estilos en línea
 
 CSS se escribe directamente en el atributo `style` del elemento HTML:
 
@@ -79,7 +79,7 @@ CSS se escribe directamente en el atributo `style` del elemento HTML:
 
 Aunque este método puede usarse, **no es recomendable para definir el estilo general de una página web**, porque mezcla la estructura HTML con los estilos CSS.
 
-### Hoja de estilos interna
+## Hoja de estilos interna
 
 El código CSS puede escribirse dentro del elemento `<style>` del `<head>` del documento:
 
@@ -95,7 +95,7 @@ El código CSS puede escribirse dentro del elemento `<style>` del `<head>` del d
 
 Este método puede resultar útil para definir unos pocos estilos en una sola página.
 
-### Hoja de estilos externa
+## Hoja de estilos externa
 
 Lo más habitual y recomendable es guardar el código CSS en un archivo `.css` aparte.
 
@@ -133,7 +133,7 @@ Para enlazar el archivo CSS desde el documento HTML se usa el elemento `<link>`,
 
     En la medida de lo posible, **usaremos hojas de estilo externas**. Así mantenemos separados la estructura HTML y los estilos CSS, y el código queda más limpio y más fácil de mantener.
 
-### Primer ejemplo
+## Primer ejemplo
 
 Crea la siguiente estructura:
 
@@ -247,7 +247,7 @@ Como `color` es una propiedad heredada, tanto `<h2>` como `<p>` también tendrá
 
 En CSS, los colores pueden expresarse de varias formas.
 
-### Nombre del color
+## Nombre del color
 
 ``` css
 p {
@@ -255,7 +255,7 @@ p {
 }
 ```
 
-### Notación hexadecimal
+## Notación hexadecimal
 
 ``` css
 p {
@@ -276,7 +276,7 @@ p {
 
     <a href="https://www.w3schools.com/css/css_colors_hex.asp" target="_blank">Css Colors Hex</a>
 
-### RGB
+## RGB
 
 El sistema RGB representa la cantidad de rojo (**Red**), verde (**Green**) y azul (**Blue**).
 
@@ -317,7 +317,7 @@ p {
 
 Las unidades pueden ser **absolutas** o **relativas**.
 
-### Unidades absolutas
+## Unidades absolutas
 
 La más habitual es `px`:
 
@@ -329,7 +329,7 @@ p {
 
 Otras unidades absolutas son `cm`, `mm`, `in`, `pt` y `pc`, aunque se usan menos en el diseño web.
 
-### Unidades relativas
+## Unidades relativas
 
 Son muy útiles para crear diseños adaptables.
 
@@ -376,7 +376,7 @@ header {
 
 ## Texto y tipografía
 
-### Color del texto
+## Color del texto
 
 La propiedad `color` define el color del texto:
 
@@ -386,7 +386,7 @@ p {
 }
 ```
 
-### Tamaño de letra
+## Tamaño de letra
 
 ``` css
 p {
@@ -394,7 +394,7 @@ p {
 }
 ```
 
-### Familia tipográfica
+## Familia tipográfica
 
 La propiedad `font-family` define el tipo de letra:
 
@@ -414,7 +414,7 @@ body {
 }
 ```
 
-### Grosor de letra
+## Grosor de letra
 
 ``` css
 p {
@@ -430,7 +430,7 @@ h1 {
 }
 ```
 
-### Estilo de letra
+## Estilo de letra
 
 ``` css
 p {
@@ -438,7 +438,7 @@ p {
 }
 ```
 
-### Alineación
+## Alineación
 
 ``` css
 p {
@@ -453,7 +453,7 @@ Valores habituales:
 -   `center`
 -   `justify`
 
-### Interlineado
+## Interlineado
 
 La propiedad `line-height` controla la distancia entre las líneas de texto:
 
@@ -463,7 +463,7 @@ p {
 }
 ```
 
-### Decoración del texto
+## Decoración del texto
 
 ``` css
 a {
@@ -483,7 +483,7 @@ Otros valores:
 }
 ```
 
-### Mayúsculas y minúsculas
+## Mayúsculas y minúsculas
 
 ``` css
 h1 {
@@ -515,7 +515,7 @@ Cada caja tiene cuatro partes principales:
     Haz pruebas en el siguiente enlace para entender todas las partes:
     <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_boxmodel" target="_blank">CSS Box Model</a>
 
-### Width y height
+## Width y height
 
 ``` css
 div {
@@ -526,7 +526,7 @@ div {
 
 `width` es el ancho del elemento y `height` es su altura.
 
-### Padding
+## Padding
 
 Es el espacio entre el contenido y el borde del elemento:
 
@@ -555,7 +555,7 @@ div {
 }
 ```
 
-### Border
+## Border
 
 Para definir el borde de un elemento:
 
@@ -583,7 +583,7 @@ div {
 }
 ```
 
-### Margin
+## Margin
 
 Define el espacio exterior del elemento:
 
@@ -613,7 +613,7 @@ main {
 }
 ```
 
-### `box-sizing`
+## `box-sizing`
 
 Por defecto, al asignar `width` a un elemento, ese ancho indica **solo el ancho del contenido (`content`)**.
 
@@ -687,7 +687,7 @@ El navegador reduce automáticamente el tamaño del contenido (`content`) para q
 
 ## Fondo
 
-### Color de fondo
+## Color de fondo
 
 ``` css
 body {
@@ -695,7 +695,7 @@ body {
 }
 ```
 
-### Imagen de fondo
+## Imagen de fondo
 
 ``` css
 header {
@@ -742,7 +742,7 @@ La propiedad `display` define cómo se organiza un elemento en el documento.
 
 ![Display](../../images/display.png)
 
-### Elementos block
+## Elementos block
 
 Los elementos `block` ocupan todo el ancho disponible y el siguiente elemento empieza en otra línea.
 
@@ -754,7 +754,7 @@ div {
 
 Elementos HTML como `<div>`, `<p>`, `<section>` o `<h1>` son `block` por defecto.
 
-### Elementos inline
+## Elementos inline
 
 Los elementos `inline` solo ocupan el espacio que necesitan para su contenido y no crean un salto de línea.
 
@@ -766,7 +766,7 @@ span {
 
 Elementos como `<span>` o `<a>` son `inline` por defecto.
 
-### Inline-block
+## Inline-block
 
 Los elementos `inline-block` pueden colocarse en la misma línea y permiten controlar las propiedades `width`, `height`, `padding` y `margin`.
 
@@ -777,7 +777,7 @@ a {
 }
 ```
 
-### Ocultar un elemento
+## Ocultar un elemento
 
 ``` css
 .elementua {
@@ -815,7 +815,7 @@ HTML:
 </div>
 ```
 
-### Dirección
+## Dirección
 
 ``` css
 .edukiontzia {
@@ -831,7 +831,7 @@ Valores principales:
 -   `column`
 -   `column-reverse`
 
-### Alineación en el eje principal
+## Alineación en el eje principal
 
 La propiedad `justify-content` distribuye los elementos en el eje principal:
 
@@ -851,7 +851,7 @@ Valores más utilizados:
 -   `space-around`
 -   `space-evenly`
 
-### Alineación en el eje transversal
+## Alineación en el eje transversal
 
 ``` css
 .edukiontzia {
@@ -867,7 +867,7 @@ Valores más utilizados:
 -   `flex-end`
 -   `center`
 
-### Pasar los elementos a la siguiente línea
+## Pasar los elementos a la siguiente línea
 
 ``` css
 .edukiontzia {
@@ -876,7 +876,7 @@ Valores más utilizados:
 }
 ```
 
-### Espacio entre elementos
+## Espacio entre elementos
 
 ``` css
 .edukiontzia {
@@ -901,7 +901,7 @@ Las páginas web deben adaptarse a diferentes tamaños de pantalla: ordenadores,
 
 Para ello podemos utilizar, entre otras cosas, medidas relativas, Flexbox, Grid y **media queries**.
 
-### Media queries
+## Media queries
 
 Una media query permite aplicar reglas CSS según una condición.
 

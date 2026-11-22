@@ -28,7 +28,7 @@ Oinarrizko kontzeptu horiek CSSren propietateekin konbinatzen dituzunean hasten 
 `display: grid` **gurasoari** aplikatzen zaio. Gurasoa Grid **edukiontzia**
 bihurtzen da, eta haren **zuzeneko umeak** Grid **elementuak** dira.
 
-### Adibidea: txartelak hiru zutabetan
+## Adibidea: txartelak hiru zutabetan
 
 ```html
 <section class="txartelak">
@@ -69,7 +69,7 @@ betetzean, bigarrena sortzen du automatikoki.
 
 ## Zutabeak, errenkadak eta tarteak
 
-### Zutabeen zabalera
+## Zutabeen zabalera
 
 `grid-template-columns` propietateko balio bakoitzak zutabe bat definitzen
 du. `fr` unitateak Grid-en libre geratzen den espazioaren zati bat adierazten
@@ -83,7 +83,7 @@ lekua kentzen da.
 | `2fr 1fr` | Bi zutabe, lehenengoak bi zati hartzen ditu eta bigarrenak bat. |
 | `220px 1fr` | Lehenengo zutabeak 220 px hartzen ditu eta bigarrenak gainerako lekua. |
 
-### Errenkaden altuera
+## Errenkaden altuera
 
 `grid-template-rows` propietateak errenkaden altuera definitzen du.
 Utzi altuera zehaztu gabe errenkadak edukiaren arabera haztea nahi baduzu.
@@ -102,7 +102,7 @@ Lehenengo errenkadak `6rem`-eko altuera du. Bigarrenaren altuera edukiaren
 arabera kalkulatzen da. Txartel gehiago gehituz gero, Grid-ek beste errenkada
 batzuk sortuko ditu automatikoki.
 
-### Elementuen arteko tartea
+## Elementuen arteko tartea
 
 `gap` propietateak errenkaden eta zutabeen **arteko** tartea ezartzen du, aurreko irudian laranjaz ikusten den tartea da.
 Edukiontziaren ertzetan ere tartea nahi baduzu, erabili `padding`.

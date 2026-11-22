@@ -490,7 +490,7 @@ HTML5 añadió **nuevas etiquetas semánticas** para organizar páginas web de m
 
 ---
 
-### Estructura de la página
+## Estructura de la página
 
 - `<header>`: **cabecera** de la página o de una sección. Normalmente se colocan el logo, el nombre del sitio web o el título principal.
 - `<nav>`: **menú de navegación**. Contiene enlaces a otras páginas o secciones.
@@ -553,9 +553,9 @@ HTML5 añadió **nuevas etiquetas semánticas** para organizar páginas web de m
 
 ![Web Semántica](../../images/web_semantikoa.png)
 
-### Explicación de cada etiqueta
+## Explicación de cada etiqueta
 
-#### `<header>`
+### `<header>`
 
 Indica la cabecera de una página o sección. Normalmente suele incluir:
 
@@ -566,7 +566,7 @@ Indica la cabecera de una página o sección. Normalmente suele incluir:
 
 ---
 
-#### `<nav>`
+### `<nav>`
 
 Incluye elementos de navegación.
 
@@ -581,7 +581,7 @@ Por ejemplo:
 
 ---
 
-#### `<main>`
+### `<main>`
 
 Incluye el **contenido principal** de la página web.
 
@@ -589,7 +589,7 @@ Debe haber **un único `<main>`** por página.
 
 ---
 
-#### `<section>`
+### `<section>`
 
 Agrupa contenido relacionado con un mismo tema.
 
@@ -604,7 +604,7 @@ Normalmente dentro hay varios `<article>`.
 
 ---
 
-#### `<article>`
+### `<article>`
 
 Representa contenido con sentido por sí mismo.
 
@@ -619,7 +619,7 @@ Normalmente incluye un título (`<h2>` o `<h3>`), texto, imágenes o vídeos.
 
 ---
 
-#### `<aside>`
+### `<aside>`
 
 Muestra información que complementa el contenido principal.
 
@@ -634,7 +634,7 @@ Normalmente se coloca en un lateral.
 
 ---
 
-#### `<footer>`
+### `<footer>`
 
 Indica el final de la página o de una sección.
 
@@ -647,20 +647,20 @@ Suele mostrar:
 
 ---
 
-### Etiquetas para organizar el contenido
+## Etiquetas para organizar el contenido
 
 - `<hgroup>`: agrupa varios títulos relacionados entre sí.
 - `<h1>` - `<h6>`: establecen la jerarquía de títulos.
 - `<div>`: etiqueta genérica para agrupar contenido de bloque.
 - `<span>`: etiqueta genérica para agrupar contenido dentro de una línea.
 
-#### `<div>`
+### `<div>`
 
 Se usa para agrupar bloques de contenido.
 
 No tiene significado semántico; se usa principalmente para organizar y dar estilo.
 
-#### `<span>`
+### `<span>`
 
 Se usa para dar estilo o comportamiento especial a un pequeño fragmento de texto.
 
@@ -673,7 +673,7 @@ No crea salto de línea.
 </p>
 ```
 
-### Contenido complementario
+## Contenido complementario
 
 - `<address>`: indica información de contacto.
 - `<details>` y `<summary>`: crean información desplegable.
@@ -734,7 +734,7 @@ Además, las etiquetas `<audio>` y `<video>` usan el **reproductor nativo del na
 
 ---
 
-### Contenido incrustado genérico (`<object>`)
+## Contenido incrustado genérico (`<object>`)
 
 La etiqueta `<object>` permite incrustar recursos externos. Actualmente no es la opción habitual para incrustar imágenes, audio o vídeo, porque para eso existen etiquetas específicas (`<img>`, `<audio>` y `<video>`).
 
@@ -748,7 +748,7 @@ Por ejemplo, para incrustar un documento PDF:
 
 ---
 
-### Audio (`<audio>`)
+## Audio (`<audio>`)
 
 La etiqueta `<audio>` se usa para incrustar archivos de audio en la página web.
 
@@ -758,7 +758,7 @@ La etiqueta `<audio>` se usa para incrustar archivos de audio en la página web.
 </audio>
 ```
 
-#### Formatos de audio principales
+### Formatos de audio principales
 
 | Formato | Descripción |
 |----------|----------|
@@ -766,7 +766,7 @@ La etiqueta `<audio>` se usa para incrustar archivos de audio en la página web.
 | **WAV** | De gran calidad, pero los archivos son muy grandes. Se puede usar para audio corto. |
 | **OGG** | Formato abierto. Ofrece buena calidad y buena compresión. |
 
-### Proporcionar varios formatos de audio
+## Proporcionar varios formatos de audio
 
 Si se quiere ofrecer el mismo audio en formatos distintos, puede usarse la etiqueta `<source>`.
 
@@ -785,7 +785,7 @@ El navegador usará el **primer formato compatible**.
 
 ---
 
-### Vídeo (`<video>`)
+## Vídeo (`<video>`)
 
 La etiqueta `<video>` se usa para incrustar archivos de vídeo directamente en la página web.
 
@@ -795,7 +795,7 @@ La etiqueta `<video>` se usa para incrustar archivos de vídeo directamente en l
 </video>
 ```
 
-#### Formatos de vídeo principales
+### Formatos de vídeo principales
 
 | Formato | Descripción |
 |----------|----------|
@@ -803,7 +803,7 @@ La etiqueta `<video>` se usa para incrustar archivos de vídeo directamente en l
 | **WebM** | Formato abierto diseñado para la web. |
 | **OGG / OGV** | Formato abierto, hoy menos utilizado. |
 
-### Proporcionar varios formatos de vídeo
+## Proporcionar varios formatos de vídeo
 
 Si se quiere ofrecer el mismo vídeo en distintos formatos, puede usarse la etiqueta `<source>`.
 
@@ -822,7 +822,7 @@ El navegador usará el **primer formato compatible**.
 
 ---
 
-### Atributos más usados de las etiquetas `<audio>` y `<video>`
+## Atributos más usados de las etiquetas `<audio>` y `<video>`
 
 | Atributo | Descripción |
 |-----------|----------|
@@ -847,7 +847,7 @@ El navegador usará el **primer formato compatible**.
 
 ---
 
-### Insertar vídeos externos (`<iframe>`)
+## Insertar vídeos externos (`<iframe>`)
 
 Los vídeos de YouTube, Vimeo o plataformas similares **no se incrustan con la etiqueta `<video>`**.
 
@@ -882,6 +882,10 @@ En YouTube, este código se obtiene haciendo clic en **Compartir → Insertar (E
 !!! example "Ejercicio 9"
     Este ejercicio nos servirá para repasar todo lo anterior: [Ejercicio 9](https://docs.google.com/document/d/11uI0NrI0OdJXkDNqBq0T9JxlLd77c4mzLti7Q4yVel4/edit?usp=sharing){: target="_blank" rel="noopener" }
 
+!!! tip "Explicación completa"
+    Para repasar más controles y los formularios de forma organizada, consulta
+    la [página de Formularios](formularioak.md).
+
 ## Formularios
 
 Los formularios se utilizan para recoger información del usuario (registros, inicio de sesión, formularios de contacto, encuestas...).
@@ -890,7 +894,7 @@ Dentro de un formulario puede haber varios controles: cuadros de texto, contrase
 
 ---
 
-### Etiqueta `<form>`
+## Etiqueta `<form>`
 
 Todos los formularios se definen dentro de la etiqueta `<form>`.
 
@@ -902,7 +906,7 @@ Todos los formularios se definen dentro de la etiqueta `<form>`.
 </form>
 ```
 
-#### Atributos principales
+### Atributos principales
 
 | Atributo | Descripción |
 |-----------|----------|
@@ -915,7 +919,7 @@ Todos los formularios se definen dentro de la etiqueta `<form>`.
 
 ---
 
-### `<label>`
+## `<label>`
 
 Se usa para dar nombre a un control de un formulario.
 
@@ -928,7 +932,7 @@ El atributo `for` debe coincidir con el atributo `id` del control.
 
 ---
 
-### `id` y `name`
+## `id` y `name`
 
 Ambos atributos son muy importantes, pero **no hacen lo mismo**. Es importante dejar claro su diferencia.
 
@@ -955,7 +959,7 @@ En este caso:
 
 ---
 
-### Campo de texto (`text`)
+## Campo de texto (`text`)
 
 Se usa para escribir textos cortos.
 
@@ -965,7 +969,7 @@ Se usa para escribir textos cortos.
 <input type="text" id="id_izena" name="izena" value="Texto predeterminado" size="20">
 ```
 
-#### Atributos más utilizados
+### Atributos más utilizados
 
 | Atributo | Descripción |
 |-----------|----------|
@@ -987,7 +991,7 @@ Ejemplo:
 
 ---
 
-### Contraseña (`password`)
+## Contraseña (`password`)
 
 Oculta los caracteres escritos.
 
@@ -997,7 +1001,7 @@ Oculta los caracteres escritos.
 
 ---
 
-### Email (`email`)
+## Email (`email`)
 
 Se utiliza para introducir una dirección de correo electrónico.
 
@@ -1009,7 +1013,7 @@ El navegador la valida automáticamente comprobando que el formato sea correcto.
 
 ---
 
-### Otras opciones de `input` disponibles
+## Otras opciones de `input` disponibles
 
 | Tipo | Uso |
 |------|-----------|
@@ -1035,7 +1039,7 @@ Ejemplo:
 
 ---
 
-### Botones de opción (`radio`)
+## Botones de opción (`radio`)
 
 Se usan para elegir **una sola** opción.
 
@@ -1058,7 +1062,7 @@ Opción predeterminada:
 
 ---
 
-### Casillas de verificación (`checkbox`)
+## Casillas de verificación (`checkbox`)
 
 Se usan para elegir **una o varias** opciones.
 
@@ -1080,7 +1084,7 @@ Opción predeterminada:
 
 ---
 
-### Lista desplegable (`select`)
+## Lista desplegable (`select`)
 
 Muestra una lista de opciones.
 
@@ -1098,7 +1102,7 @@ Muestra una lista de opciones.
 
 ![Select ejemplo](../../images/form_select.png)
 
-#### Atributos útiles
+### Atributos útiles
 
 | Atributo | Descripción |
 |-----------|----------|
@@ -1119,7 +1123,7 @@ Muestra una lista de opciones.
 
 ---
 
-### Área de texto (`textarea`)
+## Área de texto (`textarea`)
 
 Se usa para escribir textos de varias líneas.
 
@@ -1133,7 +1137,7 @@ Escribe aquí tu mensaje...
 
 ---
 
-### Sugerencias de datos (`datalist`)
+## Sugerencias de datos (`datalist`)
 
 Muestra sugerencias mientras el usuario escribe.
 
@@ -1159,7 +1163,7 @@ El usuario también puede escribir otro valor.
 
 ---
 
-### Agrupación de controles (`fieldset` y `legend`)
+## Agrupación de controles (`fieldset` y `legend`)
 
 Se usan para organizar distintas partes del formulario.
 
@@ -1179,7 +1183,7 @@ Se usan para organizar distintas partes del formulario.
 
 ---
 
-### Botones
+## Botones
 
 En los formularios se pueden usar varios tipos de botones.
 
@@ -1198,7 +1202,7 @@ En los formularios se pueden usar varios tipos de botones.
 | `button` | Se usa para controlarlo mediante JavaScript. |
 
 ---
-### Validación HTML5
+## Validación HTML5
 
 HTML5 realiza algunas validaciones automáticas sin usar JavaScript.
 
@@ -1226,7 +1230,7 @@ Gracias a esto, el usuario no podrá enviar datos incorrectos.
 
 ---
 
-### `GET` y `POST`
+## `GET` y `POST`
 
 Un formulario tiene dos métodos principales para enviar datos.
 
@@ -1248,7 +1252,7 @@ Ejemplo:
 
 ---
 
-### Ejemplo completo de formulario
+## Ejemplo completo de formulario
 
 ```html
 <form action="/bidali" method="post">

@@ -548,7 +548,7 @@ HTML5ek **etiketa semantiko berriak** gehitu zituen web-orriak modu argiago eta 
 
 ---
 
-### Orri baten egitura
+## Orri baten egitura
 
 - `<header>`: orri edo atal baten **goiburua**. Bertan normalean logoa, webgunearen izena edo izenburu nagusia kokatzen dira.
 - `<nav>`: **nabigazio-menua**. Beste orri edo atal batzuetara eramaten duten estekak biltzen ditu.
@@ -611,9 +611,9 @@ HTML5ek **etiketa semantiko berriak** gehitu zituen web-orriak modu argiago eta 
 
 ![Web Semantikoa](../../images/web_semantikoa.png)
 
-### Etiketa bakoitzaren azalpena
+## Etiketa bakoitzaren azalpena
 
-#### `<header>`
+### `<header>`
 
 Orri edo atal baten goiburua adierazten du. Normalean honako hauek izaten ditu:
 
@@ -624,7 +624,7 @@ Orri edo atal baten goiburua adierazten du. Normalean honako hauek izaten ditu:
 
 ---
 
-#### `<nav>`
+### `<nav>`
 
 Nabigazio-elementuak biltzen ditu.
 
@@ -639,7 +639,7 @@ Adibidez:
 
 ---
 
-#### `<main>`
+### `<main>`
 
 Web-orriaren **eduki nagusia** biltzen du.
 
@@ -647,7 +647,7 @@ Orri bakoitzean **`<main>` bakarra** egon behar da.
 
 ---
 
-#### `<section>`
+### `<section>`
 
 Gai bereko edukia taldekatzen du.
 
@@ -662,7 +662,7 @@ Normalean barruan hainbat `<article>` egoten dira.
 
 ---
 
-#### `<article>`
+### `<article>`
 
 Bere kabuz zentzua duen edukia adierazten du.
 
@@ -677,7 +677,7 @@ Barruan normalean izenburua (`<h2>` edo `<h3>`), testua, irudiak edo bideoak ego
 
 ---
 
-#### `<aside>`
+### `<aside>`
 
 Eduki nagusia osatzen duen informazioa erakusten du.
 
@@ -692,7 +692,7 @@ Normalean albo batean kokatzen da.
 
 ---
 
-#### `<footer>`
+### `<footer>`
 
 Orriaren edo atal baten amaiera adierazten du.
 
@@ -705,20 +705,20 @@ Bertan agertu ohi dira:
 
 ---
 
-### Edukia antolatzeko etiketak
+## Edukia antolatzeko etiketak
 
 - `<hgroup>`: elkarrekin lotutako hainbat izenburu taldekatzen ditu.
 - `<h1>` - `<h6>`: izenburuen hierarkia ezartzen dute.
 - `<div>`: blokeko edukia taldekatzeko etiketa generikoa.
 - `<span>`: lerro barruko edukia taldekatzeko etiketa generikoa.
 
-#### `<div>`
+### `<div>`
 
 Eduki blokeak taldekatzeko erabiltzen da.
 
 Ez du esanahi semantikorik; antolaketa eta estiloa aplikatzeko erabiltzen da batez ere.
 
-#### `<span>`
+### `<span>`
 
 Testu zati txiki bati estilo edo portaera berezia emateko erabiltzen da.
 
@@ -731,7 +731,7 @@ Ez du lerro-jauzirik sortzen.
 </p>
 ```
 
-### Eduki osagarria
+## Eduki osagarria
 
 - `<address>`: kontaktu-informazioa adierazten du.
 - `<details>` eta `<summary>`: informazio zabalgarria sortzen dute.
@@ -793,7 +793,7 @@ Gainera, `<audio>` eta `<video>` etiketek nabigatzailearen **erreproduzigailu na
 
 ---
 
-### Eduki txertatu generikoak (`<object>`)
+## Eduki txertatu generikoak (`<object>`)
 
 `<object>` etiketak kanpoko baliabideak txertatzeko aukera ematen du. Gaur egun ez da irudiak, audioak edo bideoak txertatzeko ohiko aukera, horretarako etiketa espezifikoak erabiltzen baitira (`<img>`, `<audio>` eta `<video>`).
 
@@ -807,7 +807,7 @@ Adibidez, PDF dokumentu bat txertatzeko erabil daiteke:
 
 ---
 
-### Audioa (`<audio>`)
+## Audioa (`<audio>`)
 
 `<audio>` etiketa web-orrian audio-fitxategiak txertatzeko erabiltzen da.
 
@@ -817,7 +817,7 @@ Adibidez, PDF dokumentu bat txertatzeko erabil daiteke:
 </audio>
 ```
 
-#### Audio-formatu nagusiak
+### Audio-formatu nagusiak
 
 | Formatua | Azalpena |
 |----------|----------|
@@ -825,7 +825,7 @@ Adibidez, PDF dokumentu bat txertatzeko erabil daiteke:
 | **WAV** | Kalitate handikoa, baina fitxategiak oso handiak dira. Audio laburretarako erabil daiteke. |
 | **OGG** | Formatu irekia. Kalitate ona eta konpresio ona eskaintzen ditu. |
 
-### Hainbat audio-formatu eskaintzea
+## Hainbat audio-formatu eskaintzea
 
 Audio bera formatu desberdinetan eskaini nahi bada, `<source>` etiketa erabil daiteke.
 
@@ -844,7 +844,7 @@ Nabigatzaileak **onartzen duen lehenengo formatua** erabiliko du.
 
 ---
 
-### Bideoa (`<video>`)
+## Bideoa (`<video>`)
 
 `<video>` etiketa bideo-fitxategiak zuzenean web-orrian txertatzeko erabiltzen da.
 
@@ -854,7 +854,7 @@ Nabigatzaileak **onartzen duen lehenengo formatua** erabiliko du.
 </video>
 ```
 
-#### Bideo-formatu nagusiak
+### Bideo-formatu nagusiak
 
 | Formatua | Azalpena |
 |----------|----------|
@@ -862,7 +862,7 @@ Nabigatzaileak **onartzen duen lehenengo formatua** erabiliko du.
 | **WebM** | Weberako diseinatutako formatu irekia. |
 | **OGG / OGV** | Formatu irekia, gaur egun gutxiago erabiltzen dena. |
 
-### Hainbat bideo-formatu eskaintzea
+## Hainbat bideo-formatu eskaintzea
 
 Bideo bera formatu desberdinetan eskaini nahi bada, `<source>` etiketa erabil daiteke.
 
@@ -881,7 +881,7 @@ Nabigatzaileak **onartzen duen lehenengo formatua** erabiliko du.
 
 ---
 
-### `<audio>` eta `<video>` etiketen atributu erabilienak
+## `<audio>` eta `<video>` etiketen atributu erabilienak
 
 | Atributua | Azalpena |
 |-----------|----------|
@@ -906,7 +906,7 @@ Nabigatzaileak **onartzen duen lehenengo formatua** erabiliko du.
 
 ---
 
-### Kanpoko bideoak txertatzea (`<iframe>`)
+## Kanpoko bideoak txertatzea (`<iframe>`)
 
 YouTube, Vimeo edo antzeko plataformetako bideoak **ez dira `<video>` etiketa erabiliz txertatzen**.
 
@@ -941,324 +941,11 @@ YouTuben bertan, **Partekatu → Kapsulatu (Embed)** aukeran klik eginez lortzen
 !!! example "Ariketa 9"
     Ariketa hau aurreko guztia errepasatzeko balioko zaigu: [Ariketa 9](https://docs.google.com/document/d/11uI0NrI0OdJXkDNqBq0T9JxlLd77c4mzLti7Q4yVel4/edit?usp=sharing){: target="_blank" rel="noopener" } 
 
-
-## Formularioak
-
-Formularioak erabiltzailearen informazioa jasotzeko erabiltzen dira (erregistroak, saio-hasierak, kontaktu-formularioak, inkestak...).
-
-Formulario baten barruan hainbat kontrol egon daitezke: testu-koadroak, pasahitzak, aukerak, botoiak, zerrendak...
-
----
-
-### `<form>` etiketa
-
-Formulario guztiak `<form>` etiketa barruan definitzen dira.
-
-```html
-<form action="/bidali" method="post">
-
-    <!-- formularioaren kontrolak -->
-
-</form>
-```
-
-#### Atributu nagusiak
-
-| Atributua | Azalpena |
-|-----------|----------|
-| `action` | Datuak bidaliko diren helbidea. |
-| `method` | Datuak bidaltzeko metodoa (`get` edo `post`). |
-
-!!! note "Oharra" 
-    Oraingoz ez dugu zerbitzaririk erabiliko; beraz, `action` atributuak ez du benetako funtziorik izango.
-    Baina atributu honetan esango dugu zein izango den formularioaren elementuak jasoko dituen fitxategia
-
----
-
-### `<label>`
-
-Formulario bateko kontrol bati izena emateko erabiltzen da.
-
-`for` atributuak kontrolaren `id` atributuarekin bat etorri behar du.
-
-```html
-<label for="izena">Izena:</label>
-<input type="text" id="izena" name="izena">
-```
-
---- 
-
-### `id` eta `name`
-
-Bi atributuak oso garrantzitsuak dira, baina **ez dute gauza bera egiten**. Haien arteko ezberdintasuna zein den argi geratu behar da.
-
-| Atributua | Zertarako erabiltzen da? |
-|-----------|--------------------------|
-| `id` | Elementua modu bakarrean identifikatzeko. `<label>` etiketarekin lotzen da. |
-| `name` | Formularioa bidaltzean datuaren izena izango da. |
-
-Adibidea:
-
-```html
-<label for="izena">Izena</label>
-
-<input
-    type="text"
-    id="izena"
-    name="izena">
-```
-
-Kasu honetan:
-
-- `for="izena"` → `id="izena"` atributuarekin lotzen da.
-- `name="izena"` → zerbitzariari bidaliko zaion datuaren izena izango da.
-
----
-
-### Testu-eremua (`text`)
-
-Testu laburrak idazteko erabiltzen da.
-
-```html
-<label for="id_izena">Erabiltzailea</label>
-
-<input type="text" id="id_izena" name="izena" value="Testu lehenetsia" size="20">
-```
-
-#### Atributu erabilienak
-
-| Atributua | Azalpena |
-|-----------|----------|
-| `name` | Datuaren izena. |
-| `value` | Hasierako balioa. |
-| `placeholder` | Laguntza-testua. |
-| `size` | Kutxaren zabalera. |
-| `maxlength` | Gehienezko karaktere kopurua. |
-| `required` | Nahitaez bete beharreko eremua. |
-
-Adibidea:
-
-```html
-<input
-    type="text"
-    placeholder="Idatzi zure izena"
-    required>
-```
-
----
-
-### Pasahitza (`password`)
-
-Idatzitako karaktereak ezkutatzen ditu.
-
-```html
-<input type="password" name="pwd">
-```
-
----
-
-### Emaila (`email`)
-
-Helbide elektroniko bat sartzeko erabiltzen da.
-
-Nabigatzaileak automatikoki egiaztatzen du formatu egokia duen.
-
-```html
-<input type="email" name="email">
-```
-
----
-
-### Beste `input` mota erabilgarri batzuk
-
-| Mota | Erabilera |
-|------|-----------|
-| `number` | Zenbakiak sartzeko. |
-| `date` | Data aukeratzeko. |
-| `color` | Kolore-hautatzailea. |
-| `file` | Fitxategiak igotzeko. |
-| `range` | Balio bat barra baten bidez aukeratzeko. |
-
-Adibidea:
-
-```html
-<input type="date">
-
-<input type="number" min="0" max="100">
-
-<input type="color">
-
-<input type="file">
-
-<input type="range" min="0" max="10">
-```
-
----
-
-### Aukera-botoiak (`radio`)
-
-Aukera **bakarra** hautatzeko erabiltzen dira.
-
-Radio botoi guztiak talde berekoak izateko, `name` berdina izan behar dute.
-
-```html
-<input type="radio" name="generoa" value="gizona"> Gizona
-
-<input type="radio" name="generoa" value="emakumea"> Emakumea
-```
-
-![Radio buttom adibidea](../../images/form_radio.png)
-
-Lehenetsitako aukera:
-
-```html
-<input type="radio" name="generoa" checked> Gizona
-```
-![Radio buttom checked](../../images/form_radio_checked.png)
-
----
-
-### Egiaztapen-laukiak (`checkbox`)
-
-Aukera **bat edo gehiago** hautatzeko erabiltzen dira.
-
-```html
-<input type="checkbox" name="ibilgailua[]" value="autoa"> Autoa
-
-<input type="checkbox" name="ibilgailua[]" value="motoa"> Motoa
-```
-
-![Checkbox adibidea](../../images/form_checkbox.png)
-
-Lehenetsitako aukera:
-
-```html
-<input type="checkbox" name="ibilgailua[]" value="motoa" checked> Motoa
-```
-
-![Radio buttom checekc](../../images/form_checkbox_checked.png)
-
----
-
-### Zerrenda desplegagarria (`select`)
-
-Aukera-zerrenda bat erakusten du.
-
-```html
-<select name="probintzia">
-
-    <option value="AB">Araba</option>
-
-    <option value="BI">Bizkaia</option>
-
-    <option value="GI" selected>Gipuzkoa</option>
-
-</select>
-```
-
-![Select adibidea](../../images/form_select.png)
-
-#### Atributu erabilgarriak
-
-| Atributua | Azalpena |
-|-----------|----------|
-| `selected` | Lehenetsitako aukera. |
-| `multiple` | Aukera bat baino gehiago hautatzeko aukera ematen du. |
-
-```html
-<select multiple>
-
-    <option>Euskara</option>
-
-    <option>Gaztelania</option>
-
-    <option>Ingelesa</option>
-
-</select>
-```
-
----
-
-### Testu-area (`textarea`)
-
-Lerro anitzeko testuak idazteko erabiltzen da.
-
-```html
-<textarea rows="6" cols="40">
-
-Hemen idatzi zure mezua...
-
-</textarea>
-```
-
----
-
-### Datu-iradokizunak (`datalist`)
-
-Erabiltzaileak idazten duen bitartean iradokizunak erakusten ditu.
-
-```html
-<input
-    type="text"
-    list="hizkuntzak">
-
-<datalist id="hizkuntzak">
-
-    <option value="Euskara">
-
-    <option value="Gaztelania">
-
-    <option value="Ingelesa">
-
-</datalist>
-```
-
-Erabiltzaileak beste balio bat ere idatz dezake.
-
-![Datalist adibidea](../../images/form_datalist.png)
-
----
-
-### Kontrolak taldekatzea (`fieldset` eta `legend`)
-
-Formularioaren atal desberdinak antolatzeko erabiltzen dira.
-
-```html
-<fieldset>
-
-    <legend>Datu pertsonalak</legend>
-
-    <label>Izena:</label>
-    <input type="text">
-
-    <label>Abizenak:</label>
-    <input type="text">
-
-</fieldset>
-```
-
----
-
-### Botoiak
-
-Formularioetan hainbat botoi mota erabil daitezke.
-
-```html
-<button type="submit">Bidali</button>
-
-<button type="reset">Garbitu</button>
-
-<button type="button">Beste ekintza</button>
-```
-
-| Mota | Azalpena |
-|-------|----------|
-| `submit` | Formularioa bidaltzen du. |
-| `reset` | Balio guztiak hasierako egoerara itzultzen ditu. |
-| `button` | JavaScript bidez kontrolatzeko erabiltzen da. |
-
----
-### HTML5 balidazioa
+!!! tip "Azalpen osoa"
+    Kontrol gehiago eta formularioak modu antolatuan berrikusteko, ikus
+    [Formularioak orria](formularioak.md).
+
+## HTML5 balidazioa
 
 HTML5ek balidazio automatiko batzuk egiten ditu JavaScript erabili gabe.
 
@@ -1286,7 +973,7 @@ Horri esker, erabiltzaileak ezin izango ditu datu okerrak bidali.
 
 ---
 
-### `GET` eta `POST`
+## `GET` eta `POST`
 
 Formulario batek bi modu nagusi ditu datuak bidaltzeko.
 
@@ -1308,7 +995,7 @@ Adibidea:
 
 ---
 
-### Formulario baten adibide osoa
+## Formulario baten adibide osoa
 
 ```html
 <form action="/bidali" method="post">

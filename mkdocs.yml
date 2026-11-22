@@ -66,6 +66,7 @@ plugins:
             Inicio: Hasiera
             Introducción: Sarrera
             General: Orokorra
+            Formularios: Formularioak
             Selectores: Hautatzaileak
             Grid: Grid
             Diseño adaptable: Diseinu moldagarria
@@ -73,7 +74,9 @@ plugins:
 nav:
   - Inicio: index.md
   - Introducción: 01-introduccion/index.md
-  - HTML: 02-html/index.md
+  - HTML:
+      - General: 02-html/index.md
+      - Formularios: 02-html/formularioak.md
   - CSS:
       - General: 03-css/index.md
       - Selectores: 03-css/hautatzaileak.md

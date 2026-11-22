@@ -188,7 +188,7 @@ jQueryk `$` funtzioa erabiltzen du CSS selektoreen bidez elementuak
 hautatzeko, bere metodo eta propietate propioak dituen objektu bat
 itzuliz.
 
-### Ekitaldien kudeaketa
+## Ekitaldien kudeaketa
 
 `click` metodoak funtzio bat sakatze-ekitaldi bati lotzen dio:
 
@@ -213,7 +213,7 @@ function klikaKudeatu() {
 
 Ohiko beste ekitaldi batzuk: `click`, `dblclick`, `mouseover`.
 
-### Atributuen irakurketa eta idazketa
+## Atributuen irakurketa eta idazketa
 
 Eremu baten balioa irakurtzeko `.val()` erabiltzen da, eta checkbox edo
 radio bat markatuta dagoen egiaztatzeko, `.prop("checked")`:
@@ -240,7 +240,7 @@ function hautatutakoakZenbatu() {
 
 Zerrenda desplegagarrien balioak ere `.val()`-ekin irakurtzen dira.
 
-### Beste metodo erabilgarri batzuk
+## Beste metodo erabilgarri batzuk
 
 - `.slideDown()` / `.slideUp()` — irristatze-animazioarekin erakusten/
   ezkutatzen dute.
@@ -249,7 +249,7 @@ Zerrenda desplegagarrien balioak ere `.val()`-ekin irakurtzen dira.
   kentzen dituzte.
 - `.html()` — elementu baten barne-edukia aldatzen du.
 
-### Negozio-arauen balidazioa
+## Negozio-arauen balidazioa
 
 Ohiko patroi bat aukera bateraezinen konbinazioak balidatzea da,
 adibidez "diesel motor batek ezin du 2300cc gainditu":

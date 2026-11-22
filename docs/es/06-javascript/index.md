@@ -184,7 +184,7 @@ document.querySelector("button").addEventListener("click", () => {
 jQuery utiliza la función `$` para seleccionar elementos mediante
 selectores CSS, devolviendo un objeto con métodos y propiedades propios.
 
-### Gestión de eventos
+## Gestión de eventos
 
 El método `click` asocia una función al evento de pulsación:
 
@@ -209,7 +209,7 @@ function gestionarClick() {
 
 Otros eventos habituales: `click`, `dblclick`, `mouseover`.
 
-### Lectura y escritura de atributos
+## Lectura y escritura de atributos
 
 Para leer el valor de un campo se usa `.val()`, y para comprobar si un
 checkbox o radio está marcado, `.prop("checked")`:
@@ -236,7 +236,7 @@ function contarSeleccionados() {
 
 Los valores de listas desplegables se leen igualmente con `.val()`.
 
-### Otros métodos útiles
+## Otros métodos útiles
 
 - `.slideDown()` / `.slideUp()` — muestran/ocultan con animación de
   deslizamiento.
@@ -245,7 +245,7 @@ Los valores de listas desplegables se leen igualmente con `.val()`.
   dinámicamente.
 - `.html()` — modifica el contenido interno de un elemento.
 
-### Validación de reglas de negocio
+## Validación de reglas de negocio
 
 Un patrón habitual es validar combinaciones de opciones incompatibles,
 por ejemplo "un motor diésel no puede superar los 2300cc":

@@ -40,7 +40,7 @@ centraremos en este módulo.
 
 ## WordPress
 
-### Dos versiones de WordPress
+## Dos versiones de WordPress
 
 Es habitual confundir dos productos distintos que comparten nombre:
 
@@ -51,14 +51,14 @@ Es habitual confundir dos productos distintos que comparten nombre:
   Automattic que usa ese mismo software, pero con opciones gratuitas
   limitadas y planes de pago para más funciones.
 
-### Páginas oficiales
+## Páginas oficiales
 
 - **wordpress.org**: sitio oficial del proyecto de software libre. Aquí
   se encuentra la descarga del CMS, el repositorio oficial de temas,
   el repositorio oficial de plugins y la documentación técnica.
 - **wordpress.com**: portal del servicio de alojamiento gestionado.
 
-### Dónde descargarlo
+## Dónde descargarlo
 
 El paquete de instalación se descarga desde la sección de descargas de
 **wordpress.org**, en formato `.zip` (o `.tar.gz`), y contiene todos los
@@ -78,7 +78,7 @@ MySQL y PHP, junto con un panel de control gráfico para arrancar y
 detener los servicios. Es el equivalente a XAMPP, pero desarrollado por
 otro fabricante.
 
-### Pasos de instalación
+## Pasos de instalación
 
 1. **Instalar MAMP**: descargar el instalador desde la web oficial de
    MAMP y ejecutarlo, aceptando las opciones por defecto.

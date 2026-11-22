@@ -12,7 +12,7 @@ Para crear un diseño adaptable, podemos utilizar varias técnicas:
 !!! tip "Idea principal"
     El diseño adaptable no es algo que se añada al final del sitio web. Debemos tener en cuenta desde el principio que se utilizará en pantallas de distintos tamaños.
 
-### Viewport
+## Viewport
 
 El *viewport* es el área disponible en el navegador para ver una página web.
 
@@ -28,7 +28,7 @@ Para que el sitio web se adapte correctamente al ancho de la pantalla en móvile
 !!! note "Ten en cuenta"
     Esta etiqueta por sí sola no hace que el diseño sea adaptable: también tenemos que adaptar el CSS.
 
-### Unidades relativas
+## Unidades relativas
 
 En CSS podemos usar unidades fijas como `px`, pero las unidades relativas también son muy útiles en los diseños adaptables. Estas unidades se calculan tomando como referencia otra medida.
 
@@ -40,7 +40,7 @@ En CSS podemos usar unidades fijas como `px`, pero las unidades relativas tambi�
 | `vw` | El 1 % del ancho del viewport | `width: 50vw` |
 | `vh` | El 1 % de la altura del viewport | `height: 50vh` |
 
-#### Ejemplo
+### Ejemplo
 
 ```css
 main {
@@ -63,7 +63,7 @@ h1 {
 !!! note "Ten en cuenta"
     Es habitual usar juntos `width: 80%` y `max-width: 1200px`: el contenido se adapta en pantallas pequeñas y no se ensancha demasiado en pantallas grandes. `em` y `rem` no son iguales: `rem` toma como referencia el elemento raíz; la referencia de `em` depende de la propiedad.
 
-### Imágenes adaptables
+## Imágenes adaptables
 
 Si una imagen es más ancha que su contenedor, puede salirse de la pantalla. Para evitarlo:
 
@@ -79,11 +79,11 @@ img {
 
 Así, las imágenes grandes se reducirán cuando sea necesario, pero no se ampliarán obligatoriamente hasta ocupar todo el ancho del contenedor.
 
-### Media queries
+## Media queries
 
 Una *media query* permite aplicar reglas CSS según una condición. En el diseño adaptable, normalmente la usamos en función del ancho del viewport.
 
-#### Sintaxis
+### Sintaxis
 
 ```css
 @media (min-width: 768px) {
@@ -93,14 +93,14 @@ Una *media query* permite aplicar reglas CSS según una condición. En el diseñ
 
 La condición `min-width: 768px` significa que los estilos del bloque se aplicarán **a partir de un ancho de 768 px**.
 
-#### Breakpoints o puntos de ruptura
+### Breakpoints o puntos de ruptura
 
 Un *breakpoint* es el ancho de pantalla que elegimos para cambiar el diseño. Por ejemplo, podemos usar `768px` cuando haya espacio suficiente para colocar los elementos uno al lado del otro.
 
 !!! tip "¿Cómo elegir un breakpoint?"
     No hay una única medida válida para todos los móviles, tabletas y ordenadores. Elegiremos el punto de ruptura cuando no haya espacio suficiente para organizar bien el contenido.
 
-#### Mobile First
+### Mobile First
 
 Con el enfoque *Mobile First*, primero se escriben los estilos para pantallas pequeñas y, después, se añaden adaptaciones para pantallas más grandes. Para ello, usamos `min-width`.
 
@@ -128,11 +128,11 @@ Con el enfoque *Mobile First*, primero se escriben los estilos para pantallas pe
 !!! note "Orden de las reglas CSS"
     Primero escribimos los estilos generales y, después, las media queries. Cuando se cumple la condición, las reglas de la media query pueden sustituir los valores anteriores, según la cascada y la especificidad.
 
-### Flexbox y Grid en el diseño adaptable
+## Flexbox y Grid en el diseño adaptable
 
 Las media queries son útiles, pero a veces también podemos lograr un diseño adaptable solo con las propiedades de Flexbox y Grid.
 
-#### Flexbox: `flex-wrap`
+### Flexbox: `flex-wrap`
 
 ```css
 .txartelak {
@@ -150,7 +150,7 @@ Las media queries son útiles, pero a veces también podemos lograr un diseño a
 - `flex-wrap: wrap`: cuando no hay espacio, los elementos pasan a la línea siguiente.
 - `flex: 1 1 250px`: las tarjetas parten de un ancho base de unos 250 px y pueden crecer o reducirse según el espacio disponible.
 
-#### Grid: `auto-fit` y `minmax()`
+### Grid: `auto-fit` y `minmax()`
 
 ```css
 .txartelak {
@@ -172,7 +172,7 @@ De esta forma, el navegador adapta automáticamente el número de columnas, sin 
 !!! tip "¿Qué técnica usar?"
     Si queremos que los elementos pasen automáticamente a otras filas o columnas, podemos usar `flex-wrap` o `auto-fit`. Si queremos cambiar la estructura o los estilos a partir de un ancho de pantalla determinado, podemos usar una media query. También se pueden combinar estas técnicas.
 
-### Probar el diseño adaptable
+## Probar el diseño adaptable
 
 Para comprobar si un sitio web es adaptable, podemos usar las herramientas de desarrollo del navegador:
 

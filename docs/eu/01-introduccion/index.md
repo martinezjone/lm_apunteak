@@ -35,18 +35,18 @@ egitura, formatua edo esanahi semantikoa deskribatzen dute.
 
 Markaketa-lengoaiek hainbat ezaugarri dituzte, dokumentuak sortu, irakurri eta trukatzeko oso egokiak egiten dituztenak.
 
-### Testu laua
+## Testu laua
 
 - Dokumentuak **testu hutsez** osatuta daude; ez dute formatu bitarrik.
 - Edozein testu-editorekin ireki eta editatu daitezke.
 - Plataforma eta sistema eragile guztietan bateragarriak dira.
 
-### Prozesatzeko erraztasuna
+## Prozesatzeko erraztasuna
 
 - Etiketen egitura dela eta, programentzat erraz interpretatzeko modukoak dira.
 - Dokumentuak automatikoki balioztatu, eraldatu edo prozesatu daitezke.
 
-### Malgutasuna
+## Malgutasuna
 
 - Hasieran testu-dokumentuak deskribatzeko sortu baziren ere, gaur egun webguneetan, web-zerbitzuetan, konfigurazio-fitxategietan eta datuen trukean erabiltzen dira.
 - Behar bakoitzerako markaketa-lengoaia desberdinak daude (HTML, XML...).
@@ -56,7 +56,7 @@ Markaketa-lengoaiek hainbat ezaugarri dituzte, dokumentuak sortu, irakurri eta t
 
 Webaren garapena posible izan da estandar irekiak definitzen dituzten erakundeei esker. Garrantzitsuenak hauek dira:
 
-### W3C (*World Wide Web Consortium*)
+## W3C (*World Wide Web Consortium*)
 
 - 1994an **Tim Berners-Lee**k sortu zuen.
 - Webaren estandarrak garatu eta mantentzen ditu.
@@ -67,7 +67,7 @@ Webaren garapena posible izan da estandar irekiak definitzen dituzten erakundeei
 
 [www.w3schools.com](https://www.w3schools.com/html/default.asp){: target="_blank" rel="noopener" }
 
-### ISO (*International Organization for Standardization*)
+## ISO (*International Organization for Standardization*)
 
 - Nazioarteko estandarizazio-erakundea da.
 - Industria eta teknologia arlo askotan estandarrak definitzen ditu.

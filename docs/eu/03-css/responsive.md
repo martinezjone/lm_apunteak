@@ -12,7 +12,7 @@ Diseinu moldagarria lortzeko, hainbat teknika erabil ditzakegu:
 !!! tip "Ideia nagusia"
     Diseinu moldagarria ez da webgunearen amaieran gehitzen den zerbait. Hasieratik kontuan hartu behar dugu webgunea tamaina desberdinetako pantailetan erabiliko dela.
 
-### Viewport
+## Viewport
 
 *Viewport* nabigatzailean web-orria ikusteko erabilgarri dagoen eremua da.
 
@@ -28,7 +28,7 @@ Mugikorretan webgunea pantailaren zabalerara behar bezala egokitzeko, HTML dokum
 !!! note "Kontuan izan"
     Etiketa honek ez du berez diseinua moldagarri bihurtzen: CSS ere egokitu behar dugu.
 
-### Unitate erlatiboak
+## Unitate erlatiboak
 
 CSSn `px` bezalako unitate finkoak erabil ditzakegu, baina diseinu moldagarrietan unitate erlatiboak ere oso erabilgarriak dira. Unitate horiek erreferentzia baten arabera kalkulatzen dira.
 
@@ -40,7 +40,7 @@ CSSn `px` bezalako unitate finkoak erabil ditzakegu, baina diseinu moldagarrieta
 | `vw` | Viewport-aren zabaleraren % 1 | `width: 50vw` |
 | `vh` | Viewport-aren altueraren % 1 | `height: 50vh` |
 
-#### Adibidea
+### Adibidea
 
 ```css
 main {
@@ -63,7 +63,7 @@ h1 {
 !!! note "Kontuan izan"
     `width: 80%` eta `max-width: 1200px` batera erabiltzea ohikoa da: edukia pantaila txikietan egokitzen da eta pantaila handietan ez da gehiegi zabaltzen. `em` eta `rem` ez dira berdinak: `rem`-ek erro-elementua hartzen du erreferentziatzat; `em`-en erreferentzia propietatearen araberakoa da.
 
-### Irudi moldagarriak
+## Irudi moldagarriak
 
 Irudi bat bere edukiontzia baino zabalagoa bada, pantailatik kanpo atera daiteke. Hori saihesteko:
 
@@ -79,11 +79,11 @@ img {
 
 Horrela, irudi handiak txikitu egingo dira beharrezkoa denean, baina ez dira derrigorrez edukiontziaren zabalera osora handituko.
 
-### Media queries
+## Media queries
 
 *Media query* batek CSS arauak baldintza baten arabera aplikatzeko aukera ematen du. Diseinu moldagarrian, normalean viewport-aren zabaleraren arabera erabiltzen dugu.
 
-#### Sintaxia
+### Sintaxia
 
 ```css
 @media (min-width: 768px) {
@@ -94,14 +94,14 @@ Horrela, irudi handiak txikitu egingo dira beharrezkoa denean, baina ez dira der
 `min-width: 768px` baldintzak esan nahi du barruko estiloak **768 px-ko zabaleratik aurrera** aplikatuko direla.
 
 
-#### Breakpoints edo eten-puntuak
+### Breakpoints edo eten-puntuak
 
 *Breakpoint* bat diseinua aldatzeko aukeratzen dugun pantaila-zabalera da. Adibidez, `768px` erabil dezakegu elementuak elkarren ondoan jartzeko nahikoa espazio dagoenean.
 
 !!! tip "Nola aukeratu breakpoint bat?"
     Ez dago mugikor, tablet eta ordenagailu guztietarako balio duen neurri bakarra. Edukia ondo antolatzeko espaziorik ez dagoenean aukeratuko dugu eten-puntua.
 
-#### Mobile First
+### Mobile First
 
 *Mobile First* ikuspegian, lehenengo pantaila txikietarako estiloak idazten dira eta, ondoren, pantaila handiagoetarako egokitzapenak gehitzen dira. Horretarako, `min-width` erabiltzen dugu.
 
@@ -129,11 +129,11 @@ Horrela, irudi handiak txikitu egingo dira beharrezkoa denean, baina ez dira der
 !!! note "CSS arauen ordena"
     Lehenengo estilo orokorrak idazten ditugu eta, ondoren, media query-ak. Baldintza betetzen denean, media query-ko arauek aurreko balioak ordezka ditzakete, kaskadaren eta espezifikotasunaren arabera.
 
-### Flexbox eta Grid diseinu moldagarrian
+## Flexbox eta Grid diseinu moldagarrian
 
 Media query-ak erabilgarriak dira, baina batzuetan Flexbox eta Grid-en propietateekin bakarrik ere lor dezakegu diseinu moldagarria.
 
-#### Flexbox: `flex-wrap`
+### Flexbox: `flex-wrap`
 
 ```css
 .txartelak {
@@ -151,7 +151,7 @@ Media query-ak erabilgarriak dira, baina batzuetan Flexbox eta Grid-en propietat
 - `flex-wrap: wrap`: tokirik ez dagoenean, elementuak hurrengo lerrora pasatzen dira.
 - `flex: 1 1 250px`: txartelak 250 px inguruko oinarrizko zabaleratik abiatzen dira, eta espazioaren arabera hazi edo txikitu daitezke.
 
-#### Grid: `auto-fit` eta `minmax()`
+### Grid: `auto-fit` eta `minmax()`
 
 ```css
 .txartelak {
@@ -173,7 +173,7 @@ Horrela, nabigatzaileak automatikoki egokitzen du zutabe kopurua, media query-ri
 !!! tip "Zein teknika erabili?"
     Elementuak automatikoki beste lerro edo zutabe batzuetara pasatzea nahi badugu, `flex-wrap` edo `auto-fit` erabil ditzakegu. Pantailaren zabalera jakin batetik aurrera diseinuaren egitura edo estiloak aldatu nahi baditugu, media query bat erabil dezakegu. Teknikak batera ere erabil daitezke.
 
-### Diseinu moldagarria probatzea
+## Diseinu moldagarria probatzea
 
 Webgune bat moldagarria dela egiaztatzeko, nabigatzailearen garatzaile-tresnak erabil ditzakegu:
 

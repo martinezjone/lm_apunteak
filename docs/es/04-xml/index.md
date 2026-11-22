@@ -48,7 +48,7 @@ entre programas.
 XML puede validarse frente a una **DTD** (*Document Type Definition*) o un
 **XML Schema (XSD)** para garantizar que cumple una estructura determinada.
 
-### DTD
+## DTD
 
 Una DTD formaliza qué elementos y atributos están permitidos y con qué
 estructura.
@@ -111,7 +111,7 @@ Permite `ventapc` y `ventamonitor` mezclados en cualquier orden.
 Permite o bien una lista de ventas, o bien una lista de compras, pero no
 mezclar ambos tipos.
 
-### XML Schema (XSD)
+## XML Schema (XSD)
 
 Más potente que una DTD: se escribe en el propio formato XML, incorpora
 validación de tipos de datos y soporta espacios de nombres (*namespaces*).

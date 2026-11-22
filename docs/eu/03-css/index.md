@@ -75,7 +75,7 @@ hautatzailea {
 
 CSS HTML dokumentu bati hiru modutan gehi diezaiokegu.
 
-### Inline estiloak
+## Inline estiloak
 
 CSS zuzenean HTML elementuaren `style` atributuan idazten da:
 
@@ -87,7 +87,7 @@ Metodo hau erabil daitekeen arren, **ez da gomendagarria web-orri baten
 estilo orokorra definitzeko**, HTML egitura eta CSS estiloak nahasten
 baitira.
 
-### Barneko estilo-orria
+## Barneko estilo-orria
 
 CSS kodea dokumentuaren `<head>` barruko `<style>` elementuan idatz
 daiteke:
@@ -105,7 +105,7 @@ daiteke:
 Metodo hau erabilgarria izan daiteke orri bakar batean estilo gutxi
 batzuk definitzeko.
 
-### Kanpoko estilo-orria
+## Kanpoko estilo-orria
 
 Ohikoena eta gomendagarriena CSS kodea aparteko `.css` fitxategi batean
 gordetzea da.
@@ -145,7 +145,7 @@ da, `<head>` barruan:
 
     Ahal den guztietan, **kanpoko estilo-orriak** erabiliko ditugu. Horrela HTML egitura eta CSS estiloak bananduta mantentzen dira, eta kodea txukunagoa eta mantentzeko errazagoa da.
 
-### Lehenengo adibidea
+## Lehenengo adibidea
 
 Sortu honako egitura:
 
@@ -293,7 +293,7 @@ inguruan bakarrik agertuko da, ez barruko elementu bakoitzean.
 
 CSSn koloreak hainbat modutan adieraz daitezke.
 
-### Kolorearen izena
+## Kolorearen izena
 
 ``` css
 p {
@@ -301,7 +301,7 @@ p {
 }
 ```
 
-### Notazio hamaseitarra
+## Notazio hamaseitarra
 
 ``` css
 p {
@@ -322,7 +322,7 @@ p {
 
     <a href="https://www.w3schools.com/css/css_colors_hex.asp" tarjet="_blank">Css Colors Hex</a>
 
-### RGB
+## RGB
 
 RGB sistemak gorriaren (**Red**), berdearen (**Green**) eta urdinaren
 (**Blue**) kantitatea adierazten du.
@@ -368,7 +368,7 @@ p {
 
 Unitateak **absolutuak** edo **erlatiboak** izan daitezke.
 
-### Unitate absolutuak
+## Unitate absolutuak
 
 Ohikoena `px` da:
 
@@ -381,7 +381,7 @@ p {
 Beste unitate absolutu batzuk `cm`, `mm`, `in`, `pt` eta `pc` dira,
 baina web-diseinuan gutxiago erabiltzen dira.
 
-### Unitate erlatiboak
+## Unitate erlatiboak
 
 Diseinu moldagarriak egiteko oso erabilgarriak dira.
 
@@ -428,7 +428,7 @@ header {
 
 ## Testua eta tipografia
 
-### Testuaren kolorea
+## Testuaren kolorea
 
 `color` propietateak testuaren kolorea definitzen du:
 
@@ -438,7 +438,7 @@ p {
 }
 ```
 
-### Letra-tamaina
+## Letra-tamaina
 
 ``` css
 p {
@@ -446,7 +446,7 @@ p {
 }
 ```
 
-### Letra-familia
+## Letra-familia
 
 `font-family` propietateak letra-tipoa definitzen du:
 
@@ -467,7 +467,7 @@ body {
 }
 ```
 
-### Letra-lodiera
+## Letra-lodiera
 
 ``` css
 p {
@@ -483,7 +483,7 @@ h1 {
 }
 ```
 
-### Letra-estiloa
+## Letra-estiloa
 
 ``` css
 p {
@@ -491,7 +491,7 @@ p {
 }
 ```
 
-### Lerrokatzea
+## Lerrokatzea
 
 ``` css
 p {
@@ -506,7 +506,7 @@ Ohiko balioak:
 -   `center`
 -   `justify`
 
-### Lerroartea
+## Lerroartea
 
 `line-height` propietateak testu-lerroen arteko distantzia kontrolatzen
 du:
@@ -517,7 +517,7 @@ p {
 }
 ```
 
-### Testuaren dekorazioa
+## Testuaren dekorazioa
 
 ``` css
 a {
@@ -537,7 +537,7 @@ Beste balio batzuk:
 }
 ```
 
-### Maiuskulak eta minuskulak
+## Maiuskulak eta minuskulak
 
 ``` css
 h1 {
@@ -569,7 +569,7 @@ Kutxa bakoitzak lau atal nagusi ditu:
     Egin frogak hurrengo estekan atal guztiak zeintzuk diren ulertu ahal izateko:
     <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_boxmodel" target="_blank"> CSS Box Model </a>
 
-### Width eta height
+## Width eta height
 
 ``` css
 div {
@@ -580,7 +580,7 @@ div {
 
 `width` elementuaren zabalera da eta `height` altuera.
 
-### Padding
+## Padding
 
 Elementuaren edukiaren eta ertzaren arteko espazioa da:
 
@@ -609,7 +609,7 @@ div {
 }
 ```
 
-### Border
+## Border
 
 Elementu baten ertza definitzeko:
 
@@ -637,7 +637,7 @@ div {
 }
 ```
 
-### Margin
+## Margin
 
 Elementuaren kanpoko espazioa definitzen du:
 
@@ -669,7 +669,7 @@ main {
 ![Padding eta Margin](../../images/paggin_margin.png)
 
 
-### `box-sizing`
+## `box-sizing`
 
 Lehenespenez, elementu bati `width` ezartzen diogunean, zabalera horrek **edukiaren (`content`) zabalera bakarrik** adierazten du.
 
@@ -743,7 +743,7 @@ Nabigatzaileak automatikoki edukiaren (`content`) tamaina txikitzen du `padding`
 
 ## Atzeko planoa
 
-### Atzeko planoaren kolorea
+## Atzeko planoaren kolorea
 
 ``` css
 body {
@@ -751,7 +751,7 @@ body {
 }
 ```
 
-### Atzeko planoko irudia
+## Atzeko planoko irudia
 
 ``` css
 header {
@@ -800,7 +800,7 @@ definitzen du.
 
 ![Display](../../images/display.png)
 
-### Block elementuak
+## Block elementuak
 
 `block` elementuek erabilgarri dagoen zabalera hartzen dute eta hurrengo
 elementua beste lerro batean hasten da.
@@ -814,7 +814,7 @@ div {
 HTMLko `<div>`, `<p>`, `<section>` edo `<h1>` bezalako elementuak
 `block` dira lehenespenez.
 
-### Inline elementuak
+## Inline elementuak
 
 `inline` elementuak edukiarentzako behar duten espazioa bakarrik hartzen
 dute eta ez dute lerro-jauzirik sortzen.
@@ -827,7 +827,7 @@ span {
 
 `<span>` edo `<a>` bezalako elementuak `inline` dira lehenespenez.
 
-### Inline-block
+## Inline-block
 
 `inline-block` elementuak lerro berean koka daitezke, baina `width`,
 `height`, `padding` eta `margin` propietateak kontrolatzeko aukera
@@ -840,7 +840,7 @@ a {
 }
 ```
 
-### Elementu bat ezkutatzea
+## Elementu bat ezkutatzea
 
 ``` css
 .elementua {
@@ -883,7 +883,7 @@ HTML:
 </div>
 ```
 
-### Norabidea
+## Norabidea
 
 ``` css
 .edukiontzia {
@@ -899,7 +899,7 @@ Balio nagusiak:
 -   `column`
 -   `column-reverse`
 
-### Ardatz nagusiko lerrokatzea
+## Ardatz nagusiko lerrokatzea
 
 `justify-content` propietateak elementuak ardatz nagusian banatzen ditu:
 
@@ -919,7 +919,7 @@ Balio erabilienak:
 -   `space-around`
 -   `space-evenly`
 
-### Zeharkako ardatzeko lerrokatzea
+## Zeharkako ardatzeko lerrokatzea
 
 ``` css
 .edukiontzia {
@@ -935,7 +935,7 @@ Balio erabilienak:
 -   `flex-end`
 -   `center`
 
-### Elementuak hurrengo lerrora pasatzea
+## Elementuak hurrengo lerrora pasatzea
 
 ``` css
 .edukiontzia {
@@ -944,7 +944,7 @@ Balio erabilienak:
 }
 ```
 
-### Elementuen arteko tartea
+## Elementuen arteko tartea
 
 ``` css
 .edukiontzia {
@@ -975,7 +975,7 @@ ordenagailuak, tabletak eta mugikorrak.
 Horretarako, besteak beste, neurri erlatiboak, Flexbox, Grid eta **media
 queries** erabil ditzakegu.
 
-### Media queries
+## Media queries
 
 Media query batek CSS arauak baldintza baten arabera aplikatzeko aukera
 ematen du.

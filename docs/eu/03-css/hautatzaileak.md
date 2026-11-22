@@ -32,7 +32,7 @@ h1 {
 | Unibertsala | `*` | Elementu guztiak |
 | Multzokatzea | `h1, h2, p` | Hiru hautatzaileetako edozeinekin bat datozenak |
 
-### 2.1. Elementuak eta klaseak
+## 2.1. Elementuak eta klaseak
 
 === "HTML"
     ```html
@@ -61,7 +61,7 @@ h1 {
 
 **Zergatik?** `p` hautatzaileak hiru paragrafoak hautatzen ditu; `.nabarmena` hautatzaileak, berriz, klase hori duen bakarra. Azken horretan `color` propietatea zehatzagoa den arauak ezartzen du.
 
-### 2.2. Klasea eta elementu mota batera
+## 2.2. Klasea eta elementu mota batera
 
 ```css
 .nabarmena { color: red; }    /* Klase hori duen edozein elementu */
@@ -70,7 +70,7 @@ p.nabarmena { color: blue; }  /* Klase hori duten p elementuak soilik */
 
 Klase bera hainbat elementutan erabil daiteke. IDak, aldiz, **bakarra izan behar du HTML dokumentu berean**. CSS estilo orokorrak aplikatzeko, normalean **klaseak lehenestea** komeni da, berrerabilgarriagoak direlako.
 
-### 2.3. Hautatzaile unibertsala
+## 2.3. Hautatzaile unibertsala
 
 ```css
 *{
@@ -93,7 +93,7 @@ Hautatzaile hauek HTMLko **egituran** oinarritzen dira.
 
 ![CSS hautatzaile konbinatuak](../../images/css_konbinatuak.png)
 
-### 3.1. Ondorengoa (` `) eta seme zuzena (`>`) alderatzea
+## 3.1. Ondorengoa (` `) eta seme zuzena (`>`) alderatzea
 
 === "HTML"
     ```html
@@ -123,7 +123,7 @@ Hautatzaile hauek HTMLko **egituran** oinarritzen dira.
 !!! note "Kontuz emaitzarekin"
     Bi CSS arauak **batera** aplikatzen badira, A eta C gorriak izango dira, `section > p` araua geroago idatzita dagoelako eta bi hautatzaileek espezifikotasun bera dutelako. B urdina izango da.
 
-### 3.2. Ondoko anaia (`+`) eta ondorengo anaiak (`~`)
+## 3.2. Ondoko anaia (`+`) eta ondorengo anaiak (`~`)
 
 === "HTML"
     ```html
@@ -166,7 +166,7 @@ HTML elementuen atributuak eta balioak aztertzen dituzte.
 
 ![CSS atributuak](../../images/css_atributuak.png)
 
-### Adibide erabilgarria: PDF estekak bereiztea
+## Adibide erabilgarria: PDF estekak bereiztea
 
 === "HTML"
     ```html
@@ -195,7 +195,7 @@ HTML elementuen atributuak eta balioak aztertzen dituzte.
 
 Pseudoklaseek elementuaren **egoera** edo **kokapena** adierazten dute.
 
-### 5.1. Erabiltzailearen interakzioa
+## 5.1. Erabiltzailearen interakzioa
 
 | Pseudoklasea | Noiz aplikatzen da? |
 |---|---|
@@ -217,7 +217,7 @@ nav a:focus-visible {
 !!! tip "Irisgarritasuna"
     Ez kendu fokuaren adierazlea `outline: none` erabiliz ordezko ikusgarririk jarri gabe. Teklatuarekin nabigatzen duten erabiltzaileek fokua non dagoen ikusi behar dute. `:hover` bakarrik ez da nahikoa.
 
-### 5.2. Elementuen kokapena
+## 5.2. Elementuen kokapena
 
 | Pseudoklasea | Zer hautatzen du? |
 |---|---|
@@ -264,7 +264,7 @@ nav a:focus-visible {
     - `p:nth-child(2)` → **lehen paragrafoa** (`div`-aren bigarren semea)
     - `p:nth-of-type(2)` → **bigarren paragrafoa** (bigarren `p` elementua)
 
-### 5.3. Ezeztapena: `:not()`
+## 5.3. Ezeztapena: `:not()`
 
 ```css
 /* .berezia klaserik ez duten li elementuak */
@@ -320,7 +320,7 @@ Ikasleentzat, lehenengo honako galdera hauek egitea komeni da:
 4. Geruza eta garrantzi bereko arauak badira, zeinek du **espezifikotasun handiagoa**?
 5. Espezifikotasuna berdina bada, **zein dator geroago**?
 
-### 7.1. Espezifikotasuna: eredua
+## 7.1. Espezifikotasuna: eredua
 
 | Hautatzailea | ID | Klase / atributu / pseudoklase | Elementu / pseudoelementu |
 |---|---:|---:|---:|
@@ -349,7 +349,7 @@ Espezifikotasuna **zutabez zutabe, ezkerretik eskuinera** alderatzen da: ID bat 
 
 **Zergatik?** Hiru arauek paragrafoa hautatzen dute, baina `#mezua` hautatzaileak espezifikotasun handiagoa du.
 
-### 7.2. Espezifikotasun bera: ordena
+## 7.2. Espezifikotasun bera: ordena
 
 ```css
 .oharra { color: blue; }
@@ -358,7 +358,7 @@ Espezifikotasuna **zutabez zutabe, ezkerretik eskuinera** alderatzen da: ID bat 
 
 Bi arauak jatorri, garrantzi, geruza eta espezifikotasun berekoak direnez, **azkena** aplikatzen da.
 
-### 7.3. `!important`: kontuz
+## 7.3. `!important`: kontuz
 
 ```css
 .oharra { color: red !important; }
@@ -411,11 +411,11 @@ HTML elementu batzuek gurasoaren CSS propietateen balioak **heredatzen** dituzte
 
 
 
-### Praktikatzeko
+## Praktikatzeko
 
 [**Ireki CSS hautatzaileen laborategia — 54 ariketa**](https://css-hautatzaileen-laborategia.jone-m.chatgpt.site){ .md-button .md-button--primary }
 
-### Erreferentzia gehiago
+## Erreferentzia gehiago
 
 - [MDN — CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)
 - [MDN — Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade)
